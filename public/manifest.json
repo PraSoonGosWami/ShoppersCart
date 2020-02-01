@@ -1,10 +1,10 @@
 {
-  "short_name": "Shopper's Cart",
-  "name": "Shopper's Cart",
+  "short_name": "Shoppers Cart",
+  "name": "Shoppers Cart",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "128x128 64x64 32x32 24x24 16x16",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {

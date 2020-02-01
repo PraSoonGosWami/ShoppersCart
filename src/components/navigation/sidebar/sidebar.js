@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../../../ui/logo/logo192.png'
 import Style from './sidebar.module.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
