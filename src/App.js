@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Toolbar from './components/navigation/toolbar/toolbar'
+import {BrowserRouter} from 'react-router-dom'
+import Sidebar from './components/navigation/sidebar/sidebar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+    state = {
+        menuOpen:false
+    };
+    menuButtonHandler = () =>{
+        this.setState((prevState) => ({menuOpen: !prevState.menuOpen}))
+    }
+
+    render() {
+        return (
+            <BrowserRouter>
+                <div>
+                    <Toolbar onMenuButtonClicked={this.menuButtonHandler}/>
+                    <Sidebar show={this.state.menuOpen} closed={this.menuButtonHandler}/>
+                </div>
+            </BrowserRouter>
+        );
+    }
+
+
 }
 
 export default App;

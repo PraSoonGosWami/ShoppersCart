@@ -1,0 +1,29 @@
+.Logo{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.Logo img{
+    max-width: 150px;
+}
+
+.Hamburger{
+    display: none;
+}
+
+@media (max-width: 850px) {
+
+    .Logo{
+        width: 90%;
+    }
+    .Hamburger{
+        display: block;
+        color: white;
+    }
+
+    .Hamburger:hover{
+        color: #2FCE98;
+    }
+}

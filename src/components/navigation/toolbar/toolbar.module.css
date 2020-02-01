@@ -1,0 +1,35 @@
+.Toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    z-index: 80;
+}
+a{
+    color: white;
+}
+a:hover,
+a:active,
+a.active {
+    color: #2FCE98 !important;
+}
+.Element{
+    display: flex;
+}
+.nav{
+    margin: 0 20px;
+}
+
+
+@media (max-width: 850px) {
+    .Element{
+        display: none;
+    }
+    .Toolbar{
+        flex-direction: column;
+    }
+}
