@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/cartButton/cartButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/cartButton/cartButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/signinbutton/signInButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mainContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mainContainer.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/categories.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/cartButton/cartButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/cartButton/cartButton.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/logo/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/logo/logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/logo/logo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/logo/logo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mainContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mainContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mainContainer.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <workItem from="1580550880469" duration="22476000" />
       <workItem from="1580584012094" duration="595000" />
       <workItem from="1580584632597" duration="1181000" />
-      <workItem from="1580800073057" duration="8297000" />
+      <workItem from="1580800073057" duration="18773000" />
     </task>
     <servers />
   </component>
@@ -141,26 +138,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580584398007" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1580800334073">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1580833467439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580800334073" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1580800334073">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580833467439" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1580833467437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580800334073" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1580800334073">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580833467437" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1580833467437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580800334073" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1580800334073">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580833467437" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1580833467437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580800334073" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580833467437" />
     <state x="269" y="0" width="1281" height="809" key="dock-window-1" timestamp="1580559680610">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="269" y="0" width="1281" height="809" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1580559680610" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1580846679482">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1580846679482" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580558404931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

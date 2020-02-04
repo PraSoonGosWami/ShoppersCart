@@ -15,7 +15,7 @@ a{
 a:hover,
 a:active,
 a.active {
-    color: #2FCE98 !important;
+    color: #2FCE98;
 }
 .Element{
     display: flex;

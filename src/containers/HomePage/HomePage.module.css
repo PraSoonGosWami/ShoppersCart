@@ -1,0 +1,22 @@
+.HomeCategories{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 851px) {
+    .HomeCategories{
+        justify-content: space-around;
+        overflow: hidden;
+        padding: 6px 20px;
+        margin: 0;
+        font-size: 1em;
+        background: #EEEEEE;
+        font-weight: bold;
+    }
+}

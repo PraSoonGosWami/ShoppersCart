@@ -10,3 +10,9 @@
 .CartItemCount::after{
     content: ')';
 }
+
+a:hover,
+a:active,
+a.active {
+    color: #2FCE98;
+}

@@ -19,7 +19,8 @@ class App extends Component{
                 <div style={{display:'block'}}>
                     <Toolbar onMenuButtonClicked={this.menuButtonHandler}/>
                     <Sidebar show={this.state.menuOpen} closed={this.menuButtonHandler}/>
-                    {/*<MainContainer/>*/}
+                    <MainContainer/>
+
                 </div>
             </BrowserRouter>
         );
