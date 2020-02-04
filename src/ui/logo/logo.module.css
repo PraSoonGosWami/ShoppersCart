@@ -13,6 +13,10 @@
     display: none;
 }
 
+.CartIcon{
+    display: none;
+}
+
 @media (max-width: 850px) {
 
     .Logo{
@@ -21,6 +25,16 @@
     .Hamburger{
         display: block;
         color: white;
+    }
+
+    .CartIcon{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .CartIcon:hover{
+        color: #2FCE98;
     }
 
     .Hamburger:hover{

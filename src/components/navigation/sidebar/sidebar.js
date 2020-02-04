@@ -1,7 +1,8 @@
 import React from 'react'
 import Style from './sidebar.module.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
+import {faTimesCircle,faHome} from "@fortawesome/free-solid-svg-icons";
+import UserSection from '../profileSection/profileSection'
 
 const sidebar = (props) => {
     const show = props.show;
@@ -13,10 +14,11 @@ const sidebar = (props) => {
     return (
         <nav className={className.join(' ')}>
             <div className={Style.Image}>
-                <h3>Home</h3>
-                <span onClick={props.closed}><FontAwesomeIcon icon={faTimesCircle} color='white' size='lg'/></span>
+                <h4><FontAwesomeIcon icon={faHome} color='#2FCE98' style={{margin:'1px 8px'}}/>Home</h4>
+                <FontAwesomeIcon icon={faTimesCircle} color='white' onClick={props.closed}/>
             </div>
             <hr/>
+            <UserSection size='lg'/>
         </nav>
     )
 }

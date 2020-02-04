@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Toolbar from './components/navigation/toolbar/toolbar'
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import Sidebar from './components/navigation/sidebar/sidebar'
+import MainContainer from './containers/main/mainContainer'
 
 
 class App extends Component{
@@ -15,9 +16,10 @@ class App extends Component{
     render() {
         return (
             <BrowserRouter>
-                <div>
+                <div style={{display:'block'}}>
                     <Toolbar onMenuButtonClicked={this.menuButtonHandler}/>
                     <Sidebar show={this.state.menuOpen} closed={this.menuButtonHandler}/>
+                    {/*<MainContainer/>*/}
                 </div>
             </BrowserRouter>
         );

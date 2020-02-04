@@ -1,0 +1,28 @@
+.UserSection{
+    margin: 18px 0;
+}
+
+.ProfileSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 6px 12px;
+    text-decoration: none;
+    padding: 8px 10px;
+    font-family: "Calibri Light";
+    color: #EEEEEE;
+    font-size: 0.9em;
+}
+
+a:hover,
+a:active,
+ a.active{
+    color: #2FCE98;
+}
+
+.ProfileSection .icon{
+    margin: 8px 6px 8px 0px;
+}
+.ProfileSection .description{
+    margin: 8px 0px 8px 4px;
+}

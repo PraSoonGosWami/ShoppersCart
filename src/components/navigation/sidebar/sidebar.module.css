@@ -13,18 +13,19 @@
     display: flex;
     text-align: center;
     box-sizing: border-box;
-    padding: 12px;
+    padding: 6px 12px;
     align-items: center;
     justify-content: space-between;
 }
 
-.Image img{
-    height: 60px;
+.Image h4{
+    color: #2FCE98;
+
+}
+.Sidebar hr{
+    background-color: #CCCCCC;
 }
 
-.Image h3{
-    color: #2FCE98;
-}
 
 
 .Show{

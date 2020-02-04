@@ -19,9 +19,14 @@ a.active {
 }
 .Element{
     display: flex;
+    align-items: center;
 }
+
 .nav{
+    display: flex;
+    align-items: center;
     margin: 0 20px;
+    text-decoration: none;
 }
 
 

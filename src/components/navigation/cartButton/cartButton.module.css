@@ -1,0 +1,12 @@
+.CartItemCount{
+    width: 20px;
+    margin-left: 4px;
+}
+
+.CartItemCount::before{
+    content: '(';
+}
+
+.CartItemCount::after{
+    content: ')';
+}
