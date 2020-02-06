@@ -1,7 +1,6 @@
-import React from 'react';
-import axios from 'axios';
+import * as React from 'react'
 
-import './signUp.css';
+import Style from './signUp.css';
 
 class signUp extends React.Component {
   constructor(props) {
@@ -23,9 +22,9 @@ class signUp extends React.Component {
 
 render() {
     return(
-      <Fragment>
+      <React.Fragment>
         <img src="logo.png" width="200" height="100"/>
-      <div class="container">
+      <div class="Style.container">
         <h1> Sign Up</h1>
         <form onSubmit={this.handleSubmit}>
           <label for="name"><b>Name</b></label>
@@ -38,13 +37,13 @@ render() {
           <input type="password" placeholder="Enter Password" data-test="psw" value={this.state.psw} onChange={this.handleChange}  required/>
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"/> Remember me
           <p>By creating an account you agree to our <a href="#" style="color:rgb(190, 175, 74);">Terms & Privacy</a>.</p>
-          <div class="clearfix">
-            <button type="submit" class="signupbtn">Sign Up</button>
+          <div class="Style.clearfix">
+            <button type="submit" class="Style.signupbtn">Sign Up</button>
           </div>
         </form>
           
       </div>
-      </Fragment>
+      </React.Fragment>
       
     )
 }

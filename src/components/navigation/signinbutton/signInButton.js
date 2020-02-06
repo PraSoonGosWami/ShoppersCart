@@ -1,14 +1,9 @@
 import React from 'react'
 import {NavLink} from "react-router-dom";
-import signUp from '';
-
-const signUp = () => {
-    return (<signUp/>)
-}
 
 const signInButton = (props) => {
     return(
-        <NavLink className={props.style} to="/profile" activeClassName={props.active} onClick={signUp} exact>
+        <NavLink className={props.style} to="/profile" activeClassName={props.active} exact>
             <h4>Sign in</h4>
         </NavLink>
     )

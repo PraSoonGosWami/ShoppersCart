@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Style from './login.module.css';
+
 class LoginPage extends Component {
   constructor() {
     super();
@@ -48,7 +50,7 @@ class LoginPage extends Component {
   render() {
     return (
         <Fragment>
-            <div className="container">
+            <div className="Style.container">
         <form onSubmit={this.handleSubmit}>
           {
             this.state.error &&
@@ -63,10 +65,9 @@ class LoginPage extends Component {
           <label>Password</label>
           <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
 
-          <div class="clearfix">
-                <button type="submit" class="loginbtn">Login</button>
+          <div class="Style.clearfix">
+                <button type="submit" class="Style.loginbtn">Login</button>
           </div>
-          {/*<input type="submit" value="Log In" data-test="submit" />*/}
         </form>
       </div>
       </Fragment>
