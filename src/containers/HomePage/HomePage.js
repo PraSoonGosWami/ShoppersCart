@@ -16,15 +16,17 @@ class HomePage extends Component {
     }
 
     componentDidMount() {
+        //getting categories
         axios.get("/categories.json")
             .then((response) => {
-                console.log(response)
                 this.setState({categories: response.data})
             })
             .catch((error) => console.log(error))
 
+        //getting showcase
         axios.get("/showcase.json")
             .then((response) => this.setState({showcase: response.data}))
+
 
     }
 
@@ -55,7 +57,6 @@ class HomePage extends Component {
                     )
                 })
 
-        console.log(showcase)
         return (
             <section>
                 <div className={Style.HomeCategories}>
@@ -64,6 +65,8 @@ class HomePage extends Component {
                 <Carousel autoplay={true} wrapAround={true} autoplayInterval={2000}>
                     {showcase}
                 </Carousel>
+
+
 
             </section>
         )
