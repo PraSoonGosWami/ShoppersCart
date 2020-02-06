@@ -27,7 +27,6 @@ class HomePage extends Component {
         axios.get("/showcase.json")
             .then((response) => this.setState({showcase: response.data}))
 
-
     }
 
 
@@ -65,8 +64,6 @@ class HomePage extends Component {
                 <Carousel autoplay={true} wrapAround={true} autoplayInterval={2000}>
                     {showcase}
                 </Carousel>
-
-
 
             </section>
         )
