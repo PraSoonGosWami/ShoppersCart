@@ -1,0 +1,29 @@
+.Showcase{
+    width: 100%;
+}
+.ShowcaseImage{
+    object-fit: cover;
+    width: 100%;
+    height: 280px;
+}
+
+@media (max-width: 850px) {
+    .ShowcaseImage{
+        height: 200px;
+    }
+}
+
+@media (max-width: 550px) {
+    .ShowcaseImage{
+        height: 180px;
+    }
+}
+
+@media (max-width: 350px) {
+    .ShowcaseImage{
+        height: 150px;
+    }
+}
+
+
+

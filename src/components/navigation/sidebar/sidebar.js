@@ -19,7 +19,7 @@ const sidebar = (props) => {
                     <FontAwesomeIcon icon={faHome} size='lg' className={Style.icon}/>
                     <p>Home</p>
                 </NavLink>
-                <FontAwesomeIcon icon={faTimesCircle} color='white' onClick={props.closed}/>
+                <FontAwesomeIcon icon={faTimesCircle} color='#212529' onClick={props.closed}/>
             </div>
             <hr/>
             <UserSection size='lg'/>

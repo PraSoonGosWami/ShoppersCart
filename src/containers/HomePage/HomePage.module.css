@@ -6,17 +6,14 @@
     width: 100%;
     box-sizing: border-box;
     align-items: center;
-    flex-wrap: nowrap;
+    background: rgb(247, 246, 248);
+    font-weight: bold;
 }
 
 @media (min-width: 851px) {
     .HomeCategories{
-        justify-content: space-around;
-        overflow: hidden;
         padding: 6px 20px;
         margin: 0;
         font-size: 1em;
-        background: #EEEEEE;
-        font-weight: bold;
     }
 }

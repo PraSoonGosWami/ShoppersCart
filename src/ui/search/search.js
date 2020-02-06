@@ -3,7 +3,7 @@ import Style from './search.module.css'
 
 const search = (props) => {
     return(
-        <input className={Style.Input} type='search' placeholder='Search here...'/>
+        <input className={Style.Input} type='search' placeholder='Search for products, brands and more'/>
     )
 }
 
