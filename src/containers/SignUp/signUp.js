@@ -49,4 +49,4 @@ render() {
 }
 }
 
-export default render;
+export default signUp;
