@@ -1,0 +1,72 @@
+.HomeProductHolder {
+    margin: 24px 16px;
+    padding: 8px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 6px #CCCCCC;
+    background-color: #f8f8f8;
+}
+
+.HomeProductHolder > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 12px;
+    box-sizing: border-box;
+}
+
+.HomeProductHolder > header > button {
+    padding: 10px 22px;
+    background-color: #DDDDDD;
+    border-radius: 4px;
+    border: 0;
+}
+
+.HomeProductHolder > header > h4 {
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+.HomeProductHolder > header > button:hover {
+    box-shadow: 2px 2px 2px #BBBBBB;
+    color: white;
+    background-color: #2FCE98;
+}
+
+.HomeProductHolder > section {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+@media (max-width: 550px) {
+    .HomeProductHolder > header > h4 {
+        font-size: 1.2em;
+    }
+    .HomeProductHolder > header > button {
+        padding: 6px 10px;
+        margin: auto 8px;
+
+    }
+
+}
+
+@media (max-width: 360px) {
+    .HomeProductHolder > header > h4 {
+        font-size: 1em;
+    }
+
+    .HomeProductHolder > header > button {
+        padding: 6px;
+        margin: auto 8px;
+        background-color: #DDDDDD;
+        font-size: 0.8em;
+        border-radius: 4px;
+        border: 0;
+    }
+}
+

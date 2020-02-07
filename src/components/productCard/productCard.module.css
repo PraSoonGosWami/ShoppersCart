@@ -1,0 +1,59 @@
+.ProductCard{
+    margin: 16px 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 1px 1px 4px #CCCCCC;
+
+
+}
+.ProductCard:hover{
+    box-shadow: 2px 2px 8px #CCCCCC;
+    cursor: pointer;
+}
+
+.ProductCard > header{
+    box-sizing: border-box;
+    width: 250px;
+    height: 200px;
+}
+
+.ProductCard header > img{
+    width: 220px;
+    object-fit: scale-down;
+    height: 190px;
+    margin-right: 12px;
+
+}
+.ProductCard > section{
+    display: block;
+    box-sizing: border-box;
+}
+.ProductCard > section > p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9em;
+}
+
+@media (max-width: 550px) {
+    .ProductCard{
+        max-width: 200px;
+        font-size: 0.9em;
+    }
+
+    .ProductCard > header{
+        box-sizing: border-box;
+        width: 200px;
+        height: 170px;
+    }
+
+    .ProductCard header > img{
+        width: 190px;
+        object-fit: scale-down;
+        height: 150px;
+        margin-right: 12px;
+
+    }
+}

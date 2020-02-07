@@ -4,10 +4,9 @@ import Showcase from '../../components/showcase/showcase'
 import Carousel from "nuka-carousel";
 import Style from './HomePage.module.css'
 import {withRouter} from "react-router";
-import ViewAllIcon from '../../components/categories/all category img.png'
-import img from './iphone-x-plus-2018.png'
 import axios from '../../AxiosInstance'
-import logo from "../../ui/logo/logo";
+import HomePageProducts from "./HomePageProducts/HomePageProducts";
+
 
 class HomePage extends Component {
     state = {
@@ -29,6 +28,9 @@ class HomePage extends Component {
 
     }
 
+    showcaseClickHandler = (url) =>{
+        this.props.history.push(url)
+    }
 
     render() {
         let categories = null
@@ -52,6 +54,7 @@ class HomePage extends Component {
                     return (
                         <Showcase
                             key={id}
+                            onClick={()=>this.showcaseClickHandler(this.state.showcase[id].url)}
                             src={this.state.showcase[id].src}/>
                     )
                 })
@@ -64,7 +67,7 @@ class HomePage extends Component {
                 <Carousel autoplay={true} wrapAround={true} autoplayInterval={2000}>
                     {showcase}
                 </Carousel>
-
+                <HomePageProducts />
             </section>
         )
     }
