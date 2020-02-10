@@ -10,8 +10,8 @@ class MainContainer extends Component {
         return(
             <main className={Style.MainContainer}>
                <Route path='/' exact component={HomePage}/>
-               <Route path='/products'  component={ProductPage}/>
-               <Route path='/category'  component={CategoryPage}/>
+               <Route path='/products/:cid/:pid'  component={ProductPage}/>
+               <Route path='/category/:cid'  component={CategoryPage}/>
             </main>
         )
     }

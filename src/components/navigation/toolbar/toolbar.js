@@ -4,7 +4,6 @@ import Logo from '../../../ui/logo/logo'
 import SearchBar from '../../../ui/search/search'
 import CartIcon from '../cartButton/cartButton'
 import SignInButton from "../signinbutton/signInButton";
-import {NavLink} from "react-router-dom";
 
 const toolbar = (props) => {
     return(

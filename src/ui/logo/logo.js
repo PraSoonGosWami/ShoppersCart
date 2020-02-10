@@ -3,7 +3,7 @@ import Style from './logo.module.css'
 import AppLogo from './logo.png'
 import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 import CartIcon from '../../components/navigation/cartButton/cartButton'
 
 

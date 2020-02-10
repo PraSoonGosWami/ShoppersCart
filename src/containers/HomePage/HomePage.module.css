@@ -1,3 +1,4 @@
+
 .HomeCategories{
     display: flex;
     justify-content: space-between;
@@ -8,6 +9,18 @@
     align-items: center;
     background: rgb(247, 246, 248);
     font-weight: bold;
+}
+
+.Spinner{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 @media (min-width: 851px) {

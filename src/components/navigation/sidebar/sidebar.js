@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './sidebar.module.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTimesCircle, faHome, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faTimesCircle, faHome} from "@fortawesome/free-solid-svg-icons";
 import UserSection from '../profileSection/profileSection'
 import {NavLink} from "react-router-dom";
 

@@ -15,8 +15,6 @@ class HomePageProducts extends Component {
     }
 
     onProductCardClickedHandler = (catId, pId) => {
-        console.log(catId, " ", pId)
-        console.log(this.props.history)
         this.props.history.push("products/"+catId+"/"+pId)
     }
 
@@ -29,10 +27,11 @@ class HomePageProducts extends Component {
         if (this.state.products)
             ProductHolders = Object.keys(this.state.products)
                 .map((catId) => {
+                    let categoryName = this.state.products[catId][Object.keys(this.state.products[catId])[0]]["catName"]
                     return (
                         <ProductHolder
                             onClick={()=>this.onViewAllButtonClickedHandler(catId)}
-                            title={catId.toString()}
+                            title={categoryName}
                             key={catId}>
                             {Object.keys(this.state.products[catId])
                                 .map((pId, index) => {
@@ -40,15 +39,14 @@ class HomePageProducts extends Component {
                                         return (
                                             <ProductCard
                                                 key={pId}
-                                                onClick={() => this.onProductCardClickedHandler(this.state.products[catId][pId].category, pId)}
+                                                onClick={() => this.onProductCardClickedHandler(catId, pId)}
                                                 src={this.state.products[catId][pId].url}
                                                 name={this.state.products[catId][pId].name}
                                                 details={this.state.products[catId][pId].details}
                                                 price={this.state.products[catId][pId].price}
                                             />
                                         )
-                                    else
-                                        return;
+
                                 })}
                         </ProductHolder>
                     )

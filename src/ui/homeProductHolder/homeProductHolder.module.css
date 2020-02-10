@@ -30,6 +30,7 @@
     box-shadow: 2px 2px 2px #BBBBBB;
     color: white;
     background-color: #2FCE98;
+    cursor: pointer;
 }
 
 .HomeProductHolder > section {
