@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Axios from "../../../AxiosInstance";
-import ProductHolder from '../../../ui/homeProductHolder/homeProductHolder'
-import ProductCard from '../../../components/productCard/productCard'
+import ProductHolder from './homeProductHolder/homeProductHolder'
+import ProductCard from './productCard/productCard'
 import {withRouter} from "react-router";
 
 class HomePageProducts extends Component {
@@ -46,6 +46,8 @@ class HomePageProducts extends Component {
                                                 price={this.state.products[catId][pId].price}
                                             />
                                         )
+                                    else
+                                        return null
 
                                 })}
                         </ProductHolder>

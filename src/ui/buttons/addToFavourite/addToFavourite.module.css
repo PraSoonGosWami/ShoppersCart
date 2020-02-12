@@ -1,0 +1,17 @@
+.AddToFavourite{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.AddToFavourite:hover{
+    cursor: pointer;
+    color: #ff2725;
+    font-size: 1.05em;
+}
+
+.AddToFavouriteIcon{
+    margin: 0 16px 0 8px;
+}
+

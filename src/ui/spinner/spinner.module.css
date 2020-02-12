@@ -5,7 +5,11 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     text-indent: -9999em;
     -webkit-animation: load4 1.3s infinite linear;
     animation: load4 1.3s infinite linear;

@@ -1,0 +1,19 @@
+.AddToCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.AddToCart:hover{
+    cursor: pointer;
+    color: #2FCE98;
+    font-size: 1.05em;
+
+
+}
+
+.AddToCartIcon{
+    margin: 0 16px;
+}

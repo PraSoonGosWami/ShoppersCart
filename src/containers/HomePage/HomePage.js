@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Categories from '../../components/categories/categories'
-import Showcase from '../../components/showcase/showcase'
+import Showcase from './HomePageProducts/showcase/showcase'
 import Carousel from "nuka-carousel";
 import Style from './HomePage.module.css'
 import {withRouter} from "react-router";

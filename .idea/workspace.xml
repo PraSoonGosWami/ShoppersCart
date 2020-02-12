@@ -2,25 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/spinner/spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/spinner/spinner.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/CategoryPage/Category.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/buttons/addToCart/addToCart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/buttons/addToCart/addToCart.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/buttons/addToFavourite/addToFavourite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/buttons/addToFavourite/addToFavourite.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/showcase/showcase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/showcase/showcase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/sidebar/sidebar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productCard/productCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/productCard/productCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productCard/productCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/productCard/productCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/showcase/showcase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/showcase/showcase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/showcase/showcase.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/showcase/showcase.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/CategoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/CategoryPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/HomePageProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/HomePageProducts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mainContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/homeProductHolder/homeProductHolder.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/homeProductHolder/homeProductHolder.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/logo/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/logo/logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mainContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mainContainer.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/homeProductHolder/homeProductHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/homeProductHolder/homeProductHolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/homeProductHolder/homeProductHolder.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/homeProductHolder/homeProductHolder.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/spinner/spinner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/spinner/spinner.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -50,26 +59,33 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Compressed/ShoppersCart-branch1/ShoppersCart-branch1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../portfolio/src/App.js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\HomePage\HomePageProducts" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\search" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\public" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\HomePage" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\categories" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\logo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\search" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -135,48 +151,47 @@
       <workItem from="1581190680123" duration="634000" />
       <workItem from="1581245009196" duration="8098000" />
       <workItem from="1581268872205" duration="1289000" />
-      <workItem from="1581346801420" duration="486000" />
+      <workItem from="1581346801420" duration="2313000" />
+      <workItem from="1581445933522" duration="14840000" />
+      <workItem from="1581496999366" duration="8264000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$USER_HOME$/Downloads/Compressed/ShoppersCart-branch1/ShoppersCart-branch1/node_modules/.staging/wait-for-expect-1961b664/lib/toBeInRangeMatcher.d.js" />
-        <option value="$USER_HOME$/Downloads/Compressed/ShoppersCart-branch1/ShoppersCart-branch1/node_modules/.staging/wait-for-expect-1961b664/lib/waitForExpect.spec.d.js" />
-        <option value="$USER_HOME$/Downloads/Compressed/ShoppersCart-branch1/ShoppersCart-branch1/node_modules/.staging/wait-for-expect-1961b664/lib/index.d.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#ESLint" timestamp="1581459468916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#ESLint/0.0.1536.824@0.0.1536.824" timestamp="1581459468916" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580559046468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580559046468" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581347036532">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581447175160">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581347036532" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1581270866073">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581447175160" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1581497666528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581270866073" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1581270866073">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581497666528" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1581497666528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581270866073" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1581270866073">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581497666528" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1581497666528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581270866073" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1581270866073">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581497666528" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1581497666528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581270866073" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581497666528" />
     <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1581015814249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

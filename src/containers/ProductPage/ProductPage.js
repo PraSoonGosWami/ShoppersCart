@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from "react-router";
 
 const ProductPage = (props) => {
     console.log(props.match.params)
@@ -7,4 +8,4 @@ const ProductPage = (props) => {
     )
 }
 
-export default ProductPage
+export default withRouter(ProductPage)
