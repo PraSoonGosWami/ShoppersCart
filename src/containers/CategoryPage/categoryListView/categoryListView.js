@@ -13,10 +13,10 @@ const categoryListView = (props) => {
                 </section>
 
                 <section className={Style.CategoryListDetails}>
-                    <h4>{props.name}</h4>
+                    <h4 >{props.name+" ("+props.color+")"}</h4>
                     <p>in {props.catName} </p>
                     <h4><span>₹</span>{props.price}</h4>
-                    <p>{props.details} Color: {props.color}</p>
+                    <p>{props.details}</p>
                 </section>
 
             </Link>

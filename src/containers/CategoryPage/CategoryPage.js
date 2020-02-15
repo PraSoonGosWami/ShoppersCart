@@ -25,6 +25,7 @@ class CategoryPage extends Component {
                 console.log(error)
             })
 
+
         Axios.get("/categories/"+this.catId+"/catName.json")
             .then(response => {
                 this.setState({catName:response.data})
@@ -34,7 +35,6 @@ class CategoryPage extends Component {
             .catch(error => {
                 console.log(error)
                 this.setState({isLoading:false})
-
             })
     }
 
@@ -42,9 +42,10 @@ class CategoryPage extends Component {
 
     render() {
         let productList = <Spinner/>
-        let heading = <h3>{this.state.catName}</h3>
-
-        if(!this.state.isLoading && this.state.products) {
+        let heading = <h3 style={{color:"#2FCE98"}}>{this.state.catName}</h3>
+        if(!this.state.isLoading)
+            productList = <h5>Oops!! Something went wrong</h5>
+        if(this.state.products) {
             productList = Object.keys(this.state.products)
                 .map((pid) => {
                     return (

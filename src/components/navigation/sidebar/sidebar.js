@@ -13,13 +13,13 @@ const sidebar = (props) => {
     else
         className = [Style.Sidebar, Style.Hide]
     return (
-        <nav className={className.join(' ')}>
+        <nav className={className.join(' ')} onClick={props.closed}>
             <div className={Style.Image}>
                 <NavLink to="/"  exact className={Style.home} activeClassName={Style.active}>
                     <FontAwesomeIcon icon={faHome} size='lg' className={Style.icon}/>
                     <p>Home</p>
                 </NavLink>
-                <FontAwesomeIcon icon={faTimesCircle} color='#212529' onClick={props.closed}/>
+                <FontAwesomeIcon icon={faTimesCircle} color='#212529'/>
             </div>
             <hr/>
             <UserSection size='lg'/>
