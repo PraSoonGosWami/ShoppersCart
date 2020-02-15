@@ -7,45 +7,43 @@ import CategoryListView from './categoryListView/categoryListView'
 
 class CategoryPage extends Component {
     state = {
-        products : null,
+        products: null,
         isLoading: true,
-        catName : "Loading..."
+        catName: "Loading..."
     }
     catId = this.props.match.params.cid
 
     componentDidMount() {
 
-        Axios.get("/products/"+this.catId+".json")
+        Axios.get("/products/" + this.catId + ".json")
             .then(response => {
-                this.setState({isLoading:false})
-                this.setState({products:response.data})
+                this.setState({isLoading: false})
+                this.setState({products: response.data})
             })
-            .catch(error=>{
-                this.setState({isLoading:false})
+            .catch(error => {
+                this.setState({isLoading: false})
                 console.log(error)
             })
 
 
-        Axios.get("/categories/"+this.catId+"/catName.json")
+        Axios.get("/categories/" + this.catId + "/catName.json")
             .then(response => {
-                this.setState({catName:response.data})
-                this.setState({isLoading:false})
+                this.setState({catName: response.data})
+                this.setState({isLoading: false})
 
-            } )
+            })
             .catch(error => {
                 console.log(error)
-                this.setState({isLoading:false})
+                this.setState({isLoading: false})
             })
     }
 
 
-
     render() {
         let productList = <Spinner/>
-        let heading = <h3 style={{color:"#2FCE98"}}>{this.state.catName}</h3>
-        if(!this.state.isLoading)
+        if (!this.state.isLoading)
             productList = <h5>Oops!! Something went wrong</h5>
-        if(this.state.products) {
+        if (this.state.products) {
             productList = Object.keys(this.state.products)
                 .map((pid) => {
                     return (
@@ -56,17 +54,19 @@ class CategoryPage extends Component {
                             name={this.state.products[pid]["name"]}
                             catName={this.state.products[pid]["catName"]}
                             price={this.state.products[pid]["price"]}
-                            details={this.state.products[pid]["details"]}
                             color={this.state.products[pid]["color"]}
+                            discount={parseInt(this.state.products[pid]["discount"])}
                         />
                     )
                 })
         }
 
-        return(
+        return (
             <div className={Style.CategoryPage}>
-                {heading}
-                {productList}
+                <h3>{this.state.catName}</h3>
+                <div className={Style.CategoryPageListHolder}>
+                    {productList}
+                </div>
             </div>
         )
     }

@@ -6,7 +6,7 @@ import Style from './addToFavourite.module.css'
 const addToFavourite = (props) => {
     return(
         <div className={Style.AddToFavourite}>
-            <FontAwesomeIcon className={Style.AddToFavouriteIcon} icon={faHeart} size="2x"/>
+            <FontAwesomeIcon className={Style.AddToFavouriteIcon} icon={faHeart} size="sm"/>
             <h6>Add to favourite</h6>
         </div>
     )

@@ -6,7 +6,7 @@ import Style from './addToCart.module.css'
 const addToCart = (props) => {
     return(
         <div className={Style.AddToCart}>
-            <FontAwesomeIcon className={Style.AddToCartIcon} icon={faShoppingCart} size="2x"/>
+            <FontAwesomeIcon className={Style.AddToCartIcon} icon={faShoppingCart} size="sm"/>
             <h6>Add to cart</h6>
         </div>
     )

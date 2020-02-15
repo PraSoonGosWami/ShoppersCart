@@ -1,19 +1,29 @@
 .CategoryListItem{
-    width: 80%;
     border: 1px solid #CCCCCC;
-    overflow: hidden;
+    height: 450px;
+    width: 280px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 4px;
     box-shadow: 1px 1px 6px #CCCCCC;
     margin: 8px;
+    overflow: hidden;
 }
 
 .CategoryListView{
+    flex-basis: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     box-sizing: border-box;
+    flex-wrap: nowrap;
     padding: 0 16px;
     text-decoration: none;
+    overflow-y: auto;
+    color: #212529;
 }
 
 .CategoryListView:hover{
@@ -42,75 +52,89 @@
 
 .CategoryListImage > img{
     object-fit: scale-down;
-    max-width: 220px;
-    height: 280px;
+    height: 200px;
+    width: 100%;
 }
 
 .CategoryListDetails{
     flex-basis: 60%;
     box-sizing: border-box;
-    padding: 8px 8px 8px 0;
-    margin: 12px 12px 12px 0;
+    padding: 8px;
+    margin: 6px;
+    font-size: 0.9em;
 }
 
 .Fav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-basis: 10%;
     background-color: #EEEEEE;
     padding: 0 8px;
 }
 
-
-
-@media (max-width: 800px) {
-    .CategoryListItem{
-        width: 90%;
-    }
-
+@media (max-width: 900px) {
     .CategoryListImage > img{
-        max-width: 100%;
-        height: auto;
+        height: 180px;
     }
 
+    .CategoryListItem{
+        width: 260px;
+        height: 420px;
+    }
 
 }
 
-@media (max-width: 550px) {
-    .CategoryListImage{
-        flex-basis: 40%;
+@media (max-width: 834px) {
+    .CategoryListImage > img{
+        height: 165px;
+    }
+
+    .CategoryListItem{
+        width: 240px;
+        height: 440px;
     }
     .CategoryListDetails{
-        flex-basis: 60%;
-    }
-    .CategoryListItem{
-        font-size: 0.95em;
-    }
-
-}
-
-@media (max-width: 530px) {
-
-    .CategoryListItem{
-        font-size: 0.9em;
-        width: 92%;
-    }
-
-}
-
-@media (max-width: 430px) {
-
-    .CategoryListView{
-        flex-direction: column;
-    }
-    .CategoryListItem{
         font-size: 0.85em;
-
-    }
-    .CategoryListImage > img{
-        max-width: 70%;
     }
 
 }
 
+@media (max-width: 590px) {
+    .CategoryListImage > img{
+        height: 160px;
+    }
+
+    .CategoryListItem{
+        width: 230px;
+        height: 410px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+    .CategoryListImage > img{
+        height: 200px;
+    }
+
+    .CategoryListItem{
+        width: 85%;
+        height: 460px;
+    }
+
+}
+
+
+@media (max-width: 350px) {
+    .CategoryListImage > img{
+        height: 160px;
+    }
+
+    .CategoryListItem{
+        width: 80%;
+        height: 380px;
+    }
+
+}
 

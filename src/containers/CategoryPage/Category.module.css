@@ -1,7 +1,22 @@
 .CategoryPage{
-    margin: 20px 12px;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 22px;
+}
+
+.CategoryPage >h3{
+    text-align: center;
+    margin-bottom: 18px;
+    color: #2FCE98;
+    font-size: 1.2em;
+}
+
+.CategoryPageListHolder{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    padding: 8px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }

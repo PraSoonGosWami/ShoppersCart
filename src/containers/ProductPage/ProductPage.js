@@ -20,11 +20,22 @@ const ProductPage = (props) => {
 
 
     return (
-        <React.Fragment>
-            <img src={product.url} alt={product.name}/>
-            <h3>{product.name}</h3>
+        product !== null ?
+            <div>
+                <aside>
 
-        </React.Fragment>
+                </aside>
+                <section>
+                    <h2>{product.name}</h2>
+                    <p>props.details</p>
+                    <hr/>
+                    <h2>{product.price}</h2>
+
+
+                </section>
+            </div>
+            :
+            <h5  style={{textAlign:"center"}}>Something went wrong!!Product you are trying to see is unavailable</h5>
     )
 }
 

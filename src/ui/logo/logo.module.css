@@ -15,6 +15,7 @@
 
 .CartIcon{
     display: none;
+    color: #212529;
 }
 
 @media (max-width: 850px) {

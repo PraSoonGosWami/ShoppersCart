@@ -5,6 +5,8 @@ import AddToCartButton from '../../../ui/buttons/addToCart/addToCart'
 import AddToFavouriteButton from '../../../ui/buttons/addToFavourite/addToFavourite'
 
 const categoryListView = (props) => {
+    let price = Math.round(props.price - ((props.price) * (props.discount / 100)))
+
     return (
         <div className={Style.CategoryListItem}>
             <Link className={Style.CategoryListView} to={"/products/" + props.href}>
@@ -13,10 +15,11 @@ const categoryListView = (props) => {
                 </section>
 
                 <section className={Style.CategoryListDetails}>
-                    <h4 >{props.name+" ("+props.color+")"}</h4>
+                    <h4>{props.name + " (" + props.color + ")"}</h4>
                     <p>in {props.catName} </p>
-                    <h4><span>₹</span>{props.price}</h4>
-                    <p>{props.details}</p>
+                    <h4><span>₹</span>{price + "\t"}</h4>
+                    <h4 style={{color: "#BBBBBB", fontSize: "0.9em"}}><del>₹{props.price}</del>
+                        {"\t\t("+props.discount+"% off)"}</h4>
                 </section>
 
             </Link>

@@ -44,6 +44,7 @@ class HomePageProducts extends Component {
                                                 name={this.state.products[catId][pId].name}
                                                 details={this.state.products[catId][pId].details}
                                                 price={this.state.products[catId][pId].price}
+                                                discount={parseInt(this.state.products[catId][pId].discount)}
                                             />
                                         )
                                     else

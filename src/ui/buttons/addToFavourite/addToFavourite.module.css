@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
 }
 
 .AddToFavourite:hover{
@@ -12,6 +11,6 @@
 }
 
 .AddToFavouriteIcon{
-    margin: 0 16px 0 8px;
+    margin: 0 6px 0 6px;
 }
 
