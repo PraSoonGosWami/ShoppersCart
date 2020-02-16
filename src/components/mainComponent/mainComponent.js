@@ -1,7 +1,6 @@
 import React, {Suspense} from 'react'
 import {Route, Switch} from "react-router";
 import Style from './mainComponent.module.css'
-
 import HomePage from "../../containers/HomePage/HomePage";
 import Spinner from "../../ui/spinner/spinner"
 
@@ -19,6 +18,7 @@ const mainComponent = (props) => {
                     <Route path='/category/:cid' exact component={CategoryPage}/>
                 </Switch>
             </Suspense>
+
         </main>
     )
 }

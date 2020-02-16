@@ -1,0 +1,136 @@
+.ProductPage{
+}
+
+.ProductPage > header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px;
+    overflow-x: hidden;
+
+    box-shadow: 0 1px 2px #BBBBBB;
+}
+
+.ProductPage > header > aside{
+    flex-basis: 45%;
+    padding: 20px;
+}
+
+
+.ProductImage{
+    text-align: center;
+    width: 100%;
+}
+
+.ProductImage > img{
+    object-fit: scale-down;
+    height: 400px;
+}
+
+.ProductPage > header > section{
+    flex-basis: 65%;
+    padding: 16px;
+    margin: 8px;
+}
+.ProductPage > header > section > hr{
+    border: 0;
+    background-color: #212529;
+    height: 1px;
+    margin: 8px 8px 8px 0;
+}
+.ButtonDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ButtonCart{
+    display: flex;
+    justify-content: center;
+    margin: 0 12px;
+    align-items: center;
+    padding: 1px 16px;
+    border: 2px solid #2FCE98;
+    border-radius: 4px;
+
+}
+
+.ButtonWish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 16px;
+    background-color: #2FCE98;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px #BBBBBB;
+    color:#f8f8f8;
+
+}
+
+.ButtonCart:hover,.ButtonWish:hover{
+    box-shadow: 1px 2px 10px #BBBBBB;
+    cursor: pointer;
+}
+@media (max-width: 1500px) {
+    .ProductPage > header{
+    }
+
+    .ProductPage > header > aside{
+        padding: 16px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 350px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .ProductPage{
+        font-size: 0.9em;
+    }
+    .ProductPage > header{
+    }
+
+    .ProductPage > header > aside{
+        padding: 14px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 320px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .ProductPage{
+        font-size: 1em;
+    }
+    .ProductPage > header{
+        flex-direction: column;
+    }
+
+    .ProductPage > header > aside{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 300px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+    .ButtonCart{
+        padding: 0px 8px;
+    }
+
+    .ButtonWish{
+        padding: 2px 8px;
+    }
+}

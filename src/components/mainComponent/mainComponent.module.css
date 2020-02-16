@@ -1,9 +1,9 @@
 .MainContainer{
-    margin: 66px 0;
+    margin: 66px 0 0 0;
 }
 
 @media (max-width: 850px){
     .MainContainer{
-        margin: 140px 0;
+        margin: 140px 0 0 0 ;
     }
 }

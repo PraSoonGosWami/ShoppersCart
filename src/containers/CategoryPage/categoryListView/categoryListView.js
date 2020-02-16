@@ -6,6 +6,8 @@ import AddToFavouriteButton from '../../../ui/buttons/addToFavourite/addToFavour
 
 const categoryListView = (props) => {
     let price = Math.round(props.price - ((props.price) * (props.discount / 100)))
+        .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
 
     return (
         <div className={Style.CategoryListItem}>
@@ -18,7 +20,8 @@ const categoryListView = (props) => {
                     <h4>{props.name + " (" + props.color + ")"}</h4>
                     <p>in {props.catName} </p>
                     <h4><span>₹</span>{price + "\t"}</h4>
-                    <h4 style={{color: "#BBBBBB", fontSize: "0.9em"}}><del>₹{props.price}</del>
+                    <h4 style={{color: "#BBBBBB", fontSize: "0.9em"}}><del>₹{props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    }</del>
                         {"\t\t("+props.discount+"% off)"}</h4>
                 </section>
 

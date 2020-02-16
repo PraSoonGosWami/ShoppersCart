@@ -5,6 +5,7 @@ import Sidebar from './components/navigation/sidebar/sidebar'
 import MainComponent from './components/mainComponent/mainComponent'
 import Backdrop from './ui/backdrop/backdrop'
 
+
 class App extends Component {
     state = {
         menuOpen: false
@@ -13,8 +14,6 @@ class App extends Component {
     menuButtonHandler = () => {
         this.setState((prevState) => ({menuOpen: !prevState.menuOpen}))
     }
-
-
 
     render() {
         return (

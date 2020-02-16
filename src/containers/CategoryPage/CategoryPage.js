@@ -4,6 +4,7 @@ import Style from './Category.module.css'
 import Axios from '../../AxiosInstance'
 import Spinner from '../../ui/spinner/spinner'
 import CategoryListView from './categoryListView/categoryListView'
+const AppFooter = React.lazy(()=>import( "../../ui/AppFooter/AppFooter"))
 
 class CategoryPage extends Component {
     state = {
@@ -41,6 +42,7 @@ class CategoryPage extends Component {
 
     render() {
         let productList = <Spinner/>
+        let footer = null
         if (!this.state.isLoading)
             productList = <h5>Oops!! Something went wrong</h5>
         if (this.state.products) {
@@ -59,6 +61,7 @@ class CategoryPage extends Component {
                         />
                     )
                 })
+            footer=<AppFooter/>
         }
 
         return (
@@ -67,6 +70,7 @@ class CategoryPage extends Component {
                 <div className={Style.CategoryPageListHolder}>
                     {productList}
                 </div>
+                {footer}
             </div>
         )
     }
