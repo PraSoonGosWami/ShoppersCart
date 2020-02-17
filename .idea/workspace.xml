@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/ProductPage/productPage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/AppFooter/AppFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/AppFooter/appFooter.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/Category.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/Category.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/CategoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/CategoryPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/productCard/productCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/productCard/productCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/productPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/productPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/AppFooter/appFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AppFooter/appFooter.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +38,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../portfolio/src/App.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -150,7 +140,8 @@
       <workItem from="1581759852877" duration="239000" />
       <workItem from="1581760109843" duration="884000" />
       <workItem from="1581761017992" duration="20156000" />
-      <workItem from="1581845287571" duration="17927000" />
+      <workItem from="1581845287571" duration="19579000" />
+      <workItem from="1581930977223" duration="1990000" />
     </task>
     <servers />
   </component>
@@ -177,22 +168,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581447175160" />
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom" timestamp="1581845791270">
+    <state width="1515" height="207" key="GridCell.Tab.0.bottom" timestamp="1581879338170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581845791270" />
-    <state width="1515" height="207" key="GridCell.Tab.0.center" timestamp="1581845791270">
+    <state width="1515" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
+    <state width="1515" height="207" key="GridCell.Tab.0.center" timestamp="1581879338170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581845791270" />
-    <state width="1515" height="207" key="GridCell.Tab.0.left" timestamp="1581845791268">
+    <state width="1515" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
+    <state width="1515" height="207" key="GridCell.Tab.0.left" timestamp="1581879338170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581845791268" />
-    <state width="1515" height="207" key="GridCell.Tab.0.right" timestamp="1581845791270">
+    <state width="1515" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
+    <state width="1515" height="207" key="GridCell.Tab.0.right" timestamp="1581879338170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581845791270" />
+    <state width="1515" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
     <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1581015814249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,4 +1,4 @@
-.CategoryListItem{
+.CategoryListItem {
     border: 1px solid #CCCCCC;
     height: 450px;
     width: 280px;
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.CategoryListView{
+.CategoryListView {
     flex-basis: 90%;
     display: flex;
     justify-content: space-between;
@@ -26,23 +26,23 @@
     color: #212529;
 }
 
-.CategoryListView:hover{
+.CategoryListView:hover {
     color: #212529;
 }
 
-.CategoryListItem:hover{
+.CategoryListItem:hover {
     color: #212529;
     box-shadow: 1px 2px 12px #BBBBBB;
 }
 
 
-.CategoryListView >.CategoryListDetails > p ,
-.CategoryListView > .CategoryListDetails> h4{
+.CategoryListView > .CategoryListDetails > p,
+.CategoryListView > .CategoryListDetails > h4 {
     margin: 8px;
     padding: 0;
 }
 
-.CategoryListImage{
+.CategoryListImage {
     flex-basis: 40%;
     display: block;
     box-sizing: border-box;
@@ -50,21 +50,20 @@
     padding: 16px;
 }
 
-.CategoryListImage > img{
+.CategoryListImage > img {
     object-fit: scale-down;
     height: 200px;
     width: 100%;
 }
 
-.CategoryListDetails{
+.CategoryListDetails {
     flex-basis: 60%;
     box-sizing: border-box;
     padding: 8px;
     margin: 6px;
-    font-size: 0.9em;
 }
 
-.Fav{
+.Fav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,11 +73,11 @@
 }
 
 @media (max-width: 900px) {
-    .CategoryListImage > img{
+    .CategoryListImage > img {
         height: 180px;
     }
 
-    .CategoryListItem{
+    .CategoryListItem {
         width: 260px;
         height: 420px;
     }
@@ -86,54 +85,57 @@
 }
 
 @media (max-width: 834px) {
-    .CategoryListImage > img{
+    .CategoryListImage > img {
         height: 165px;
     }
 
-    .CategoryListItem{
+    .CategoryListItem {
         width: 240px;
         height: 440px;
     }
-    .CategoryListDetails{
-        font-size: 0.85em;
-    }
+
 
 }
 
 @media (max-width: 590px) {
-    .CategoryListImage > img{
+    .CategoryListImage > img {
         height: 160px;
     }
 
-    .CategoryListItem{
+    .CategoryListItem {
         width: 230px;
-        height: 410px;
+        height: 430px;
+        font-size: 0.9em;
     }
 
 }
 
 
 @media (max-width: 520px) {
-    .CategoryListImage > img{
+    .CategoryListImage > img {
         height: 200px;
     }
 
-    .CategoryListItem{
+    .CategoryListItem {
         width: 85%;
-        height: 460px;
+        height: 440px;
     }
 
 }
 
 
-@media (max-width: 350px) {
-    .CategoryListImage > img{
+@media (max-width: 340px) {
+    .CategoryListImage > img {
         height: 160px;
     }
 
-    .CategoryListItem{
+    .CategoryListItem {
         width: 80%;
         height: 380px;
+    }
+
+    .CategoryListDetails {
+        font-size: 0.9em;
     }
 
 }

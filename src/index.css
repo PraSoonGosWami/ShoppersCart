@@ -13,10 +13,10 @@ code {
     monospace;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
 
   body{
-    font-size: 0.84em;
+    font-size: 0.9em;
   }
 
 }

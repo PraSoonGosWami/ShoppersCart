@@ -35,7 +35,6 @@
 
 .FooterIcon {
     margin: 0 12px;
-
 }
 
 .FooterFeature {
@@ -63,5 +62,17 @@
     }
     .FooterFeature{
         margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .Footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 350px) {
+    .Footer {
+        font-size: 0.7em;
     }
 }

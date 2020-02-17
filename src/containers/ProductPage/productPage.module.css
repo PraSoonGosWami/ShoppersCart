@@ -109,7 +109,7 @@
 
 @media (max-width: 800px) {
     .ProductPage{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .ProductPage > header{
         flex-direction: column;
@@ -133,4 +133,37 @@
     .ButtonWish{
         padding: 2px 8px;
     }
+}
+
+
+@media (max-width: 400px) {
+    .ProductPage{
+        font-size: 0.78em;
+    }
+
+    .ButtonCart{
+        padding: 0px 8px;
+    }
+
+    .ButtonWish{
+        padding: 2px 8px;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .ProductPage{
+        font-size: 0.7em;
+    }
+
+    .ButtonCart{
+        font-size: 0.8em;
+        padding: 0px 6px;
+    }
+
+    .ButtonWish{
+        font-size: 0.8em;
+        padding: 2px 6px;
+    }
+
 }
