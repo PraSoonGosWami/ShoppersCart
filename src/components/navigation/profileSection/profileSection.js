@@ -1,4 +1,4 @@
-import React from 'react'
+    import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";

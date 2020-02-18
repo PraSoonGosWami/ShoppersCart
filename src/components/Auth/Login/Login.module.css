@@ -1,0 +1,98 @@
+
+.Login{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 6px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Login > aside{
+    flex-basis: 35%;
+    padding: 18px;
+    background-color: #2FCE98;
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+}
+
+.Login > aside > img{
+    object-fit: fill;
+    height: 100%;
+    max-width: 80%;
+
+}
+
+.Login > main{
+    flex-basis: 65%;
+
+}
+
+.Login >main > header{
+    padding: 16px;
+    text-align: center;
+    color: #03212c;
+}
+.Login >main > header > img{
+    width: 180px;
+
+}
+.Login > main > header > h4 {
+
+}
+
+.Login > main > section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Login > main > section > input{
+    border: 2px solid #2FCE98;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    width: 30%;
+    margin: 10px 4px;
+}
+
+.Login > main > section  button {
+
+    padding: 10px 16px;
+    border: 0;
+    background-color: #2FCE98;
+    color: #f8f8f8;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #CCCCCC;
+    margin: 20px;
+    width: 145px;
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .Login > aside {
+        display: none;
+    }
+
+    .Login > main{
+        flex-basis: 80%;
+    }
+
+    .Login > main > section > input {
+        width: 90%;
+    }
+}
+
+
+
+

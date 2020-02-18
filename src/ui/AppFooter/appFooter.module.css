@@ -14,7 +14,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: #212529;
     margin-left: 36px;
     margin-right: 10px;
 }
@@ -30,7 +29,7 @@
 }
 
 .FooterBasic > span > a:hover {
-    color: #f8f8f8;
+    font-size: 1.05em;
 }
 
 .FooterIcon {
@@ -53,26 +52,34 @@
     color: #212529;
 }
 
+.Copyright{
+    text-align: center;
+    background-color: #2FCE98;
+    margin: 0;
+    padding: 16px 0;
+}
+
+@media (max-width: 900px) {
+    .Footer {
+        font-size: 0.9em;
+    }
+
+}
+
 @media (max-width: 851px) {
     .Footer {
-        flex-direction: column;
+       display: none;
     }
-    .FooterBasic{
-        margin: 0;
-    }
-    .FooterFeature{
-        margin: 0;
-    }
+   .Copyright{
+       font-size: 0.9em;
+       background-color: #EEEEEE;
+
+   }
 }
 
-@media (max-width: 400px) {
-    .Footer {
+@media (max-width: 500px) {
+
+    .Copyright{
         font-size: 0.8em;
-    }
-}
-
-@media (max-width: 350px) {
-    .Footer {
-        font-size: 0.7em;
     }
 }

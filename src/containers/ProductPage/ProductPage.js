@@ -26,8 +26,7 @@ const ProductPage = (props) => {
                 console.error(error);
                 setIsLoading(false)
             })
-
-    }, [product])
+    }, [])
 
     let spinner = <Spinner/>
     let productView = null
@@ -72,8 +71,8 @@ const ProductPage = (props) => {
                     </section>
                 </header>
                 <article>
-                    <h3>Product Details</h3>
-
+                    <h2>Product Details</h2>
+                    <p>{product.details}</p>
                 </article>
             </div>
         )

@@ -18,7 +18,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div style={{display: 'block'}}>
+                <div>
                     <Toolbar onMenuButtonClicked={this.menuButtonHandler}/>
                     <Backdrop
                         onBackDropClicked={this.menuButtonHandler}

@@ -16,7 +16,6 @@
     padding: 20px;
 }
 
-
 .ProductImage{
     text-align: center;
     width: 100%;
@@ -32,17 +31,20 @@
     padding: 16px;
     margin: 8px;
 }
+
 .ProductPage > header > section > hr{
     border: 0;
     background-color: #212529;
     height: 1px;
     margin: 8px 8px 8px 0;
 }
+
 .ButtonDiv{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
 .ButtonCart{
     display: flex;
     justify-content: center;
@@ -51,7 +53,6 @@
     padding: 1px 16px;
     border: 2px solid #2FCE98;
     border-radius: 4px;
-
 }
 
 .ButtonWish{
@@ -70,6 +71,13 @@
     box-shadow: 1px 2px 10px #BBBBBB;
     cursor: pointer;
 }
+
+.ProductPage > article{
+    padding: 16px;
+    margin: 12px;
+}
+
+
 @media (max-width: 1500px) {
     .ProductPage > header{
     }
@@ -134,7 +142,6 @@
         padding: 2px 8px;
     }
 }
-
 
 @media (max-width: 400px) {
     .ProductPage{

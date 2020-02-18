@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/Login/loginlanding.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userProfile/UserProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userProfile/UserProfile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wishList/WishList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/AuthContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/AuthModal/AuthModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/AuthModal/AuthModal.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryPage/categoryListView/categoryListView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/signinbutton/signInButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/signinbutton/signInButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/productPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/productPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/AppFooter/AppFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AppFooter/AppFooter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/AppFooter/appFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AppFooter/appFooter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/backdrop/backdrop.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/backdrop/backdrop.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/spinner/spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/spinner/spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/spinner/spinner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/spinner/spinner.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +56,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Auth/Login" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -56,10 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\Auth\Login" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\public" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\HomePage" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\categories" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\logo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\footer" />
@@ -141,7 +160,9 @@
       <workItem from="1581760109843" duration="884000" />
       <workItem from="1581761017992" duration="20156000" />
       <workItem from="1581845287571" duration="19579000" />
-      <workItem from="1581930977223" duration="1990000" />
+      <workItem from="1581930977223" duration="2142000" />
+      <workItem from="1581949371134" duration="5507000" />
+      <workItem from="1582013014193" duration="19048000" />
     </task>
     <servers />
   </component>
@@ -168,22 +189,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581447175160" />
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom" timestamp="1581879338170">
+    <state width="1515" height="207" key="GridCell.Tab.0.bottom" timestamp="1582013182184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
-    <state width="1515" height="207" key="GridCell.Tab.0.center" timestamp="1581879338170">
+    <state width="1515" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582013182184" />
+    <state width="1515" height="207" key="GridCell.Tab.0.center" timestamp="1582013182184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
-    <state width="1515" height="207" key="GridCell.Tab.0.left" timestamp="1581879338170">
+    <state width="1515" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582013182184" />
+    <state width="1515" height="207" key="GridCell.Tab.0.left" timestamp="1582013182184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
-    <state width="1515" height="207" key="GridCell.Tab.0.right" timestamp="1581879338170">
+    <state width="1515" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582013182184" />
+    <state width="1515" height="207" key="GridCell.Tab.0.right" timestamp="1582013182184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581879338170" />
+    <state width="1515" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582013182184" />
     <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1581015814249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
