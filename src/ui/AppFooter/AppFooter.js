@@ -56,7 +56,7 @@ const AppFooter = (props) => {
 
                 </section>
             </footer>
-            <p className={Style.Copyright}>© 2020 Shopper's Car All rights reserved.</p>
+            <p className={Style.Copyright}>© 2020 Shopper's Cart All rights reserved.</p>
         </React.Fragment>
     )
 }

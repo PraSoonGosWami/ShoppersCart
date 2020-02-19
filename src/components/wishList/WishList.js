@@ -3,8 +3,8 @@ import {AuthContext} from "../../context/AuthContext";
 import {Redirect} from "react-router";
 
 const WishList = (props) => {
-    const [isLoggedIn, setIsLoggedIn, user, setUser] = useContext(AuthContext)
-    if (!isLoggedIn) {
+    const contextVal = useContext(AuthContext)
+    if (!contextVal.isLoggedIn) {
         return (
             <Redirect to={"/signin"}/>
         )

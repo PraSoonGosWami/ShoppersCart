@@ -10,6 +10,7 @@ const UserProfilePage = React.lazy(() => import("../../components/userProfile/Us
 const Cart = React.lazy(() => import("../../components/cart/Cart"))
 const Wishlist = React.lazy(() => import("../../components/wishList/WishList"))
 const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
+const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
 
 const mainComponent = (props) => {
     return (
@@ -24,6 +25,7 @@ const mainComponent = (props) => {
                     <Route path='/cart' exact component={Cart}/>
                     <Route path='/wishlist' exact component={Wishlist}/>
                     <Route path='/signin' exact component={Signin}/>
+                    <Route path='/signup' exact component={Signup}/>
                 </Switch>
             </Suspense>
 

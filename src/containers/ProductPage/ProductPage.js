@@ -8,6 +8,7 @@ import Style from './productPage.module.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart,faHeart} from "@fortawesome/free-solid-svg-icons";
 
+
 const ProductPage = (props) => {
     const [product, setProduct] = useState({})
     const [isLoading, setIsLoading] = useState(true)
@@ -18,7 +19,6 @@ const ProductPage = (props) => {
     useEffect(() => {
         axios.get(url)
             .then(response => {
-                console.log(response)
                 setProduct(response.data)
                 setIsLoading(false)
             })
@@ -40,7 +40,7 @@ const ProductPage = (props) => {
                     <aside>
                         <Carousel wrapAround={true}>
                             <div className={Style.ProductImage}>
-                                <img src={product.url}/>
+                                <img src={product.url} alt={product.name}/>
                             </div>
                         </Carousel>
                     </aside>

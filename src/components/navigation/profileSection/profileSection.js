@@ -28,7 +28,7 @@ const profileSection = (props) => {
                 <p className={Style.description}>My Cart</p>
             </NavLink>
 
-            <NavLink to="/coupon"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <NavLink to="/profile/#coupon"  exact className={Style.ProfileSection} activeClassName={Style.active}>
                 <FontAwesomeIcon icon={faTag} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Coupons</p>
             </NavLink>

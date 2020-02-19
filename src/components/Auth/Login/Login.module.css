@@ -31,7 +31,6 @@
 .Login >main > header{
     padding: 16px;
     text-align: center;
-    color: #03212c;
 }
 .Login >main > header > img{
     width: 180px;
@@ -51,12 +50,12 @@
 
 .Login > main > section > input{
     border: 2px solid #2FCE98;
-    padding: 10px 20px;
+    padding: 10px 16px;
     border-radius: 4px;
     background-color: #f8f8f8;
     width: available;
     margin: 10px 4px;
-    width: 40%;
+    width: 50%;
 
 }
 
@@ -82,9 +81,9 @@
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 850px){
     .Login{
-        width: 100%;
+
     }
     .Login > aside {
         display: none;
@@ -92,10 +91,13 @@
     }
 
     .Login > main{
+        background-image: url("loginlandingmobile.svg");
         background-clip: border-box;
         background-position: center;
+        background-repeat: no-repeat;
         border-radius: 6px;
         flex-basis: 100%;
+        padding: 28px 12px;
 
     }
 

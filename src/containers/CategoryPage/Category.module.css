@@ -1,12 +1,12 @@
 .CategoryPage{
     box-sizing: border-box;
     display: block;
-    padding-top: 22px;
+    padding-top: 12px;
 }
 
 .CategoryPage >h3{
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #2FCE98;
     font-size: 1.2em;
 }
