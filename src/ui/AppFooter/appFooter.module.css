@@ -1,6 +1,6 @@
 .Footer {
-    background-color: #2FCE98;
-    margin: 0;
+    background-color: whitesmoke;
+    margin-top: 100px;
     padding: 16px;
     display: flex;
     align-items: flex-start;
@@ -54,7 +54,7 @@
 
 .Copyright{
     text-align: center;
-    background-color: #2FCE98;
+    background-color: whitesmoke;
     margin: 0;
     padding: 16px 0;
 }

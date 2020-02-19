@@ -1,13 +1,24 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
 import {NavLink} from "react-router-dom";
+import {AuthContext} from "../../../context/AuthContext";
 
-const signInButton = (props) => {
+const SignInDialog = React.lazy(import("../../Auth/Login/Login"))
 
-    return(
+const SignInButton = (props) => {
+
+    const contextVal = useContext(AuthContext)
+    let displayVal = "Sign In"
+    if (contextVal.isLoggedIn) {
+        displayVal = "Hi! "+ contextVal.user.displayName
+    }
+
+    return (
         <NavLink className={props.style} to="/profile" activeClassName={props.active} exact>
-            <h4>Sign in</h4>
+            <h4>{displayVal}</h4>
         </NavLink>
     )
+
+
 }
 
-export default signInButton
+export default SignInButton

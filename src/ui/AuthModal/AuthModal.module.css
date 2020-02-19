@@ -2,12 +2,21 @@
     position: fixed;
     background-color: white;
     border-radius: 6px;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.4s ease-out;
     box-sizing: border-box;
     z-index: 95;
+
+}
+
+@media (max-width: 850px) {
+
+    .AuthModal{
+        width: 95%;
+    }
 
 }
 

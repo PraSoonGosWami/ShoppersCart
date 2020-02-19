@@ -8,8 +8,8 @@ const AuthModal = (props) => {
         history.goBack()
     }
 
-    return (
 
+    return (
         <React.Fragment>
             <Backdrop show onBackDropClicked={onBackDropClicked} />
             <div className={Style.AuthModal}>
