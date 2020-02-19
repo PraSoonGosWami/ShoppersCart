@@ -16,20 +16,22 @@ const Login = (props) => {
                 <main>
                     <header>
                         <img src={Logo}/>
-                        <h4>Welcome Back</h4>
-                        <h5>Please Login to continue</h5>
+                        <h4>Welcome to Shoppers Cart</h4>
+                        <h5>Please Sign Up</h5>
                     </header>
                     <section>
                         <label style={{marginRight:"140px"}}>Email</label>
-                        <input id="email" type="email"/><br/>
+                        <input type="email"/><br/>
                         <label style={{marginRight:"110px"}}>Password</label>
-                        <input id="password" type="password"/>
+                        <input type="password"/><br/>
+                        <label style={{marginRight:"80px"}}>Mobile Number</label>
+                        <input type="tel"/><br/>
+                        <label>
+                            <input type="checkbox" checked="checked"/>
+                            I have read all <Link to="/tc" style={{color:"#2FCE98"}}>terms & conditions</Link>
+                        </label>
                         <div className={Style.ButtonDiv}>
-                            <button>Sign In</button>
-                            <label style={{marginTop : "30px"}}>New to Shoppers Cart!</label>
-                            <Link to="/signup">
-                                <button type="button">Sign Up</button>
-                            </Link>
+                            <button>Sign Up</button>
                         </div>
                     </section>
                 </main>

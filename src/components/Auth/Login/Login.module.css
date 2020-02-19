@@ -37,9 +37,6 @@
     width: 180px;
     margin: 16px 8px;
 }
-.Login > main > header > h4 {
-
-}
 
 .Login > main > section{
     display: flex;
@@ -62,6 +59,7 @@
 
 .ButtonDiv{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -79,8 +77,6 @@
     margin: 4px;
     flex-basis: 30%;
 }
-
-
 
 @media (max-width: 850px) {
     .Login{
@@ -102,12 +98,19 @@
     .Login > main > section > input {
         padding: 8px 10px;
     }
+
+    .Login > main > section > label {
+        margin-right: 100px;
+    }
 }
 
 @media (max-width: 500px) {
     .Login > main > section > input {
         padding: 8px 10px;
-        width: 60%;
+    }
+
+    .Login > main > section > label {
+        margin-right: 100px;
     }
 }
 
