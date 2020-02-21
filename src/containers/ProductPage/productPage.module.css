@@ -39,6 +39,7 @@
     margin: 8px 8px 8px 0;
 }
 
+
 .ButtonDiv{
     display: flex;
     justify-content: flex-start;
@@ -148,13 +149,6 @@
         font-size: 0.78em;
     }
 
-    .ButtonCart{
-        padding: 0px 8px;
-    }
-
-    .ButtonWish{
-        padding: 2px 8px;
-    }
 
 }
 

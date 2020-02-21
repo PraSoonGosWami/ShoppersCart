@@ -1,79 +1,103 @@
-import React, {Component} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {withRouter} from "react-router";
 import Style from './Category.module.css'
 import Axios from '../../AxiosInstance'
 import Spinner from '../../ui/spinner/spinner'
 import CategoryListView from './categoryListView/categoryListView'
-const AppFooter = React.lazy(()=>import( "../../ui/AppFooter/AppFooter"))
+import {AppContext} from "../../context/AppContext";
 
-class CategoryPage extends Component {
-    state = {
-        products: null,
-        isLoading: true,
-        catName: "Loading..."
-    }
-    catId = this.props.match.params.cid
+const AppFooter = React.lazy(() => import( "../../ui/AppFooter/AppFooter"))
 
-    componentDidMount() {
+const CategoryPage = (props) => {
+    //initializing states
+    const [products, setProducts] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
+    const [catName, setCatName] = useState("Loading...")
 
-        Axios.get("/products/" + this.catId + ".json")
+    //getting cat id from url
+    const catId = props.match.params.cid
+
+    //getting context value
+    const contextValue = useContext(AppContext)
+
+    //getting data from backend once components get mounted
+    useEffect(() => {
+        //getting all the products for single category
+        Axios.get("/products/" + catId + ".json")
             .then(response => {
-                this.setState({isLoading: false})
-                this.setState({products: response.data})
+                setProducts(response.data)
+                setIsLoading(false)
             })
             .catch(error => {
-                this.setState({isLoading: false})
+                setIsLoading(false)
                 console.log(error)
             })
 
 
-        Axios.get("/categories/" + this.catId + "/catName.json")
+        //getting the category name
+        Axios.get("/categories/" + catId + "/catName.json")
             .then(response => {
-                this.setState({catName: response.data})
-                this.setState({isLoading: false})
-
+                setCatName(response.data)
+                setIsLoading(false)
             })
             .catch(error => {
                 console.log(error)
-                this.setState({isLoading: false})
+                setIsLoading(false)
+
             })
+    })
+
+    // add to cart button click handler
+    const onAddToCartButtonClickedListener = (pid) => {
+        //setting clicked product to cart context
+        contextValue.setCart(prevState => prevState.concat(products[pid]))
+        //storing current cart to database if user is logged in
+        if (contextValue.isLoggedIn) {
+
+        }
     }
 
+    //init. spinner product list and footer
+    let spinner = <Spinner/>
+    let productList = null
+    let footer = null
 
-    render() {
-        let productList = <Spinner/>
-        let footer = null
-        if (!this.state.isLoading)
-            productList = <h5>Oops!! Something went wrong</h5>
-        if (this.state.products) {
-            productList = Object.keys(this.state.products)
+    //populating product list with downloaded data
+    if (!isLoading) {
+        spinner = null
+        if (products) {
+            productList = Object.keys(products)
                 .map((pid) => {
                     return (
                         <CategoryListView
                             key={pid}
-                            href={this.catId + "/" + pid}
-                            url={this.state.products[pid]["url"]}
-                            name={this.state.products[pid]["name"]}
-                            catName={this.state.products[pid]["catName"]}
-                            price={this.state.products[pid]["price"]}
-                            color={this.state.products[pid]["color"]}
-                            discount={parseInt(this.state.products[pid]["discount"])}
+                            href={catId + "/" + pid}
+                            url={products[pid]["url"]}
+                            name={products[pid]["name"]}
+                            catName={products[pid]["catName"]}
+                            price={products[pid]["price"]}
+                            color={products[pid]["color"]}
+                            discount={parseInt(products[pid]["discount"])}
+                            onClickHandler={() => onAddToCartButtonClickedListener(pid)}
                         />
                     )
                 })
-            footer=<AppFooter/>
+            footer = <AppFooter/>
+        } else {
+            productList = <h4>Oops!! Something went wrong</h4>
         }
-
-        return (
-            <div className={Style.CategoryPage}>
-                <h3>{this.state.catName}</h3>
-                <div className={Style.CategoryPageListHolder}>
-                    {productList}
-                </div>
-                {footer}
-            </div>
-        )
     }
+
+    return (
+        <div className={Style.CategoryPage}>
+            <h3>{catName}</h3>
+            <div className={Style.CategoryPageListHolder}>
+                {productList}
+            </div>
+            {footer}
+        </div>
+    )
+
 }
 
 export default withRouter(CategoryPage)

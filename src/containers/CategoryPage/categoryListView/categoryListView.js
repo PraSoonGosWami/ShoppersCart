@@ -28,8 +28,21 @@ const categoryListView = (props) => {
             </Link>
 
             <section className={Style.Fav}>
-                <AddToFavouriteButton/>
-                <AddToCartButton/>
+                <AddToFavouriteButton
+                    AddToFavourite={Style.AddToFavourite}
+                    style={{margin: "0 6px 0 6px"}}
+                    color="#ff2725"
+                    size="lg"
+                    text="Add to wish list"
+                />
+                <AddToCartButton
+                    style={{margin:"0 6px"}}
+                    AddToCart={Style.AddToCart}
+                    color="#2FCE98"
+                    size="lg"
+                    text="Add to cart"
+                    onClickHandler={props.onClickHandler}
+                />
             </section>
         </div>
     )

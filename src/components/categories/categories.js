@@ -3,6 +3,8 @@ import Style from './categories.module.css'
 import {NavLink} from "react-router-dom"
 
 const categories = (props) => {
+
+    //this component displays all categories on the home page
     return(
         <div className={Style.Categories}>
             <NavLink to={"/category/"+props.catId} exact className={Style.Link}>

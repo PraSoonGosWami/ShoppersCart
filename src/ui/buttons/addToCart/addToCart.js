@@ -1,15 +1,17 @@
 import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import Style from './addToCart.module.css'
 
-const addToCart = (props) => {
+
+const AddToCart = (props) => {
+
+    //this component is add to cart button used to add products to cart
     return(
-        <div className={Style.AddToCart}>
-            <FontAwesomeIcon className={Style.AddToCartIcon} icon={faShoppingCart} size="sm"/>
-            <h6>Add to cart</h6>
+        <div className={props.AddToCart} onClick={props.onClickHandler} >
+            <FontAwesomeIcon style={props.style} icon={faShoppingCart} size={props.size} color={props.color}/>
+            <p>{props.text}</p>
         </div>
     )
 }
 
-export default addToCart
+export default AddToCart

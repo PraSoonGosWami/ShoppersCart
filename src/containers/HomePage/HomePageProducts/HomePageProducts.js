@@ -49,7 +49,6 @@ class HomePageProducts extends Component {
                                         )
                                     else
                                         return null
-
                                 })}
                         </ProductHolder>
                     )

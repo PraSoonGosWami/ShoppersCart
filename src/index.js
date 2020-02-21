@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {AuthProvider} from "./context/AuthContext";
+import {AppProvider} from "./context/AppContext";
 import * as serviceWorker from './serviceWorker';
 
 const app = () =>{
     return(
-        <AuthProvider>
+        <AppProvider>
             <App />
-        </AuthProvider>
+        </AppProvider>
     )
 }
 ReactDOM.render(app(), document.getElementById('root'));

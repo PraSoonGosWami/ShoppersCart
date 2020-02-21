@@ -5,8 +5,14 @@ import {faTimesCircle, faHome} from "@fortawesome/free-solid-svg-icons";
 import UserSection from '../profileSection/profileSection'
 import {NavLink} from "react-router-dom";
 
+
+// this component is used to show navigation items
+// in mobile view
+
 const sidebar = (props) => {
+    //contains the value - to show the side menu or not
     const show = props.show;
+
     let className
     if (show)
         className = [Style.Sidebar, Style.Show]

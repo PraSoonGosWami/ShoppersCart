@@ -1,15 +1,23 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
-import Style from './addToFavourite.module.css'
+import {AppContext} from "../../../context/AppContext";
+import {useHistory} from "react-router";
 
-const addToFavourite = (props) => {
+const AddToFavourite = (props) => {
+    const contextVal = useContext(AppContext)
+    const history = useHistory()
+    const onClickHandler = () => {
+        if(!contextVal.isLoggedIn)
+            history.push("/signin")
+    }
+
     return(
-        <div className={Style.AddToFavourite}>
-            <FontAwesomeIcon className={Style.AddToFavouriteIcon} icon={faHeart} size="sm"/>
-            <h6>Add to favourite</h6>
+        <div className={props.AddToFavourite} onClick={onClickHandler}>
+            <FontAwesomeIcon style={props.style} icon={faHeart} size={props.size} color={props.color}/>
+            <p>{props.text}</p>
         </div>
     )
 }
 
-export default addToFavourite
+export default AddToFavourite

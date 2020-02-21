@@ -2,7 +2,7 @@
 .Login{
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 6px;
     box-sizing: border-box;
@@ -10,18 +10,18 @@
 
 .Login > aside{
     flex-basis: 40%;
-    width: 60%;
+    width: 50%;
     padding: 18px;
     background-color: #2FCE98;
     display: block;
     box-sizing: border-box;
     text-align: center;
-    height: 100%;
     border-radius: 6px 0 0 6px;
 }
 
 .Login > aside > img{
-    object-fit: scale-down;
+    object-fit: fill;
+    height: 420px;
 }
 
 .Login > main{
@@ -29,15 +29,18 @@
 }
 
 .Login >main > header{
-    padding: 16px;
+    padding: 6px 16px;
     text-align: center;
 }
 .Login >main > header > img{
-    width: 180px;
-    margin: 16px 8px;
+    width: 160px;
+    margin-top: 8px;
 }
 .Login > main > header > h4 {
-
+    margin: 5px 8px 16px 8px;
+}
+.Login > main > header > h5 {
+    margin: 4px;
 }
 
 .Login > main > section{
@@ -50,38 +53,29 @@
 
 .Login > main > section > input{
     border: 2px solid #2FCE98;
-    padding: 10px 16px;
+    padding: 10px;
     border-radius: 4px;
     background-color: #f8f8f8;
     width: available;
-    margin: 10px 4px;
+    margin: 8px 4px;
     width: 50%;
 
 }
 
-.ButtonDiv{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin: 20px 4px;
-}
 
 .Login > main > section  button {
 
-    padding: 10px 16px;
+    padding: 10px 26px;
     border: 0;
     background-color: #2FCE98;
     color: #f8f8f8;
     border-radius: 4px;
     box-shadow: 1px 1px 4px #CCCCCC;
-    margin: 4px;
-    flex-basis: 30%;
+    margin: 22px;
 }
 
 
-
-@media (max-width: 850px){
+@media (max-width: 700px){
     .Login{
 
     }
@@ -97,8 +91,7 @@
         background-repeat: no-repeat;
         border-radius: 6px;
         flex-basis: 100%;
-        padding: 28px 12px;
-
+        padding: 6px 12px;
     }
 
     .Login > main > section > input {

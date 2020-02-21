@@ -1,9 +1,9 @@
 import React, {useContext} from 'react'
-import {AuthContext} from "../../context/AuthContext";
+import {AppContext} from "../../context/AppContext";
 import {Redirect} from "react-router";
 
 const UserProfile = (props) => {
-    const contextVal = useContext(AuthContext)
+    const contextVal = useContext(AppContext)
     if (!contextVal.isLoggedIn) {
         return (
             <Redirect to={"/signin"}/>

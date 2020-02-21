@@ -1,12 +1,12 @@
 import React, {useEffect, useContext} from 'react'
 import {NavLink} from "react-router-dom";
-import {AuthContext} from "../../../context/AuthContext";
+import {AppContext} from "../../../context/AppContext";
 
 const SignInDialog = React.lazy(import("../../Auth/Login/Login"))
 
 const SignInButton = (props) => {
 
-    const contextVal = useContext(AuthContext)
+    const contextVal = useContext(AppContext)
     let displayVal = "Sign In"
     if (contextVal.isLoggedIn) {
         displayVal = "Hi! "+ contextVal.user.displayName

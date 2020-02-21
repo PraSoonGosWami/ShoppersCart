@@ -1,9 +1,12 @@
-    import React from 'react'
+import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import Style from './profileSection.module.css'
 
+
+//this component contains links to different pages for logged in user
+//used in side bar
 const profileSection = (props) => {
     return(
         <section className={Style.UserSection}>
