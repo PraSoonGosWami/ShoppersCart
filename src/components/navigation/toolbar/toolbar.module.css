@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    height: 68px;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,6 +27,7 @@
 .nav{
     display: flex;
     align-items: center;
+    padding: 0;
     margin: 0 20px;
     text-decoration: none;
     color: #212529;
@@ -43,5 +45,6 @@
     }
     .Toolbar{
         flex-direction: column;
+        height: 140px;
     }
 }

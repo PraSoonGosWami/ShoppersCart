@@ -76,14 +76,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.72em;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
 .AddToFavourite:hover{
     cursor: pointer;
     color: #ff2725;
-    font-size: 0.8em;
+    font-size: 0.85em;
 }
 
 .AddToCart{
@@ -91,19 +91,18 @@
     justify-content: center;
     align-items: center;
     margin-right: 8px;
-    font-size: 0.72em;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
 .AddToCart:hover{
     cursor: pointer;
     color: #2FCE98;
-
-    font-size: 0.8em;
+    font-size: 0.85em;
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
     .CategoryListImage > img {
         height: 180px;
     }
@@ -111,22 +110,12 @@
     .CategoryListItem {
         width: 260px;
         height: 420px;
+        margin-top: 16px;
+
     }
 
 }
 
-@media (max-width: 834px) {
-    .CategoryListImage > img {
-        height: 165px;
-    }
-
-    .CategoryListItem {
-        width: 240px;
-        height: 440px;
-    }
-
-
-}
 
 @media (max-width: 590px) {
     .CategoryListImage > img {
@@ -134,40 +123,51 @@
     }
 
     .CategoryListItem {
-        width: 230px;
-        height: 430px;
+        margin: 16px 4px 16px 4px;
+        width: 260px;
+        height: 410px;
         font-size: 0.9em;
     }
 
 }
 
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
     .CategoryListImage > img {
-        height: 200px;
+        height: 250px;
     }
 
     .CategoryListItem {
-        width: 85%;
-        height: 440px;
+        width: 95%;
+        height: auto;
+        padding: 0;
+        margin: 12px;
+    }
+
+    .CategoryListView{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
 }
 
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
     .CategoryListImage > img {
         height: 160px;
     }
 
     .CategoryListItem {
-        width: 80%;
-        height: 380px;
+        width: 90%;
+        height: auto;
     }
 
-    .CategoryListDetails {
-        font-size: 0.9em;
-    }
+    .CategoryListView{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
 
+    }
 }
 

@@ -36,7 +36,7 @@ const ProductPage = (props) => {
                 console.error(error);
                 setIsLoading(false)
             })
-    }, [])
+    }, [url])
 
     // add to cart button click handler
     const onAddToCartButtonClickedListener = () => {

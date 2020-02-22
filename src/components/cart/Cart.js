@@ -16,7 +16,7 @@ const Cart = (props) => {
         if (contextValue.cart) {
             setCart(contextValue.cart)
         }
-    })
+    },[contextValue.cart])
     return (
         <ul>
             {

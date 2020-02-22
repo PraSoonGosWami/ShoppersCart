@@ -1,38 +1,61 @@
-import React, {Component} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Toolbar from './components/navigation/toolbar/toolbar'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Sidebar from './components/navigation/sidebar/sidebar'
 import MainComponent from './components/mainComponent/mainComponent'
 import Backdrop from './ui/backdrop/backdrop'
+import Firebase from "./config/FirebaseConfig";
+import {AppContext} from "./context/AppContext";
 
 
-class App extends Component {
-    state = {
-        menuOpen: false
-    };
+const App = (props) => {
+    //init state to control side menu open handler
+    const [menuOpen,setMenuOpen] = useState(false)
 
-    menuButtonHandler = () => {
-        this.setState((prevState) => ({menuOpen: !prevState.menuOpen}))
+    //getting context value
+    const contextValue = useContext(AppContext)
+
+    const menuButtonHandler = () => {
+        setMenuOpen((prevState) => !prevState )
     }
 
-    render() {
-        return (
-            <Router>
-                <div>
-                    <Toolbar onMenuButtonClicked={this.menuButtonHandler}/>
-                    <Backdrop
-                        onBackDropClicked={this.menuButtonHandler}
-                        show={this.state.menuOpen}
-                    />
-                    <Sidebar
-                        show={this.state.menuOpen}
-                        closed={this.menuButtonHandler}
-                    />
-                    <MainComponent/>
-                </div>
-            </Router>
-        );
+    //firebase auth listener
+    //listens to any changes (login/logout)
+    //updates app context accordingly
+    const authListener = () => {
+        Firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                contextValue.setIsLoggedIn(true)
+                contextValue.setUser(user)
+            } else {
+                // User is signed out.
+                contextValue.setIsLoggedIn(false)
+                contextValue.setUser(null)
+
+            }
+        })
     }
+
+    useEffect(()=>{
+        authListener()
+    })
+
+    return (
+        <Router>
+            <div>
+                <Toolbar onMenuButtonClicked={menuButtonHandler}/>
+                <Backdrop
+                    onBackDropClicked={menuButtonHandler}
+                    show={menuOpen}
+                />
+                <Sidebar
+                    show={menuOpen}
+                    closed={menuButtonHandler}
+                />
+                <MainComponent/>
+            </div>
+        </Router>
+    );
 
 
 }

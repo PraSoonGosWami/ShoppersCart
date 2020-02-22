@@ -1,0 +1,31 @@
+.Dropdown{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.Dropdown:hover{
+    cursor: pointer;
+    color: #2FCE98;
+}
+.SignInButton{
+    color: #212529;
+    text-decoration: none;
+}
+.SignInButton:hover{
+    cursor: pointer;
+    color: #2FCE98;
+}
+.DropdownContent{
+    display: none;
+    position: absolute;
+    background-color: rgba(250,250,250,0.9);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+    border-radius: 6px;
+
+}
+
+.Dropdown:hover .DropdownContent {display: block;}

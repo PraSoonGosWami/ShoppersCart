@@ -62,7 +62,6 @@
 
 }
 
-
 .Login > main > section  button {
 
     padding: 10px 26px;
@@ -74,10 +73,26 @@
     margin: 22px;
 }
 
+.Login > main > section  button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 8px #AAAAAA;
+
+}
+
+.ForgetPassword{
+    color:#2FCE98;
+    margin:0;
+
+}
+
+.ForgetPassword:hover{
+    cursor: pointer;
+    font-size: 0.86em;
+}
 
 @media (max-width: 700px){
     .Login{
-
+        width: auto;
     }
     .Login > aside {
         display: none;
@@ -96,15 +111,23 @@
 
     .Login > main > section > input {
         padding: 8px 10px;
+        width: 60%;
     }
 }
 
 @media (max-width: 500px) {
     .Login > main > section > input {
         padding: 8px 10px;
-        width: 60%;
+        margin: 10px 8px;
+        width: 65%;
     }
 }
 
+@media (max-width: 350px) {
+    .Login > main > section > input {
+        padding: 8px 10px;
+        width: 70%;
+    }
+}
 
 

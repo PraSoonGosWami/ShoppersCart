@@ -1,28 +1,32 @@
-.UserSection{
+.UserSection {
     margin: 18px 0;
 }
 
-.ProfileSection{
+.ProfileSection {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 6px 12px;
+    margin: 6px 0;
     text-decoration: none;
-    padding: 8px 10px;
+    padding: 8px 24px;
     font-family: "Calibri Light";
     color: #212529;
     font-size: 0.9em;
 }
 
-a:hover,
-a:active,
- a.active{
+.ProfileSection:hover,
+.ProfileSection > a:hover,
+.ProfileSection > a:active,
+a.active {
     color: #2FCE98;
+    background: white;
+    font-size: 1em;
 }
 
-.ProfileSection .icon{
+.icon {
     margin: 8px 6px 8px 0px;
 }
-.ProfileSection .description{
+
+.description {
     margin: 8px 0px 8px 4px;
 }

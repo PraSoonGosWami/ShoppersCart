@@ -1,13 +1,37 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag} from "@fortawesome/free-solid-svg-icons";
+import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag, faPowerOff} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import Style from './profileSection.module.css'
+import {AppContext} from "../../../context/AppContext";
+import Firebase from "../../../config/FirebaseConfig";
 
 
 //this component contains links to different pages for logged in user
 //used in side bar
-const profileSection = (props) => {
+const ProfileSection = (props) => {
+
+    //getting context value
+    const contextVal = useContext(AppContext)
+    let logout = null
+
+    //checking if user is logged in
+    if(contextVal.isLoggedIn){
+        const userLogout = () =>{
+            Firebase.auth().signOut()
+        }
+        logout = (
+            <div className={Style.ProfileSection} onClick={userLogout} >
+                <FontAwesomeIcon icon={faPowerOff} size={props.size} className={Style.icon} />
+                <p className={Style.description}>Logout</p>
+            </div>
+        )
+    }
+
+
+
+
+
     return(
         <section className={Style.UserSection}>
 
@@ -36,8 +60,11 @@ const profileSection = (props) => {
                 <p className={Style.description}>My Coupons</p>
             </NavLink>
 
+            {logout}
+
+
         </section>
     )
 }
 
-export default profileSection
+export default ProfileSection

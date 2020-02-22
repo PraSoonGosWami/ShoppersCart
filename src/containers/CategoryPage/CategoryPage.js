@@ -90,6 +90,7 @@ const CategoryPage = (props) => {
 
     return (
         <div className={Style.CategoryPage}>
+            {spinner}
             <h3>{catName}</h3>
             <div className={Style.CategoryPageListHolder}>
                 {productList}

@@ -22,7 +22,7 @@ const CartButton = (props) => {
         if(contextValue.cart) {
             setCartLen(contextValue.cart.length)
         }
-    })
+    },[contextValue.cart])
     return(
         <NavLink className={props.style} to="/cart" activeClassName={Style.active} exact>
             <FontAwesomeIcon icon={faShoppingCart} size={props.size} />

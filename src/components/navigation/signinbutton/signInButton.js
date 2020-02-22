@@ -1,21 +1,29 @@
-import React, {useEffect, useContext} from 'react'
+import React, {useContext} from 'react'
 import {NavLink} from "react-router-dom";
 import {AppContext} from "../../../context/AppContext";
-
-const SignInDialog = React.lazy(import("../../Auth/Login/Login"))
+import ProfileSection from '../profileSection/profileSection'
+import Style from './signInButton.module.css'
 
 const SignInButton = (props) => {
 
     const contextVal = useContext(AppContext)
-    let displayVal = "Sign In"
+    let displayVal = <NavLink to="/signin" className={Style.SignInButton}><h4>Sign In</h4></NavLink>
     if (contextVal.isLoggedIn) {
-        displayVal = "Hi! "+ contextVal.user.displayName
+        if(contextVal.user)
+            displayVal = (
+                <div className={Style.Dropdown}>
+                    <h4>{`Hi! ${contextVal.user.displayName}`}</h4>
+                    <div className={Style.DropdownContent}>
+                        <ProfileSection/>
+                    </div>
+                </div>
+            )
     }
 
     return (
-        <NavLink className={props.style} to="/profile" activeClassName={props.active} exact>
-            <h4>{displayVal}</h4>
-        </NavLink>
+        <React.Fragment>
+            {displayVal}
+        </React.Fragment>
     )
 
 

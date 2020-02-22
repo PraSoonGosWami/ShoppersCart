@@ -1,16 +1,43 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import Style from "./Login.module.css"
 import LoginVector from './loginlanding.svg'
 import Logo from '../../../ui/logo/logo.png'
 import AuthModal from "../../../ui/AuthModal/AuthModal";
-import {Redirect} from "react-router";
+import {Redirect, useHistory} from "react-router";
 import {Link} from "react-router-dom";
 import {AppContext} from "../../../context/AppContext";
+import Firebase from "../../../config/FirebaseConfig";
 
 const Login = (props) => {
 
+    //setting states for login and password input
+    const [email,setEmail] = useState("")
+    const [password,setPassword] = useState("")
+
     //getting context value
     const contextValue = useContext(AppContext)
+
+    //using route history to redirect back when logged in
+    const history = useHistory()
+
+    //firebase login method
+    const login = () => {
+        Firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((response) => {
+                history.goBack()
+            })
+            .catch((error => console.log(error)))
+    }
+
+    //email
+    const onEmailChangedListener = (event) => {
+        setEmail(event.target.value)
+    }
+
+    //password
+    const onPsdChangedListener = (event) => {
+        setPassword(event.target.value)
+    }
 
     // returning login pop up if user is not logged in
     if (!contextValue.isLoggedIn) {
@@ -27,10 +54,11 @@ const Login = (props) => {
                             <h5>Please Login to continue</h5>
                         </header>
                         <section>
-                            <input type="email" placeholder={"Email"}/>
-                            <input type="password" placeholder={"Password"}/>
-                            <button>Sign In</button>
-                            <h5>Don't have an account? <Link to={"/signup"}>Sign Up</Link> here</h5>
+                            <input type="email" placeholder={"Email"} onChange={onEmailChangedListener} />
+                            <input type="password" placeholder={"Password"} onChange={onPsdChangedListener}/>
+                            <button onClick={login}>Sign In</button>
+                            <h5 className={Style.ForgetPassword}>Forgot password? </h5>
+                            <h5>Don't have an account? <Link to={"/signup"} style={{textDecoration:"none",color:"#2FCE98"}}>Sign Up</Link> here</h5>
 
                         </section>
                     </main>
