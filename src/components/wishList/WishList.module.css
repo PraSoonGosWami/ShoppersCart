@@ -1,4 +1,4 @@
-.WishList > header{
+.container > .WishList > header{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,34 +7,39 @@
     box-shadow: 0 1px 2px #BBBBBB;
 }
 
-.WishList > header > aside{
+.container > .WishList > header > aside{
     flex-basis: 45%;
     padding: 20px;
 }
 
-.ProductImage{
+.container > .ProductImage{
     text-align: center;
     width: 100%;
 }
 
-.ProductImage > img{
+.container > .ProductImage > img{
     object-fit: scale-down;
     height: 400px;
 }
 
-.WishList > header > section{
+.container > .WishList > header > section{
     flex-basis: 65%;
     padding: 16px;
     margin: 8px;
 }
 
+.container > .hdng {
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
 @media (max-width: 1500px) {
-    .WishList > header > aside{
+    .container > .WishList > header > aside{
         padding: 16px;
         width: 100%;
     }
 
-    .ProductImage > img{
+    .container > .ProductImage > img{
         height: 350px;
         width: 100%;
         object-fit: scale-down;
@@ -43,18 +48,16 @@
 }
 
 @media (max-width: 1000px) {
-    .WishList{
+    .container > .WishList{
         font-size: 0.9em;
     }
-    .WishList > header{
-    }
-
-    .WishList > header > aside{
+    
+    .container > .WishList > header > aside{
         padding: 14px;
         width: 100%;
     }
 
-    .ProductImage > img{
+    .container > .ProductImage > img{
         height: 320px;
         width: 100%;
         object-fit: scale-down;
@@ -63,34 +66,47 @@
 }
 
 @media (max-width: 800px) {
-    .WishList{
+    .container > .WishList{
         font-size: 0.9em;
     }
-    .WishList > header{
+    .container > .WishList > header{
         flex-direction: column;
     }
 
-    .WishList > header > aside{
+    .container > .WishList > header > aside{
         padding: 20px;
         width: 100%;
     }
 
-    .ProductImage > img{
+    .container > .ProductImage > img{
         height: 300px;
         width: 100%;
         object-fit: scale-down;
     }
+
+    .container > .hdng {
+        margin-left: 20px;
+        margin-top: 80px;
+    }
 }
 
 @media (max-width: 400px) {
-    .WishList{
+    .container > .WishList{
         font-size: 0.78em;
+    }
+    .container > .hdng {
+        margin-left: 20px;
+        margin-top: 80px;
     }
 
 }
 
 @media (max-width: 330px) {
-    .WishList{
+    .container > .WishList{
         font-size: 0.7em;
+    }
+    .container > .hdng {
+        margin-left: 20px;
+        margin-top: 80px;
     }
 }
