@@ -62,7 +62,7 @@ const ProductPage = (props) => {
                                 <p>ADD TO CART</p>
                            </span>
                             <span className={Style.ButtonWish}>
-                                <FontAwesomeIcon icon={faHeart} color="#ff2725" size="lg" style={{margin:"2px 8px 2px 0"}}/>
+                                <FontAwesomeIcon icon={faHeart} color="#ff2725" size="lg" style={{margin:"2px 2px 2px 0"}}/>
                                 <p>ADD TO WISH LIST</p>
                            </span>
                         </div>

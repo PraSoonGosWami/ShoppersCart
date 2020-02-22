@@ -1,0 +1,96 @@
+.WishList > header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px;
+    overflow-x: hidden;
+    box-shadow: 0 1px 2px #BBBBBB;
+}
+
+.WishList > header > aside{
+    flex-basis: 45%;
+    padding: 20px;
+}
+
+.ProductImage{
+    text-align: center;
+    width: 100%;
+}
+
+.ProductImage > img{
+    object-fit: scale-down;
+    height: 400px;
+}
+
+.WishList > header > section{
+    flex-basis: 65%;
+    padding: 16px;
+    margin: 8px;
+}
+
+@media (max-width: 1500px) {
+    .WishList > header > aside{
+        padding: 16px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 350px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .WishList{
+        font-size: 0.9em;
+    }
+    .WishList > header{
+    }
+
+    .WishList > header > aside{
+        padding: 14px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 320px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .WishList{
+        font-size: 0.9em;
+    }
+    .WishList > header{
+        flex-direction: column;
+    }
+
+    .WishList > header > aside{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .ProductImage > img{
+        height: 300px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+}
+
+@media (max-width: 400px) {
+    .WishList{
+        font-size: 0.78em;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .WishList{
+        font-size: 0.7em;
+    }
+}
