@@ -150,6 +150,19 @@
         justify-content: center;
     }
 
+    .AddToCart{
+        font-size: 0.95em;
+        padding: 4px;
+    }
+    .AddToFavourite{
+        font-size: 0.95em;
+        padding: 4px;
+    }
+    .AddToCart:hover,
+    .AddToFavourite:hover{
+        font-size: 1em;
+    }
+
 }
 
 

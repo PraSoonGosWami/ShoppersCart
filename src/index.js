@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 const app = () =>{
     return(
+
         <AppProvider>
             <App />
         </AppProvider>

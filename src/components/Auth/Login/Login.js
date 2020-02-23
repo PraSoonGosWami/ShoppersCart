@@ -7,12 +7,16 @@ import {Redirect, useHistory} from "react-router";
 import {Link} from "react-router-dom";
 import {AppContext} from "../../../context/AppContext";
 import Firebase from "../../../config/FirebaseConfig";
+import { useToasts } from 'react-toast-notifications'
+
 
 const Login = (props) => {
 
     //setting states for login and password input
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+
+    const {addToast} = useToasts()
 
     //getting context value
     const contextValue = useContext(AppContext)
@@ -26,7 +30,13 @@ const Login = (props) => {
             .then((response) => {
                 history.goBack()
             })
-            .catch((error => console.log(error)))
+            .catch((error => {
+                addToast(error.message, {
+                    appearance: 'error',
+                    autoDismiss: true,
+                    placement:"top-center"
+                })
+            }))
     }
 
     //email
@@ -54,8 +64,8 @@ const Login = (props) => {
                             <h5>Please Login to continue</h5>
                         </header>
                         <section>
-                            <input type="email" placeholder={"Email"} onChange={onEmailChangedListener} />
-                            <input type="password" placeholder={"Password"} onChange={onPsdChangedListener}/>
+                            <input type="email" placeholder={"Email"} value={email} onChange={onEmailChangedListener} />
+                            <input type="password" placeholder={"Password"} value={password} onChange={onPsdChangedListener}/>
                             <button onClick={login}>Sign In</button>
                             <h5 className={Style.ForgetPassword}>Forgot password? </h5>
                             <h5>Don't have an account? <Link to={"/signup"} style={{textDecoration:"none",color:"#2FCE98"}}>Sign Up</Link> here</h5>

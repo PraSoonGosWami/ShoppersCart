@@ -56,7 +56,8 @@ const AppFooter = (props) => {
 
                 </section>
             </footer>
-            <p className={Style.Copyright}>Icon made by Freepik from www.flaticon.com</p>
+            <p className={Style.Copyright}>© 2020 Shopper's Cart. All rights reserved</p>
+            <p style={{marginTop:"0"}} className={Style.Copyright}>Icon made by Freepik from www.flaticon.com</p>
         </React.Fragment>
     )
 }

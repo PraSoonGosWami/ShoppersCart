@@ -18,9 +18,9 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 500px) {
     .AuthModal{
-        width: 80%;
+        width: 90%;
     }
 }
 

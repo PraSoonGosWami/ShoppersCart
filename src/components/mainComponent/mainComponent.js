@@ -1,8 +1,11 @@
-import React, {Suspense} from 'react'
+import React, {Suspense, useContext, useEffect} from 'react'
 import {Route, Switch} from "react-router";
 import Style from './mainComponent.module.css'
 import HomePage from "../../containers/HomePage/HomePage";
 import Spinner from "../../ui/spinner/spinner"
+import {AppContext} from "../../context/AppContext";
+import Firebase from "../../config/FirebaseConfig";
+import {useToasts} from 'react-toast-notifications'
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
 const CategoryPage = React.lazy(() => import("../../containers/CategoryPage/CategoryPage"))
@@ -12,10 +15,46 @@ const Wishlist = React.lazy(() => import("../../components/wishList/WishList"))
 const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
 const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
 
-const mainComponent = (props) => {
+const MainComponent = (props) => {
 
     //this is the main component
     //which holds all the routes to SPA
+
+    //getting context value
+    const contextValue = useContext(AppContext)
+
+    const {addToast} = useToasts()
+
+    //firebase auth listener
+    //listens to any changes (login/logout)
+    //updates app context accordingly
+    const authListener = () => {
+
+        Firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                contextValue.setIsLoggedIn(true)
+                contextValue.setUser(user)
+
+
+            } else {
+                // User is signed out.
+                contextValue.setIsLoggedIn(false)
+                contextValue.setUser(null)
+                addToast("Welcome aboard\nPlease sign in to get the most of us" , {
+                    appearance: 'info',
+                    autoDismiss: true,
+                })
+
+            }
+        })
+    }
+
+    useEffect(() => {
+        authListener()
+
+
+    }, [Firebase.auth().currentUser])
+
 
     return (
         <main className={Style.MainContainer}>
@@ -57,4 +96,4 @@ const mainComponent = (props) => {
     )
 }
 
-export default mainComponent
+export default MainComponent
