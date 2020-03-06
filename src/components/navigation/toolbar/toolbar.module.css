@@ -10,7 +10,9 @@
     background-color: white;
     z-index: 80;
     box-shadow: 2px 2px 5px #BBBBBB;
+
 }
+
 .Toolbar > a{
     color: #212529;
 }

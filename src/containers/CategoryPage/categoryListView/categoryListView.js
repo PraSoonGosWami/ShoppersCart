@@ -34,6 +34,7 @@ const categoryListView = (props) => {
                     color="#ff2725"
                     size="lg"
                     text="Add to wish list"
+                    onClickHandler={props.onClickHandler}
                 />
                 <AddToCartButton
                     style={{margin:"0 6px"}}
@@ -41,7 +42,7 @@ const categoryListView = (props) => {
                     color="#2FCE98"
                     size="lg"
                     text="Add to cart"
-                    onClickHandler={props.onClickHandler}
+                    onCartButtonClickHandler={props.onCartButtonClickHandler}
                 />
             </section>
         </div>

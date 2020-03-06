@@ -12,6 +12,7 @@
 }
 
 .CategoryPageListHolder{
+    margin: 8px;
     display: flex;
     padding: 4px;
     align-items: center;

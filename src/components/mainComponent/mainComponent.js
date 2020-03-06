@@ -14,6 +14,7 @@ const Cart = React.lazy(() => import("../../components/cart/Cart"))
 const Wishlist = React.lazy(() => import("../../components/wishList/WishList"))
 const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
 const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
+const ErrorPage = React.lazy(()=> import("../../ui/Error404Page/Error404Page"))
 
 const MainComponent = (props) => {
 
@@ -35,7 +36,6 @@ const MainComponent = (props) => {
                 contextValue.setIsLoggedIn(true)
                 contextValue.setUser(user)
 
-
             } else {
                 // User is signed out.
                 contextValue.setIsLoggedIn(false)
@@ -52,8 +52,7 @@ const MainComponent = (props) => {
     useEffect(() => {
         authListener()
 
-
-    }, [Firebase.auth().currentUser])
+    },[])
 
 
     return (
@@ -88,7 +87,7 @@ const MainComponent = (props) => {
                     <Route path='/signup' exact component={Signup}/>
 
                     {/*Route to unknown pages are handled here*/}
-                    <Route render={() => <h2>Error 404 NOT FOUND</h2>}/>
+                    <Route component={ErrorPage}/>
                 </Switch>
             </Suspense>
 

@@ -8,12 +8,16 @@ import AddToFavouriteButton from "../../ui/buttons/addToFavourite/addToFavourite
 import AddToCartButton from "../../ui/buttons/addToCart/addToCart";
 import {AppContext} from "../../context/AppContext";
 import AppFooter from "../../ui/AppFooter/AppFooter";
+import {useToasts} from "react-toast-notifications";
+import Backdrop from "../../ui/backdrop/backdrop";
 
 
 const ProductPage = (props) => {
     //initializing states
     const [product, setProduct] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
+    const [adding, setAdding] = useState(false)
+
 
     //getting category id  and product id from url
     const cid = useParams()["cid"]
@@ -23,6 +27,10 @@ const ProductPage = (props) => {
 
     //getting context value
     const contextValue = useContext(AppContext)
+
+    //toast notification
+    const {addToast} = useToasts()
+
 
     //getting data from backend once components get mounted
     useEffect(() => {
@@ -41,12 +49,56 @@ const ProductPage = (props) => {
     // add to cart button click handler
     const onAddToCartButtonClickedListener = () => {
         //setting clicked product to cart context
+        setAdding(true)
         contextValue.setCart(prevState => prevState.concat(product))
-        //alert("Product added to cart")
-
         //storing current cart to database if user is logged in
-        if(contextValue.isLoggedIn){
+        if (contextValue.isLoggedIn) {
             //send data to backend
+            const url = `/cart/${contextValue.user.uid}/${contextValue.user.uid + product.id}.json`
+        }
+        //alert("Product added to cart")
+        addToast("Product successfully added to your cart!", {
+            appearance: 'success',
+            autoDismiss: true,
+        })
+
+
+    }
+
+    //add to wishlist button click handler
+    const onAddToWishListButtonClickedListener = () => {
+        //storing current wishlist to database if user is logged in
+
+        if (contextValue.isLoggedIn) {
+            setAdding(true)
+
+            //send data to database
+            const data = {
+                name: product.name,
+                catName: product.catName,
+                pid: product.id,
+                cid: product.category,
+                price: "₹" + Math.round(product.price - ((product.price) * (product.discount / 100)))
+                    .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                img: product.url
+            }
+            const url = `/wishlist/${contextValue.user.uid}/${contextValue.user.uid + product.id}.json`
+            axios.put(url, data)
+                .then(response => {
+                    setAdding(false)
+
+                    addToast("Product successfully added to your wish list!", {
+                        appearance: 'success',
+                        autoDismiss: true,
+                    })
+                })
+                .catch(error => {
+                    addToast("Something went wrong!Please try again", {
+                        appearance: 'error',
+                        autoDismiss: true,
+                    })
+                    setAdding(true)
+                })
         }
     }
 
@@ -91,7 +143,7 @@ const ProductPage = (props) => {
                                     color="#2FCE98"
                                     size="lg"
                                     text="ADD TO CART"
-                                    onClickHandler={onAddToCartButtonClickedListener}
+                                    onCartButtonClickHandler={onAddToCartButtonClickedListener}
                                 />
                                 <AddToFavouriteButton
                                     AddToFavourite={Style.ButtonWish}
@@ -99,6 +151,7 @@ const ProductPage = (props) => {
                                     color="#ff2725"
                                     size="lg"
                                     text="ADD TO WISH LIST"
+                                    onClickHandler={onAddToWishListButtonClickedListener}
                                 />
 
                             </div>
@@ -113,14 +166,14 @@ const ProductPage = (props) => {
                 </div>
             )
             footer = <AppFooter/>
-        }
-        else{
-           productView = <h2> Oops!! Seems like content you are searching for is unavailable</h2>
+        } else {
+            productView = <h2> Oops!! Seems like content you are searching for is unavailable</h2>
         }
     }
 
     return (
         <React.Fragment>
+            <Backdrop show={adding}/>
             {spinner}
             {productView}
             {footer}

@@ -8,7 +8,7 @@ import {ToastProvider} from 'react-toast-notifications'
 import { DefaultToast } from 'react-toast-notifications';
 
 const MyCustomToast = ({ children, ...props }) => (
-    <DefaultToast {...props} style={{maxWidth:"29t0px",marginTop:"20px"}}>
+    <DefaultToast {...props} style={{maxWidth:"290px",marginTop:"20px"}}>
         {children}
     </DefaultToast>
 );

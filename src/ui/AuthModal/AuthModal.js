@@ -13,6 +13,7 @@ const AuthModal = (props) => {
         <React.Fragment>
             <Backdrop show onBackDropClicked={onBackDropClicked} />
             <div className={Style.AuthModal}>
+                <span onClick={onBackDropClicked}><p>&#10006;</p></span>
                 {props.children}
             </div>
         </React.Fragment>

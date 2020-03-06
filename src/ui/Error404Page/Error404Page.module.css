@@ -1,0 +1,34 @@
+.ErrorPage{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: url("errorpage.svg");
+    background-position: center center;
+    background-size: contain;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+    height: 80vh;
+
+}
+
+.ErrorPage > a{
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #cccccc;
+    margin: 32px 16px 16px 16px;
+    padding: 12px 18px;
+    background-color: #2FCE98;
+    font-size: 1.2em;
+}
+
+.ErrorPage > a:hover{
+    box-shadow: 0px 2px 8px #BBBBBB;
+
+}

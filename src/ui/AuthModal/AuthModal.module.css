@@ -12,6 +12,22 @@
 
 }
 
+.AuthModal > span {
+    position: fixed;
+    text-align: right;
+    right: 10px;
+    top: 0px;
+    font-weight: bold;
+    padding: 0 8px;
+    color: black;
+
+}
+
+.AuthModal > span:hover{
+    color: #2FCE98;
+    cursor: pointer;
+}
+
 @media (max-width: 700px) {
     .AuthModal{
         width: 70%;

@@ -5,6 +5,8 @@ import Axios from '../../AxiosInstance'
 import Spinner from '../../ui/spinner/spinner'
 import CategoryListView from './categoryListView/categoryListView'
 import {AppContext} from "../../context/AppContext";
+import {useToasts} from "react-toast-notifications";
+import Backdrop from '../../ui/backdrop/backdrop'
 
 const AppFooter = React.lazy(() => import( "../../ui/AppFooter/AppFooter"))
 
@@ -13,12 +15,16 @@ const CategoryPage = (props) => {
     const [products, setProducts] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [catName, setCatName] = useState("Loading...")
+    const [adding, setAdding] = useState(false)
 
     //getting cat id from url
     const catId = props.match.params.cid
 
     //getting context value
     const contextValue = useContext(AppContext)
+
+    //toast notification
+    const {addToast} = useToasts()
 
     //getting data from backend once components get mounted
     useEffect(() => {
@@ -30,7 +36,10 @@ const CategoryPage = (props) => {
             })
             .catch(error => {
                 setIsLoading(false)
-                console.log(error)
+                addToast("Something went wrong!Please try again", {
+                    appearance: 'error',
+                    autoDismiss: true,
+                })
             })
 
 
@@ -41,11 +50,14 @@ const CategoryPage = (props) => {
                 setIsLoading(false)
             })
             .catch(error => {
-                console.log(error)
+                addToast("Something went wrong!Please try again", {
+                    appearance: 'error',
+                    autoDismiss: true,
+                })
                 setIsLoading(false)
 
             })
-    })
+    },[products,catId,addToast])
 
     // add to cart button click handler
     const onAddToCartButtonClickedListener = (pid) => {
@@ -54,6 +66,43 @@ const CategoryPage = (props) => {
         //storing current cart to database if user is logged in
         if (contextValue.isLoggedIn) {
 
+        }
+    }
+
+
+
+    //add to wishlist button click handler
+    const onAddToWishListButtonClickedListener = (pid) => {
+        //storing current wishlist to database if user is logged in
+        if(contextValue.isLoggedIn){
+            //send data to database
+            setAdding(true)
+            const data = {
+                name:products[pid].name,
+                catName:products[pid].catName,
+                pid: products[pid].id,
+                cid: products[pid].category,
+                price: "₹"+Math.round(products[pid].price - ((products[pid].price) * (products[pid].discount / 100)))
+                    .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                img:products[pid].url
+            }
+            const url = `/wishlist/${contextValue.user.uid}/${contextValue.user.uid+pid}.json`
+            Axios.put(url,data)
+                .then(response=>{
+                    setAdding(false)
+                    addToast("Product successfully added to your wish list!" , {
+                        appearance: 'success',
+                        autoDismiss: true,
+                    })
+
+                })
+                .catch(error=>{
+                    setAdding(false)
+                    addToast("Something went wrong!Please try again", {
+                        appearance: 'error',
+                        autoDismiss: true,
+                    })
+                })
         }
     }
 
@@ -78,7 +127,8 @@ const CategoryPage = (props) => {
                             price={products[pid]["price"]}
                             color={products[pid]["color"]}
                             discount={parseInt(products[pid]["discount"])}
-                            onClickHandler={() => onAddToCartButtonClickedListener(pid)}
+                            onCartButtonClickHandler={() => onAddToCartButtonClickedListener(pid)}
+                            onClickHandler={()=>onAddToWishListButtonClickedListener(pid)}
                         />
                     )
                 })
@@ -90,6 +140,7 @@ const CategoryPage = (props) => {
 
     return (
         <div className={Style.CategoryPage}>
+            <Backdrop show={adding}/>
             {spinner}
             <h3>{catName}</h3>
             <div className={Style.CategoryPageListHolder}>

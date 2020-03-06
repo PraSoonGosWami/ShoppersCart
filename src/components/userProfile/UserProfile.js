@@ -6,7 +6,7 @@ const UserProfile = (props) => {
     const contextVal = useContext(AppContext)
     if (!contextVal.isLoggedIn) {
         return (
-            <Redirect to={"/signin"}/>
+            <Redirect to={"/signin?from=profile"}/>
         )
     }
     else {
