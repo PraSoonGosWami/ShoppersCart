@@ -4,9 +4,10 @@ export const AppContext = createContext({})
 
 export const AppProvider = (props) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [user, setUser] = useState({displayName:"Prasoon"});
+    const [user, setUser] = useState({});
     const [cart, setCart] = useState([])
     const [wishList, setWishList] = useState(null)
+    const [searchData,setSearchData] = useState([])
 
     return (
         <AppContext.Provider
@@ -18,7 +19,9 @@ export const AppProvider = (props) => {
                 cart:cart,
                 setCart:setCart,
                 wishList:wishList,
-                setWishList:setWishList
+                setWishList:setWishList,
+                searchData:searchData,
+                setSearchData:setSearchData
             }}>
             {props.children}
         </AppContext.Provider>

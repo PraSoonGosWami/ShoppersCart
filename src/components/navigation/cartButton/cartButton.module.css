@@ -1,18 +1,14 @@
 .CartItemCount{
     width: 20px;
-    margin-left: 4px;
+    margin-left: 1px;
+    background-color: rgba(47, 206, 152, 0.79);
+    text-align: center;
+    border-radius: 50%;
+    color: white;
 }
 
-.CartItemCount::before{
-    content: '(';
-}
-
-.CartItemCount::after{
-    content: ')';
-}
-
-a:hover,
-a:active,
-a.active {
+.CartItemCount> a:hover,
+.CartItemCount a:active,
+.CartItemCount a.active {
     color: #2FCE98;
 }

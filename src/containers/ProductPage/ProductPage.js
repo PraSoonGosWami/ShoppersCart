@@ -9,7 +9,10 @@ import AddToCartButton from "../../ui/buttons/addToCart/addToCart";
 import {AppContext} from "../../context/AppContext";
 import AppFooter from "../../ui/AppFooter/AppFooter";
 import {useToasts} from "react-toast-notifications";
-import Backdrop from "../../ui/backdrop/backdrop";
+import LoadModal from "../../ui/LoadModal/LoadModal";
+import addToCartFunction from "../../helper/addToCartFunction";
+import addToWishListFunction from "../../helper/addToWishListFunction";
+import dataModel from "../../helper/dataModel";
 
 
 const ProductPage = (props) => {
@@ -48,58 +51,14 @@ const ProductPage = (props) => {
 
     // add to cart button click handler
     const onAddToCartButtonClickedListener = () => {
-        //setting clicked product to cart context
-        setAdding(true)
-        contextValue.setCart(prevState => prevState.concat(product))
-        //storing current cart to database if user is logged in
-        if (contextValue.isLoggedIn) {
-            //send data to backend
-            const url = `/cart/${contextValue.user.uid}/${contextValue.user.uid + product.id}.json`
-        }
-        //alert("Product added to cart")
-        addToast("Product successfully added to your cart!", {
-            appearance: 'success',
-            autoDismiss: true,
-        })
 
+        addToCartFunction(dataModel(product),contextValue,addToast,setAdding)
 
     }
 
     //add to wishlist button click handler
     const onAddToWishListButtonClickedListener = () => {
-        //storing current wishlist to database if user is logged in
-
-        if (contextValue.isLoggedIn) {
-            setAdding(true)
-
-            //send data to database
-            const data = {
-                name: product.name,
-                catName: product.catName,
-                pid: product.id,
-                cid: product.category,
-                price: "₹" + Math.round(product.price - ((product.price) * (product.discount / 100)))
-                    .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-                img: product.url
-            }
-            const url = `/wishlist/${contextValue.user.uid}/${contextValue.user.uid + product.id}.json`
-            axios.put(url, data)
-                .then(response => {
-                    setAdding(false)
-
-                    addToast("Product successfully added to your wish list!", {
-                        appearance: 'success',
-                        autoDismiss: true,
-                    })
-                })
-                .catch(error => {
-                    addToast("Something went wrong!Please try again", {
-                        appearance: 'error',
-                        autoDismiss: true,
-                    })
-                    setAdding(true)
-                })
-        }
+        addToWishListFunction(contextValue,setAdding,product,addToast)
     }
 
     //init. spinner product list and footer
@@ -173,7 +132,7 @@ const ProductPage = (props) => {
 
     return (
         <React.Fragment>
-            <Backdrop show={adding}/>
+            <LoadModal show={adding}/>
             {spinner}
             {productView}
             {footer}

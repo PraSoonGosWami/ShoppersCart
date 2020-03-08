@@ -6,7 +6,10 @@ import Spinner from '../../ui/spinner/spinner'
 import CategoryListView from './categoryListView/categoryListView'
 import {AppContext} from "../../context/AppContext";
 import {useToasts} from "react-toast-notifications";
-import Backdrop from '../../ui/backdrop/backdrop'
+import addToCartFunction from "../../helper/addToCartFunction";
+import addToWishListFunction from "../../helper/addToWishListFunction";
+import LoadModal from "../../ui/LoadModal/LoadModal";
+import dataModel from "../../helper/dataModel";
 
 const AppFooter = React.lazy(() => import( "../../ui/AppFooter/AppFooter"))
 
@@ -61,49 +64,15 @@ const CategoryPage = (props) => {
 
     // add to cart button click handler
     const onAddToCartButtonClickedListener = (pid) => {
-        //setting clicked product to cart context
-        contextValue.setCart(prevState => prevState.concat(products[pid]))
-        //storing current cart to database if user is logged in
-        if (contextValue.isLoggedIn) {
+        addToCartFunction(dataModel(products[pid]),contextValue,addToast,setAdding)
 
-        }
     }
 
 
 
     //add to wishlist button click handler
     const onAddToWishListButtonClickedListener = (pid) => {
-        //storing current wishlist to database if user is logged in
-        if(contextValue.isLoggedIn){
-            //send data to database
-            setAdding(true)
-            const data = {
-                name:products[pid].name,
-                catName:products[pid].catName,
-                pid: products[pid].id,
-                cid: products[pid].category,
-                price: "₹"+Math.round(products[pid].price - ((products[pid].price) * (products[pid].discount / 100)))
-                    .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-                img:products[pid].url
-            }
-            const url = `/wishlist/${contextValue.user.uid}/${contextValue.user.uid+pid}.json`
-            Axios.put(url,data)
-                .then(response=>{
-                    setAdding(false)
-                    addToast("Product successfully added to your wish list!" , {
-                        appearance: 'success',
-                        autoDismiss: true,
-                    })
-
-                })
-                .catch(error=>{
-                    setAdding(false)
-                    addToast("Something went wrong!Please try again", {
-                        appearance: 'error',
-                        autoDismiss: true,
-                    })
-                })
-        }
+        addToWishListFunction(contextValue,setAdding,products[pid],addToast)
     }
 
     //init. spinner product list and footer
@@ -140,7 +109,7 @@ const CategoryPage = (props) => {
 
     return (
         <div className={Style.CategoryPage}>
-            <Backdrop show={adding}/>
+            <LoadModal show={adding}/>
             {spinner}
             <h3>{catName}</h3>
             <div className={Style.CategoryPageListHolder}>

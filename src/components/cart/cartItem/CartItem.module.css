@@ -1,0 +1,78 @@
+.CartItem{
+    margin: 1px;
+    padding: 12px 8px;
+    box-shadow: 0px 1px 4px #cccccc;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-decoration: none;
+    color: #212529;
+}
+
+.CartItem > a{
+    flex-basis: 40%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.CartItem > a >img{
+    object-fit: scale-down;
+    max-height: 200px;
+    width: 50%;
+}
+
+.CartItem > main{
+    flex-basis: 60%;
+    padding: 4px 8px;
+    margin: 2px 8px;
+}
+
+.RemoveButton{
+    color: #ed413e;
+    font-size: 0.85em;
+}
+
+.CartItem:hover{
+    box-shadow: 0px 2px 8px #BBBBBB;
+    cursor: pointer;
+    color: #212529;
+}
+.CartItem:hover,
+.RemoveButton:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .CartItem {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .CartItem > a > img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .CartItem{
+        font-size: 0.9em;
+    }
+    .CartItem > a > img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .CartItem{
+        font-size: 0.8em;
+    }
+    .CartItem > a > img {
+        width: 85%;
+    }
+}
+
+
+

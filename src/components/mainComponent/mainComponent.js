@@ -6,6 +6,7 @@ import Spinner from "../../ui/spinner/spinner"
 import {AppContext} from "../../context/AppContext";
 import Firebase from "../../config/FirebaseConfig";
 import {useToasts} from 'react-toast-notifications'
+import Axios from "../../AxiosInstance";
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
 const CategoryPage = React.lazy(() => import("../../containers/CategoryPage/CategoryPage"))
@@ -14,7 +15,7 @@ const Cart = React.lazy(() => import("../../components/cart/Cart"))
 const Wishlist = React.lazy(() => import("../../components/wishList/WishList"))
 const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
 const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
-const ErrorPage = React.lazy(()=> import("../../ui/Error404Page/Error404Page"))
+const ErrorPage = React.lazy(() => import("../../ui/Error404Page/Error404Page"))
 
 const MainComponent = (props) => {
 
@@ -34,13 +35,29 @@ const MainComponent = (props) => {
         Firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 contextValue.setIsLoggedIn(true)
+
+                //setting user data to app context
                 contextValue.setUser(user)
+                //populating cart app context from database
+
+                const url = `/cart/${user.uid}.json`
+                Axios.get(url)
+                    .then(response => {
+                        Object.keys(response.data).map(key=>{
+                            contextValue.setCart(prevVal=>prevVal.concat(response.data[key]))
+                        })
+
+                    })
+                    .catch(error => {
+                        //console.error(error)
+                    })
+
 
             } else {
                 // User is signed out.
                 contextValue.setIsLoggedIn(false)
                 contextValue.setUser(null)
-                addToast("Welcome aboard\nPlease sign in to get the most of us" , {
+                addToast("Welcome aboard\nPlease sign in to get the most of us", {
                     appearance: 'info',
                     autoDismiss: true,
                 })
@@ -52,7 +69,7 @@ const MainComponent = (props) => {
     useEffect(() => {
         authListener()
 
-    },[])
+    }, [])
 
 
     return (

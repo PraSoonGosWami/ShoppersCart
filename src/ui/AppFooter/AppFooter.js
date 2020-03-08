@@ -56,7 +56,7 @@ const AppFooter = (props) => {
 
                 </section>
             </footer>
-            <p className={Style.Copyright}>Icon made by Freepik from <a href="www.flaticon.com" style={{textDecoration:"none"}}>www.flaticon.com</a></p>
+            <p className={Style.Copyright}>Icon made by Freepik from <a href="https://www.flaticon.com" target="_blank" style={{textDecoration:"none"}}>www.flaticon.com</a></p>
         </React.Fragment>
     )
 }

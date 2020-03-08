@@ -29,6 +29,7 @@ const sidebar = (props) => {
             </div>
             <hr/>
             <UserSection size='lg'/>
+
         </nav>
     )
 }

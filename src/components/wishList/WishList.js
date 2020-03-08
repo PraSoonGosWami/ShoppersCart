@@ -6,7 +6,8 @@ import {AppContext} from "../../context/AppContext";
 import Spinner from '../../ui/spinner/spinner'
 import WishListItem from "./WishListItem/WishListItem";
 import {useToasts} from "react-toast-notifications";
-import Backdrop from '../../ui/backdrop/backdrop'
+import addToCartFunction from "../../helper/addToCartFunction";
+import LoadModal from "../../ui/LoadModal/LoadModal";
 
 
 const WishList = (props) => {
@@ -41,11 +42,8 @@ const WishList = (props) => {
     },[addToast,contextVal.user,wishList])
 
     // add to cart button click handler
-    const onAddToCartButtonClickedListener = () => {
-        //setting clicked product to cart context
-        // contextVal.setCart(prevState => prevState.concat(product))
-        //alert("Product added to cart")
-
+    const onAddToCartButtonClickedListener = (id) => {
+        addToCartFunction(wishList[id],contextVal,addToast,setProgress)
     }
 
     // remove item from cart button click handler
@@ -86,16 +84,16 @@ const WishList = (props) => {
                     <header>
                         <h3>My Wish-list</h3>
                     </header>
-                    {Object.keys(wishList).map(id=>{
+                    {Object.keys(wishList).map(keyId=>{
                         return <WishListItem
-                            key={id}
-                            name={wishList[id].name}
-                            catName={wishList[id].catName}
-                            price={wishList[id].price}
-                            img={wishList[id].img}
-                            href={`/products/${wishList[id].cid}/${wishList[id].pid}`}
-                            onCartButtonClicked={onAddToCartButtonClickedListener}
-                            onRemoveFromWishListButton={()=>onRemoveFromWishListButtonClickedListener(id)}
+                            key={keyId}
+                            name={wishList[keyId].name}
+                            catName={wishList[keyId].catName}
+                            price={wishList[keyId].price}
+                            img={wishList[keyId].img}
+                            href={`/products/${wishList[keyId].cid}/${wishList[keyId].id}`}
+                            onCartButtonClicked={()=>onAddToCartButtonClickedListener(keyId)}
+                            onRemoveFromWishListButton={()=>onRemoveFromWishListButtonClickedListener(keyId)}
                         />
                     })}
                 </div>
@@ -109,7 +107,7 @@ const WishList = (props) => {
     return (
         <React.Fragment>
             {!contextVal.isLoggedIn && <Redirect to={"/signin?from=wishlist"}/>}
-            <Backdrop show={progress}/>
+            <LoadModal show={progress}/>
             {spinner}
             {list}
             {emptyMsg}

@@ -1,0 +1,79 @@
+.Cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+.Cart > aside {
+    padding: 16px;
+    width: fit-content;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Cart > section {
+    padding: 18px 8px;
+    margin: 4px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.CartSummary {
+    font-size: 0.9em;
+    width: 80%;
+    margin: 4px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 0px 2px 6px #cccccc;
+    background-color: white;
+}
+
+.CartSummary > table {
+    width: 100%;
+}
+
+.ProceedButton {
+    text-align: center;
+    margin: 18px 8px 8px 8px;
+}
+
+.ProceedButton > button {
+    text-align: center;
+    width: 80%;
+    padding: 12px 8px;
+    font-size: 1.05em;
+    background-color: #2FCE98;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+
+}
+
+.ProceedButton > button:hover {
+    box-shadow: 0px 2px 6px #cccccc;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .Cart {
+        flex-direction: column;
+    }
+
+    .Cart > section {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CartSummary{
+
+    }
+}
