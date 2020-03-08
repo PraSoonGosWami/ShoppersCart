@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router";
 import Style from './mainComponent.module.css'
 import HomePage from "../../containers/HomePage/HomePage";
 import Spinner from "../../ui/spinner/spinner"
+import Landing from "../Admin/Landing/landing"
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
 const CategoryPage = React.lazy(() => import("../../containers/CategoryPage/CategoryPage"))
@@ -26,6 +27,7 @@ const mainComponent = (props) => {
                     <Route path='/wishlist' exact component={Wishlist}/>
                     <Route path='/signin' exact component={Signin}/>
                     <Route path='/signup' exact component={Signup}/>
+                    <Route path='/admin' exact component={Landing}/>
                 </Switch>
             </Suspense>
 
