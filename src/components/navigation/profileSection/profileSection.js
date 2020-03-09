@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag, faPowerOff} from "@fortawesome/free-solid-svg-icons";
-import {NavLink} from "react-router-dom";
+import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag, faPowerOff,faSignInAlt} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 import Style from './profileSection.module.css'
 import {AppContext} from "../../../context/AppContext";
 import Firebase from "../../../config/FirebaseConfig";
@@ -26,6 +26,13 @@ const ProfileSection = (props) => {
                 <p className={Style.description}>Logout</p>
             </div>
         )
+    }else{
+        logout = (
+            <Link to="/signin"  exact='true' className={Style.ProfileSection}>
+                <FontAwesomeIcon icon={faSignInAlt} size={props.size} className={Style.icon} />
+                <p className={Style.description}>Sign In</p>
+            </Link>
+        )
     }
 
 
@@ -35,30 +42,30 @@ const ProfileSection = (props) => {
     return(
         <section className={Style.UserSection}>
 
-            <NavLink to="/profile"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <Link to="/profile"  exact={"true"} className={Style.ProfileSection}>
                 <FontAwesomeIcon icon={faUser} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Account</p>
-            </NavLink>
+            </Link>
 
-            <NavLink to="/orders"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <Link to="/orders"  exact={"true"} className={Style.ProfileSection}>
                 <FontAwesomeIcon icon={faShoppingBag} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Orders</p>
-            </NavLink>
+            </Link>
 
-            <NavLink to="/wishlist"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <Link to="/wishlist"  exact={"true"} className={Style.ProfileSection} >
                 <FontAwesomeIcon icon={faHeart} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Wish list</p>
-            </NavLink>
+            </Link>
 
-            <NavLink to="/cart"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <Link to="/cart"  exact={"true"} className={Style.ProfileSection}>
                 <FontAwesomeIcon icon={faShoppingCart} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Cart</p>
-            </NavLink>
+            </Link>
 
-            <NavLink to="/profile/#coupon"  exact className={Style.ProfileSection} activeClassName={Style.active}>
+            <Link to="/profile/#coupon"  exact={"true"} className={Style.ProfileSection}>
                 <FontAwesomeIcon icon={faTag} size={props.size} className={Style.icon} />
                 <p className={Style.description}>My Coupons</p>
-            </NavLink>
+            </Link>
 
             {logout}
 

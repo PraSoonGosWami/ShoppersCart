@@ -9,7 +9,7 @@ const LoadModal = (props) => {
 
             pop &&
                 <React.Fragment>
-                    <Backdrop show={pop}/>
+                    <Backdrop  zindex={{zIndex:"96"}}show={pop}/>
                     <div className={Style.AuthModal}>
                         <Spinner/>
                     </div>

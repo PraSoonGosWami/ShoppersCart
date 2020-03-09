@@ -4,6 +4,7 @@
     align-items: flex-start;
     box-sizing: border-box;
     background-color: whitesmoke;
+    padding-top: 18px;
 }
 
 .Cart > aside {

@@ -39,12 +39,11 @@ const MainComponent = (props) => {
                 //setting user data to app context
                 contextValue.setUser(user)
                 //populating cart app context from database
-
                 const url = `/cart/${user.uid}.json`
                 Axios.get(url)
                     .then(response => {
                         Object.keys(response.data).map(key=>{
-                            contextValue.setCart(prevVal=>prevVal.concat(response.data[key]))
+                           return  contextValue.setCart(prevVal=>prevVal.concat(response.data[key]))
                         })
 
                     })
@@ -57,10 +56,7 @@ const MainComponent = (props) => {
                 // User is signed out.
                 contextValue.setIsLoggedIn(false)
                 contextValue.setUser(null)
-                addToast("Welcome aboard\nPlease sign in to get the most of us", {
-                    appearance: 'info',
-                    autoDismiss: true,
-                })
+
 
             }
         })

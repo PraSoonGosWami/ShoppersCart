@@ -3,6 +3,7 @@ const addToCartFunction = (product, contextValue, addToast, setAdding ) => {
 
     setAdding(true)
 
+    //finding matched item in the cart if already exists
     const matchedId = contextValue.cart.find(item => {
         return (item.id === product.id)
     })

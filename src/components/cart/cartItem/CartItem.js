@@ -20,7 +20,7 @@ const CartItem = (props) => {
                 style={{margin: "2px 8px 2px 0"}}
                 color="#ed413e"
                 size="lg"
-                onDeleteButtonClickHandler={props.onRemoveFromWishListButton}
+                onDeleteButtonClickHandler={props.onRemoveFromCartButton}
             />
         </div>
 

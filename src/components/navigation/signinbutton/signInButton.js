@@ -6,18 +6,32 @@ import Style from './signInButton.module.css'
 
 const SignInButton = (props) => {
 
+
     const contextVal = useContext(AppContext)
     let displayVal = <NavLink to="/signin" className={Style.SignInButton}><h4>Sign In</h4></NavLink>
     if (contextVal.isLoggedIn) {
-        if(contextVal.user)
-            displayVal = (
-                <div className={Style.Dropdown}>
-                    <h4>{`Hi! ${contextVal.user.displayName}`}</h4>
-                    <div className={Style.DropdownContent}>
-                        <ProfileSection/>
+        if (contextVal.user) {
+            if (contextVal.user.displayName) {
+                displayVal = (
+                    <div className={Style.Dropdown}>
+                        <h4>{`Hi! ${contextVal.user.displayName}`}</h4>
+                        <div className={Style.DropdownContent}>
+                            <ProfileSection/>
+                        </div>
                     </div>
-                </div>
-            )
+                )
+            }else{
+                displayVal = (
+                    <div className={Style.Dropdown}>
+                        <h4>{`Hello!`}</h4>
+                        <div className={Style.DropdownContent}>
+                            <ProfileSection/>
+                        </div>
+                    </div>
+                )
+            }
+        }
+
     }
 
     return (
