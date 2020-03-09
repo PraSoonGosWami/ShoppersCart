@@ -4,6 +4,8 @@ import Style from './mainComponent.module.css'
 import HomePage from "../../containers/HomePage/HomePage";
 import Spinner from "../../ui/spinner/spinner"
 import Landing from "../Admin/Landing/landing"
+import addProd from "../Admin/addProduct/addProduct"
+import modProd from "../Admin/modProd/modProd"
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
 const CategoryPage = React.lazy(() => import("../../containers/CategoryPage/CategoryPage"))
@@ -28,6 +30,8 @@ const mainComponent = (props) => {
                     <Route path='/signin' exact component={Signin}/>
                     <Route path='/signup' exact component={Signup}/>
                     <Route path='/admin' exact component={Landing}/>
+                    <Route path='/admin/addprod' exact component={addProd}/>
+                    <Route path='/admin/modprod' exact component={modProd}/>
                 </Switch>
             </Suspense>
 
