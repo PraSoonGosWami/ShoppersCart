@@ -5,7 +5,8 @@ import Style from './Cart.module.css'
 import removeFromCart from "../../helper/removeFromCart";
 import {useToasts} from "react-toast-notifications";
 import LoadModal from "../../ui/LoadModal/LoadModal";
-import Spinner from '../../ui/spinner/spinner'
+import AppFooter from "../../ui/AppFooter/AppFooter";
+import {useHistory} from "react-router";
 const Cart = (props) => {
 
     //getting context value
@@ -17,9 +18,13 @@ const Cart = (props) => {
     //toast notification
     const {addToast} = useToasts()
 
+    //use history
+    const  history = useHistory()
+
     //initializing states
     const [cart, setCart] = useState([])
     let totalPrice = 0
+    let effectivePrice = 0
     let totalDiscount = 0
     let savePercent = 0
     //getting data from context and setting it to current component state
@@ -34,76 +39,95 @@ const Cart = (props) => {
     const onRemoveFromCartButtonClickedListener = (id) => {
         removeFromCart(id, contextValue, addToast, setAdding)
     }
+
+    const checkOutHandler = () => {
+        history.replace(
+            {
+                pathname:'/checkout/payment',
+                state:{
+                    price:effectivePrice
+                }
+            }
+        )
+    }
+
+
     for(let item of cart){
-        totalPrice +=  (item["originalPrice"]-item["discountedPrice"])
+        totalPrice += item["originalPrice"]
+        effectivePrice +=  (item["originalPrice"]-item["discountedPrice"])
         totalDiscount += item["discountedPrice"]
     }
     if(totalPrice !==0 & totalDiscount!==0)
         savePercent = (Math.round(totalDiscount/totalPrice*100))
     let cartDisplay = null
-    let spinner = <Spinner/>
     let emptyCart = null
 
-    if(cart){
+
+    if(cart.length > 0){
         cartDisplay = (
-            <div className={Style.Cart}>
-                <aside>
-                    {cart.map(item => {
-                        return <CartItem
-                            key={item.id}
-                            name={item.name}
-                            catName={item.catName}
-                            price={item.price}
-                            img={item.img}
-                            href={`/products/${item.cid}/${item.id}`}
-                            onRemoveFromCartButton={() => onRemoveFromCartButtonClickedListener(item.id)}
-                        />
-                    })}
-                </aside>
-                <section>
-                    <div className={Style.CartSummary}>
-                        <h3>Order Summary</h3>
-                        <p><strong>No. of items: {cart.length}</strong></p>
-                        <p><strong>Total price: {"₹" +totalPrice}</strong></p>
-                        <p><strong>Total discount: {"₹" + totalDiscount} </strong></p>
-                        <p><strong>You save: {savePercent+"%"}</strong></p>
-                    </div>
+            <React.Fragment>
+                <div className={Style.Cart}>
+                    <aside>
+                        {cart.map(item => {
+                            return <CartItem
+                                key={item.id}
+                                name={item.name}
+                                catName={item.catName}
+                                price={item.price}
+                                img={item.img}
+                                href={`/products/${item.cid}/${item.id}`}
+                                onRemoveFromCartButton={() => onRemoveFromCartButtonClickedListener(item.id)}
+                            />
+                        })}
+                    </aside>
+                    <section>
 
-                    <div className={Style.CartSummary}>
-                        <h3>Order Items</h3>
-                        <table>
-                            <tbody>
-                            {cart.map(item => {
-                                return (
-                                    <tr key={item.id}>
-                                        <td>{item.name}</td>
-                                        <td>1</td>
-                                        <td>{"\t"}</td>
-                                        <td >{item.price}</td>
-                                    </tr>
-                                )
-                            })}
-                            </tbody>
-                        </table>
-                        <div className={Style.ProceedButton}>
-                            <button>CHECKOUT</button>
+                        <div className={Style.CartSummary}>
+                            <h3>Order Items</h3>
+                            <table>
+                                <tbody>
+                                {cart.map(item => {
+                                    return (
+                                        <tr key={item.id}>
+                                            <td>{item.name}</td>
+                                            <td>1</td>
+                                            <td>{"\t"}</td>
+                                            <td >{item.price}</td>
+                                        </tr>
+                                    )
+                                })}
+                                </tbody>
+                            </table>
+
                         </div>
-                    </div>
+                        <div className={Style.CartSummary}>
+                            <h3>Order Summary</h3>
+                            <p><strong>No. of items: {cart.length}</strong></p>
+                            <p><strong>Total price: {"₹" +totalPrice}</strong></p>
+                            <p><strong>Total discount: {"₹" + totalDiscount} </strong></p>
+                            <p><strong>You save: {savePercent+"%"}</strong></p>
+                            <p style={{fontSize:"1.15em",textAlign:"center"}}><strong>Final price: {"₹" + effectivePrice} </strong></p>
 
-                </section>
-            </div>
+                            <div className={Style.ProceedButton}>
+                                <button onClick={() => checkOutHandler()}>CHECKOUT</button>
+                            </div>
+                        </div>
+
+
+                    </section>
+                </div>
+                <AppFooter/>
+            </React.Fragment>
         )
-        spinner=null
-        emptyCart = null
-    }else{
-        cartDisplay = null
-        spinner=null
-        emptyCart = <h3>Oops! Seems like your cart is empty</h3>
     }
+    else{
+        emptyCart = <h3>No item in cart</h3>
+    }
+
+
     return (
         <React.Fragment>
             <LoadModal show={adding}/>
-            {spinner}
             {cartDisplay}
             {emptyCart}
         </React.Fragment>

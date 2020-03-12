@@ -115,6 +115,7 @@
 }
 
 @media (max-width: 500px) {
+
     .Login > main > form > input {
         margin: 10px 8px;
     }

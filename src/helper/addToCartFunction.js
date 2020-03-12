@@ -40,6 +40,7 @@ const addToCartFunction = (product, contextValue, addToast, setAdding ) => {
             appearance: 'success',
             autoDismiss: true,
         })
+        setAdding(false)
     }
 
 

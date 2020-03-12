@@ -5,6 +5,8 @@
     box-sizing: border-box;
     background-color: whitesmoke;
     padding-top: 18px;
+    overflow-x: hidden;
+    height: auto;
 }
 
 .Cart > aside {
@@ -43,11 +45,13 @@
 
 .ProceedButton {
     text-align: center;
-    margin: 18px 8px 8px 8px;
+    margin: 32px 8px 8px 8px;
+    padding-top: 16px;
 }
 
 .ProceedButton > button {
     text-align: center;
+    margin-top: 0;
     width: 80%;
     padding: 12px 8px;
     font-size: 1.05em;
@@ -69,12 +73,22 @@
     }
 
     .Cart > section {
-        width: 90%;
+        width: 95%;
         align-items: center;
         justify-content: center;
     }
 
     .CartSummary{
-
+        font-size: 0.8em;
+        box-shadow: none;
+        width: 95%;
+    }
+    .ProceedButton > button {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 16px 8px;
     }
 }

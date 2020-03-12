@@ -82,7 +82,7 @@ const WishList = (props) => {
             list = (
                 <div className={Style.WishList}>
                     <header>
-                        <h3>My Wish-list</h3>
+                        <h3>Wish List</h3>
                     </header>
                     {Object.keys(wishList).map(keyId=>{
                         return <WishListItem

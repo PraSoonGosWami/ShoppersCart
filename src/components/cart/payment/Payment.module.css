@@ -1,0 +1,31 @@
+.Payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12px;
+}
+
+.Payment > section{
+    display: block;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+
+.Payment > section > button{
+    padding: 8px 20px;
+    border: none;
+    background-color: #2FCE98;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #cccccc;
+    margin: 2px 16px;
+    width: 250px;
+}
+
+.Payment > section > button:hover{
+    cursor: pointer;
+}

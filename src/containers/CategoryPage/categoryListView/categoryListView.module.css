@@ -12,6 +12,11 @@
     overflow: hidden;
 }
 
+.CategoryListItem> ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    height: 0px;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 .CategoryListView {
     flex-basis: 90%;
     display: flex;
@@ -20,7 +25,7 @@
     flex-direction: column;
     box-sizing: border-box;
     flex-wrap: nowrap;
-    padding: 0 16px;
+    padding: 0 10px;
     text-decoration: none;
     overflow-y: auto;
     color: #212529;
@@ -47,7 +52,7 @@
     display: block;
     box-sizing: border-box;
     text-align: center;
-    padding: 16px;
+    padding: 8px;
 }
 
 .CategoryListImage > img {
@@ -132,14 +137,15 @@
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
+
     .CategoryListImage > img {
-        height: 250px;
+        height: 260px;
     }
 
     .CategoryListItem {
         width: 95%;
-        height: auto;
+        height: 280px;
         padding: 0;
         margin: 12px;
     }

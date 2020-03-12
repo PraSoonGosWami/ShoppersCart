@@ -6,7 +6,8 @@
 
 .CategoryPage >h3{
     text-align: center;
-    margin-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 12px;
     color: #2FCE98;
     font-size: 1.2em;
 }
@@ -16,7 +17,13 @@
     display: flex;
     padding: 4px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    .CategoryPage > h3{
+        font-size: 1em;
+    }
 }

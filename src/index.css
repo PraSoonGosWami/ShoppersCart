@@ -9,10 +9,22 @@ body {
 
 }
 
+html.touch *:hover
+{
+  all:unset!important;
+  pointer-events: none !important;
+
+}
+html.no-touch .thing:hover {}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body.touch *:hover {
+  pointer-events: none !important;
 }
 
 @media (max-width: 350px) {
@@ -20,5 +32,7 @@ code {
   body{
     font-size: 0.9em;
   }
+
+
 
 }

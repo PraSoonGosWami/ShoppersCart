@@ -5,7 +5,6 @@ import HomePage from "../../containers/HomePage/HomePage";
 import Spinner from "../../ui/spinner/spinner"
 import {AppContext} from "../../context/AppContext";
 import Firebase from "../../config/FirebaseConfig";
-import {useToasts} from 'react-toast-notifications'
 import Axios from "../../AxiosInstance";
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
@@ -16,6 +15,7 @@ const Wishlist = React.lazy(() => import("../../components/wishList/WishList"))
 const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
 const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
 const ErrorPage = React.lazy(() => import("../../ui/Error404Page/Error404Page"))
+const PaymentPage = React.lazy(() => import("../cart/payment/Payment"))
 
 const MainComponent = (props) => {
 
@@ -25,19 +25,17 @@ const MainComponent = (props) => {
     //getting context value
     const contextValue = useContext(AppContext)
 
-    const {addToast} = useToasts()
-
     //firebase auth listener
     //listens to any changes (login/logout)
     //updates app context accordingly
-    const authListener = () => {
+    const authListener = async () => {
 
-        Firebase.auth().onAuthStateChanged(function (user) {
+        Firebase.auth().onAuthStateChanged(await function (user) {
             if (user) {
                 contextValue.setIsLoggedIn(true)
-
                 //setting user data to app context
                 contextValue.setUser(user)
+
                 //populating cart app context from database
                 const url = `/cart/${user.uid}.json`
                 Axios.get(url)
@@ -45,7 +43,6 @@ const MainComponent = (props) => {
                         Object.keys(response.data).map(key=>{
                            return  contextValue.setCart(prevVal=>prevVal.concat(response.data[key]))
                         })
-
                     })
                     .catch(error => {
                         //console.error(error)
@@ -56,6 +53,7 @@ const MainComponent = (props) => {
                 // User is signed out.
                 contextValue.setIsLoggedIn(false)
                 contextValue.setUser(null)
+                contextValue.setCart([])
 
 
             }
@@ -63,9 +61,9 @@ const MainComponent = (props) => {
     }
 
     useEffect(() => {
-        authListener()
+        authListener().then().catch()
 
-    }, [])
+    }, [Firebase.auth()])
 
 
     return (
@@ -98,6 +96,9 @@ const MainComponent = (props) => {
 
                     {/*Route to sign up page*/}
                     <Route path='/signup' exact component={Signup}/>
+
+                    {/*Route to payment page*/}
+                    <Route path='/checkout/payment' exact component={PaymentPage}/>
 
                     {/*Route to unknown pages are handled here*/}
                     <Route component={ErrorPage}/>
