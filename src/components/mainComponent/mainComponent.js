@@ -16,6 +16,7 @@ const Signin = React.lazy(() => import("../../components/Auth/Login/Login"))
 const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
 const ErrorPage = React.lazy(() => import("../../ui/Error404Page/Error404Page"))
 const PaymentPage = React.lazy(() => import("../cart/payment/Payment"))
+const MyOrdersPage = React.lazy(() => import('../myOrders/MyOrders'))
 
 const MainComponent = (props) => {
 
@@ -99,6 +100,9 @@ const MainComponent = (props) => {
 
                     {/*Route to payment page*/}
                     <Route path='/checkout/payment' exact component={PaymentPage}/>
+
+                    {/*Route to My Order page*/}
+                    <Route path='/orders' exact component={MyOrdersPage}/>
 
                     {/*Route to unknown pages are handled here*/}
                     <Route component={ErrorPage}/>

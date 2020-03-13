@@ -28,8 +28,8 @@ const WishList = (props) => {
             Axios.get(url)
                 .then(response => {
                     setWishList(response.data);
-                    if(!wishList)
-                        setLoading(false)
+                    setTimeout(()=> setLoading(false),500)
+
                 })
                 .catch(error => {
                     addToast("Something went wrong!Please try again", {
@@ -110,7 +110,7 @@ const WishList = (props) => {
             <LoadModal show={progress}/>
             {spinner}
             {list}
-            {emptyMsg}
+            {!loading && emptyMsg}
         </React.Fragment>
     )
 

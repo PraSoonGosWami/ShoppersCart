@@ -125,7 +125,11 @@ const Login = (props) => {
 
     // redirecting accidental visit of logged in user to home page
     else {
-        return <Redirect to={"/"+new URLSearchParams(location.search).get("from")}/>
+        if(location.search)
+            return <Redirect to={"/"+new URLSearchParams(location.search).get("from")}/>
+        else
+            return <Redirect to={"/"}/>
+
     }
 
 

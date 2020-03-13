@@ -16,7 +16,7 @@ const CartItem = (props) => {
                 <h3>{props.price}</h3>
 
             </main>
-            <DeleteButton
+             <DeleteButton
                 style={{margin: "2px 8px 2px 0"}}
                 color="#ed413e"
                 size="lg"

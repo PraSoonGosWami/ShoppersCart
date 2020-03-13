@@ -7,19 +7,20 @@ import {useToasts} from "react-toast-notifications";
 import LoadModal from "../../ui/LoadModal/LoadModal";
 import AppFooter from "../../ui/AppFooter/AppFooter";
 import {useHistory} from "react-router";
+
 const Cart = (props) => {
 
     //getting context value
     const contextValue = useContext(AppContext)
 
     //init state
-    const [adding,setAdding] = useState(false)
+    const [adding, setAdding] = useState(false)
 
     //toast notification
     const {addToast} = useToasts()
 
     //use history
-    const  history = useHistory()
+    const history = useHistory()
 
     //initializing states
     const [cart, setCart] = useState([])
@@ -31,7 +32,9 @@ const Cart = (props) => {
     // once components get mounted
     useEffect(() => {
         if (contextValue.cart) {
+            setAdding(true)
             setCart(contextValue.cart)
+            setTimeout(()=>setAdding(false),1000)
         }
     }, [contextValue.cart])
 
@@ -41,87 +44,96 @@ const Cart = (props) => {
     }
 
     const checkOutHandler = () => {
+        if (!contextValue.isLoggedIn) {
+            addToast("Please login to checkout!", {
+                appearance: 'info',
+                autoDismiss: true,
+            })
+            return history.push('/signin')
+        }
         history.replace(
             {
-                pathname:'/checkout/payment',
-                state:{
-                    price:effectivePrice
+                pathname: '/checkout/payment',
+                state: {
+                    price: effectivePrice,
+                    data: cart
                 }
             }
         )
     }
 
 
-    for(let item of cart){
+    for (let item of cart) {
         totalPrice += item["originalPrice"]
-        effectivePrice +=  (item["originalPrice"]-item["discountedPrice"])
+        effectivePrice += (item["originalPrice"] - item["discountedPrice"])
         totalDiscount += item["discountedPrice"]
     }
-    if(totalPrice !==0 & totalDiscount!==0)
-        savePercent = (Math.round(totalDiscount/totalPrice*100))
+    if (totalPrice !== 0 & totalDiscount !== 0)
+        savePercent = (Math.round(totalDiscount / totalPrice * 100))
     let cartDisplay = null
     let emptyCart = null
 
+    if (!adding) {
+        if (cart.length > 0) {
+            cartDisplay = (
+                <React.Fragment>
+                    <div className={Style.Cart}>
+                        <aside>
+                            {cart.map(item => {
+                                return <CartItem
+                                    key={item.id}
+                                    name={item.name}
+                                    catName={item.catName}
+                                    price={item.price}
+                                    img={item.img}
+                                    href={`/products/${item.cid}/${item.id}`}
+                                    onRemoveFromCartButton={() => onRemoveFromCartButtonClickedListener(item.id)}
+                                />
+                            })}
+                        </aside>
+                        <section>
 
-    if(cart.length > 0){
-        cartDisplay = (
-            <React.Fragment>
-                <div className={Style.Cart}>
-                    <aside>
-                        {cart.map(item => {
-                            return <CartItem
-                                key={item.id}
-                                name={item.name}
-                                catName={item.catName}
-                                price={item.price}
-                                img={item.img}
-                                href={`/products/${item.cid}/${item.id}`}
-                                onRemoveFromCartButton={() => onRemoveFromCartButtonClickedListener(item.id)}
-                            />
-                        })}
-                    </aside>
-                    <section>
+                            <div className={Style.CartSummary}>
+                                <h3>Order Items</h3>
+                                <table>
+                                    <tbody>
+                                    {cart.map(item => {
+                                        return (
+                                            <tr key={item.id}>
+                                                <td>{item.name}</td>
+                                                <td>1</td>
+                                                <td>{"\t"}</td>
+                                                <td>{item.price}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                    </tbody>
+                                </table>
 
-                        <div className={Style.CartSummary}>
-                            <h3>Order Items</h3>
-                            <table>
-                                <tbody>
-                                {cart.map(item => {
-                                    return (
-                                        <tr key={item.id}>
-                                            <td>{item.name}</td>
-                                            <td>1</td>
-                                            <td>{"\t"}</td>
-                                            <td >{item.price}</td>
-                                        </tr>
-                                    )
-                                })}
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <div className={Style.CartSummary}>
-                            <h3>Order Summary</h3>
-                            <p><strong>No. of items: {cart.length}</strong></p>
-                            <p><strong>Total price: {"₹" +totalPrice}</strong></p>
-                            <p><strong>Total discount: {"₹" + totalDiscount} </strong></p>
-                            <p><strong>You save: {savePercent+"%"}</strong></p>
-                            <p style={{fontSize:"1.15em",textAlign:"center"}}><strong>Final price: {"₹" + effectivePrice} </strong></p>
-
-                            <div className={Style.ProceedButton}>
-                                <button onClick={() => checkOutHandler()}>CHECKOUT</button>
                             </div>
-                        </div>
+                            <div className={Style.CartSummary}>
+                                <h3>Order Summary</h3>
+                                <p><strong>No. of items: {cart.length}</strong></p>
+                                <p><strong>Total price: {"₹" + totalPrice}</strong></p>
+                                <p><strong>Total discount: {"₹" + totalDiscount} </strong></p>
+                                <p><strong>You save: {savePercent + "%"}</strong></p>
+                                <p style={{fontSize: "1.15em", textAlign: "center"}}><strong>Final
+                                    price: {"₹" + effectivePrice} </strong></p>
+
+                                <div className={Style.ProceedButton}>
+                                    <button onClick={() => checkOutHandler()}>CHECKOUT</button>
+                                </div>
+                            </div>
 
 
-                    </section>
-                </div>
-                <AppFooter/>
-            </React.Fragment>
-        )
-    }
-    else{
-        emptyCart = <h3>No item in cart</h3>
+                        </section>
+                    </div>
+                    <AppFooter/>
+                </React.Fragment>
+            )
+        } else {
+            emptyCart = <h3>No item in cart</h3>
+        }
     }
 
 
@@ -129,7 +141,7 @@ const Cart = (props) => {
         <React.Fragment>
             <LoadModal show={adding}/>
             {cartDisplay}
-            {emptyCart}
+            {!adding && emptyCart}
         </React.Fragment>
     )
 }

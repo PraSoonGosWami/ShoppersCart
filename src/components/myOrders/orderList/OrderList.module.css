@@ -1,0 +1,81 @@
+.OrderList{
+    margin: auto;
+    box-shadow: 0 1px 4px #cccccc;
+    width: 600px;
+    margin: 28px 6px;
+}
+
+.OrderList > header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 8px;
+}
+
+.OrderList > header  h5 {
+    margin: 2px 16px;
+    font-size: 0.8em;
+    color: #323232;
+    font-weight: normal;
+}
+
+.OrderListItem{
+    padding: 8px 12px;
+    margin: 4px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #212529;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+.OrderList :hover{
+    color: #212529;
+}
+
+.OrderId{
+    background-color: whitesmoke;
+    padding: 2px 8px;
+    font-size: 0.8em;
+    text-align: center;
+    color: #323232;
+    font-weight: normal;
+
+}
+.OrderListItem > img{
+    max-width: 150px;
+    margin: 4px 16px 4px 4px;
+}
+
+.OrderListItem > main {
+    margin: 8px;
+}
+
+.OrderListItem > main > h4 {
+    margin-bottom: 6px;
+}
+
+.OrderListItem > main > h5 {
+    margin-top: 0px;
+}
+
+@media (max-width: 700px) {
+    .OrderList{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .OrderListItem > img{
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 320px) {
+    .OrderListItem > img{
+        max-width: 85px;
+    }
+}
