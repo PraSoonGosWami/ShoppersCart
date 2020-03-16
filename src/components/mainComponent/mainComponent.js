@@ -6,6 +6,7 @@ import Spinner from "../../ui/spinner/spinner"
 import Landing from "../Admin/Landing/landing"
 import addProd from "../Admin/addProduct/addProduct"
 import modProd from "../Admin/modProd/modProd"
+import tc from "../../ui/termsConditions/termsConditions"
 
 const ProductPage = React.lazy(() => import("../../containers/ProductPage/ProductPage"))
 const CategoryPage = React.lazy(() => import("../../containers/CategoryPage/CategoryPage"))
@@ -32,6 +33,7 @@ const mainComponent = (props) => {
                     <Route path='/admin' exact component={Landing}/>
                     <Route path='/admin/addprod' exact component={addProd}/>
                     <Route path='/admin/modprod' exact component={modProd}/>
+                    <Route path='/terms-conditions' exact component={tc}/>
                 </Switch>
             </Suspense>
 
