@@ -1,32 +1,37 @@
 import React from 'react';
-import axios from 'axios';
+import axiosInstance from "../../../AxiosInstance";
 import Style from './addProduct.module.css';
 import {NavLink} from "react-router-dom";
 
 class addProduct extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
     state = {
+        catName: '',
+        category: '',
+        color: '',
+        coupon: '',
+        details: '',
+        discount: '',
+        id: '',
+        isAvailable: '',
         name: '',
         price: '',
-        catName: '',
-        details: ''
+        url: ''
       }
     
       handleChange = event => {
-        this.setState({ name: event.target.value,price: event.target.value, catName: event.target.value, details: event.target.value  });
+        this.setState({ [event.target.name]: event.target.value });
       }
     
       handleSubmit = event => {
         event.preventDefault();
-    
-        const product = {
-          name: this.state.name,
-          price: this.state.price,
-          catName: this.state.catName,
-          details: this.state.details
-        };
-    
-        axios.put(`https://shopper-cart.firebaseio.com/products/c001`, { product })
+        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
+        axiosInstance.put("/products/"+this.state.category+"/p013.json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
           .then(res => {
             console.log(res);
             console.log(res.data);
@@ -34,23 +39,43 @@ class addProduct extends React.Component {
       }
 
     render() {
+        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
         return(
             <div className={Style.addProd} onSubmit={this.handleSubmit}>
                 <form>
-                    <label for="fname">Product Name</label>
-                    <input className={Style.txt} type="text" id="pname" name="name" placeholder="Product Name.." onChange={this.handleChange}/>
-                    <label for="lname">Product Price</label>
-                    <input className={Style.txt} type="text" id="pprice" name="price" placeholder="Product Price.." onChange={this.handleChange}/>
-                    <label for="cat">Category</label>
-                    <select className={Style.txt} id="catName" name="category" onChange={this.handleChange}>
-                        <option value="paa">Phones & Accessories</option>
-                        <option value="lac">Laptops & Computers</option>
-                        <option value="fac">Fashion & Clothing</option>
+                    <label>Category</label>
+                    <select className={Style.txt} value={catName} name="catName" onChange={this.handleChange}>
+                        <option value={"Phones & Accessories"}>Phones & Accessories</option>
+                        <option value={"Laptops & Computers"}>Laptops & Computers</option>
+                        <option value={"Fashion & Clothing"}>Fashion & Clothing</option>
                     </select>
-                    <label for="detail">Product Details</label>
-                    <textarea className={Style.txt} id="detail" name="details" placeholder="Details..." onChange={this.handleChange} style={{height:"200px"}}></textarea>
-                    {/*<label for="detail">Product Image</label>
-                    <input className={Style.txt} type="file" id="img" name="img" accept="image/*"/>*/}
+                    <label>Category ID</label>
+                    <select className={Style.txt} value={category} name="id" onChange={this.handleChange}>
+                        <option value={"c001"}>c001</option>
+                        <option value={"c002"}>c002</option>
+                        <option value={"c004"}>c004</option>
+                    </select>
+                    <label>Color</label>
+                    <input className={Style.txt} type="text" value={color} name="color" onChange={this.handleChange}/>
+                    <label>Coupon</label>
+                    <input className={Style.txt} type="text" value={coupon} name="coupon" onChange={this.handleChange}/>
+                    <label>Product Details</label>
+                    <textarea className={Style.txt} name="details" value={details} onChange={this.handleChange} style={{height:"200px"}}></textarea>
+                    <label>Discount</label>
+                    <input className={Style.txt} type="text" value={discount} name="discount" onChange={this.handleChange}/>
+                    <label>Product ID</label>
+                    <input className={Style.txt} type="text" value={id} name="id" onChange={this.handleChange}/>
+                    <label>Availability</label>
+                    <select className={Style.txt} name="isAvailable" value={isAvailable} onChange={this.handleChange}>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <label>Product Name</label>
+                    <input className={Style.txt} type="text" name="name" value={name} onChange={this.handleChange}/>
+                    <label>Product Price</label>
+                    <input className={Style.txt} type="text" name="price" value={price} onChange={this.handleChange}/>
+                    <label>Product Image</label>
+                    <input className={Style.txt} type="file" name="img" accept="image/*"/>
                     <input className={Style.sub} type="submit" value="Submit"/>
                 </form>
                     <NavLink to={"/admin"}>
