@@ -23,7 +23,7 @@ class addProduct extends React.Component {
         isAvailable: '',
         name: '',
         price: '',
-        url: ''
+        url: 'gs://shopper-cart.appspot.com/samsung-galaxy-a50s.jpg'
       }
     
       handleChange = event => {
@@ -32,8 +32,11 @@ class addProduct extends React.Component {
     
       handleSubmit = event => {
         event.preventDefault();
-        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
-        axiosInstance.put("/products/"+this.state.category+"/p013.json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
+        const { color, coupon, details, discount, id, name, price } = this.state;
+        var catName = document.getElementById("catName").value;
+        var category = document.getElementById("catID").value;
+        var isAvailable = document.getElementById("isAvl").value;
+        axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
           .then(res => {
             console.log(res);
             console.log(res.data);
@@ -41,17 +44,18 @@ class addProduct extends React.Component {
       }
 
     render() {
-      const options = [
-        'Phones & Accessories', 'Laptops & Computers', 'Fashion & Clothing'
-      ]
         const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
         return(
             <div className={Style.addProd} onSubmit={this.handleSubmit}>
                 <form>
                     <label>Category</label>
-                    <Dropdown className={Style.txt} options={options} onChange={this._onSelect} value={catName} placeholder="Select an option" />
+                    <select className={Style.txt} id="catName" value={catName} name="id" onChange={this.handleChange}>
+                        <option value={"Phones & Accessories"}>Phones & Accessories</option>
+                        <option value={"Laptops & Computers"}>Laptops & Computers</option>
+                        <option value={"Fashion & Clothing"}>Fashion & Clothing</option>
+                    </select>
                     <label>Category ID</label>
-                    <select className={Style.txt} value={category} name="id" onChange={this.handleChange}>
+                    <select className={Style.txt} id="catID" value={category} name="id" onChange={this.handleChange}>
                         <option value={"c001"}>c001</option>
                         <option value={"c002"}>c002</option>
                         <option value={"c004"}>c004</option>
@@ -67,7 +71,7 @@ class addProduct extends React.Component {
                     <label>Product ID</label>
                     <input className={Style.txt} type="text" value={id} name="id" onChange={this.handleChange}/>
                     <label>Availability</label>
-                    <select className={Style.txt} name="isAvailable" value={isAvailable} onChange={this.handleChange}>
+                    <select className={Style.txt} id="isAvl" name="isAvailable" value={isAvailable} onChange={this.handleChange}>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
