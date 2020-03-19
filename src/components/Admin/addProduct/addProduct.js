@@ -2,6 +2,8 @@ import React from 'react';
 import axiosInstance from "../../../AxiosInstance";
 import Style from './addProduct.module.css';
 import {NavLink} from "react-router-dom";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 class addProduct extends React.Component {
 
@@ -39,16 +41,15 @@ class addProduct extends React.Component {
       }
 
     render() {
+      const options = [
+        'Phones & Accessories', 'Laptops & Computers', 'Fashion & Clothing'
+      ]
         const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
         return(
             <div className={Style.addProd} onSubmit={this.handleSubmit}>
                 <form>
                     <label>Category</label>
-                    <select className={Style.txt} value={catName} name="catName" onChange={this.handleChange}>
-                        <option value={"Phones & Accessories"}>Phones & Accessories</option>
-                        <option value={"Laptops & Computers"}>Laptops & Computers</option>
-                        <option value={"Fashion & Clothing"}>Fashion & Clothing</option>
-                    </select>
+                    <Dropdown className={Style.txt} options={options} onChange={this._onSelect} value={catName} placeholder="Select an option" />
                     <label>Category ID</label>
                     <select className={Style.txt} value={category} name="id" onChange={this.handleChange}>
                         <option value={"c001"}>c001</option>
