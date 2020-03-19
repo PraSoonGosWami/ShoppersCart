@@ -2,8 +2,6 @@ import React from 'react';
 import axiosInstance from "../../../AxiosInstance";
 import Style from './addProduct.module.css';
 import {NavLink} from "react-router-dom";
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 
 class addProduct extends React.Component {
 
@@ -41,6 +39,7 @@ class addProduct extends React.Component {
             console.log(res);
             console.log(res.data);
           })
+        alert("Product Added Successfully");
       }
 
     render() {

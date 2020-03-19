@@ -11,11 +11,11 @@ const categories = (props) => {
             <NavLink to={"/admin/addprod"} className={Style.Link}>
                 <p className={Style.LandingName}>Add Products</p>
             </NavLink>
-            <NavLink to={"/admin/modprod"} className={Style.Link}>
+            <NavLink to={"/admin"} className={Style.Link}>
                 <p className={Style.LandingName}>Modify Products</p>
             </NavLink>
-            <NavLink to={"/admin/modoff"} exact className={Style.Link}>
-                <p className={Style.LandingName}>Modify Offers</p>
+            <NavLink to={"/admin/delprod"} className={Style.Link}>
+                <p className={Style.LandingName}>Delete Products</p>
             </NavLink>
         </div>
     )
