@@ -2,24 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/myOrders/MyOrders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myOrders/MyOrders.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddAddress/AddAddress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddAddress/AddAddress.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userProfile/profile.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/Cart.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/Cart.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/cartItem/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cartItem/CartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/payment/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/payment/Payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wishList/WishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wishList/WishList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AxiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AxiosInstance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/profileSection/profileSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/signinbutton/signInButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/signinbutton/signInButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userProfile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userProfile/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userProfile/UserProfile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userProfile/UserProfile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/wishList/WishList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wishList/WishList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/homeProductHolder/homeProductHolder.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePageProducts/homeProductHolder/homeProductHolder.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/backdrop/backdrop.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/backdrop/backdrop.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/wishList/WishListItem/WishListItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wishList/WishListItem/WishListItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AppContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AppContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/AppFooter/AppFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AppFooter/AppFooter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/cart/payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -67,19 +68,19 @@
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\cart\payment" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\Error404Page" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList\WishListItem" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\config" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\Auth\Login" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\footer" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\HomePage\HomePageProducts" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\userProfile" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\navigation\profileSection" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\cart\payment" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\Error404Page" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList\WishListItem" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -172,7 +173,15 @@
       <workItem from="1583682586599" duration="18292000" />
       <workItem from="1583733753399" duration="14046000" />
       <workItem from="1584017242204" duration="13816000" />
-      <workItem from="1584084537129" duration="12379000" />
+      <workItem from="1584084537129" duration="12983000" />
+      <workItem from="1584354234286" duration="601000" />
+      <workItem from="1584355704272" duration="55000" />
+      <workItem from="1584367725830" duration="100000" />
+      <workItem from="1584370568681" duration="3879000" />
+      <workItem from="1584432627347" duration="5447000" />
+      <workItem from="1584521284756" duration="18077000" />
+      <workItem from="1584639648389" duration="1147000" />
+      <workItem from="1584688490687" duration="4677000" />
     </task>
     <servers />
   </component>
@@ -199,26 +208,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580559046468" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1583866305472">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584642198745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583866305472" />
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom" timestamp="1584084746168">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584642198745" />
+    <state width="1515" height="206" key="GridCell.Tab.0.bottom" timestamp="1584689728364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584084746168" />
-    <state width="1515" height="207" key="GridCell.Tab.0.center" timestamp="1584084746168">
+    <state width="1515" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584689728364" />
+    <state width="1515" height="206" key="GridCell.Tab.0.center" timestamp="1584689728363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584084746168" />
-    <state width="1515" height="207" key="GridCell.Tab.0.left" timestamp="1584084746167">
+    <state width="1515" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584689728363" />
+    <state width="1515" height="206" key="GridCell.Tab.0.left" timestamp="1584689728363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584084746167" />
-    <state width="1515" height="207" key="GridCell.Tab.0.right" timestamp="1584084746168">
+    <state width="1515" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584689728363" />
+    <state width="1515" height="206" key="GridCell.Tab.0.right" timestamp="1584689728363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584084746168" />
+    <state width="1515" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584689728363" />
     <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1581015814249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

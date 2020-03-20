@@ -14,7 +14,7 @@ const SignInButton = (props) => {
             if (contextVal.user.displayName) {
                 displayVal = (
                     <div className={Style.Dropdown}>
-                        <h4>{`Hi! ${contextVal.user.displayName}`}</h4>
+                        <h4>{`Hi! ${contextVal.user.displayName} `} &#x25BC;</h4>
                         <div className={Style.DropdownContent}>
                             <ProfileSection/>
                         </div>

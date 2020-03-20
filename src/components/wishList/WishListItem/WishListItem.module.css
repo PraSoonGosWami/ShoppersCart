@@ -87,7 +87,7 @@
 
 @media (max-width: 690px) {
     .WishListItem {
-        font-size: 0.85em;
+        font-size: 1em;
     }
 
 }
@@ -109,7 +109,7 @@
 @media (max-width: 450px) {
     .WishListItem {
         width: 90%;
-        font-size: 0.75em;
+        font-size: 0.86em;
     }
 
 
@@ -119,6 +119,14 @@
     .CartButton,
     .DeleteButton{
         padding: 0 6px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .WishListItem {
+        width: 90%;
+        font-size: 0.75em;
     }
 
 

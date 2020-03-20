@@ -4,7 +4,7 @@ import LoginVector from '../Login/loginlanding.svg'
 import Logo from '../../../ui/logo/logo.png'
 import AuthModal from "../../../ui/AuthModal/AuthModal";
 import {AppContext} from "../../../context/AppContext";
-import {Redirect, useHistory} from "react-router";
+import {Redirect} from "react-router";
 import LoadModal from "../../../ui/LoadModal/LoadModal";
 import { useToasts } from 'react-toast-notifications'
 import Firebase from "../../../config/FirebaseConfig";
@@ -27,7 +27,6 @@ const SignUp = (props) => {
     const {addToast} = useToasts()
 
     //
-    const history = useHistory()
     //name handler
     const nameHandler = (event) => {
         setName(event.target.value)

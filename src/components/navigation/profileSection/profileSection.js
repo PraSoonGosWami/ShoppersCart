@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faShoppingBag, faHeart, faShoppingCart, faTag, faPowerOff,faSignInAlt} from "@fortawesome/free-solid-svg-icons";
+import {faUser, faShoppingBag, faHeart, faShoppingCart, faPowerOff,faSignInAlt,faAddressCard} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 import Style from './profileSection.module.css'
 import {AppContext} from "../../../context/AppContext";
@@ -62,9 +62,9 @@ const ProfileSection = (props) => {
                 <p className={Style.description}>My Cart</p>
             </Link>
 
-            <Link to="/profile/#coupon"  exact={"true"} className={Style.ProfileSection}>
-                <FontAwesomeIcon icon={faTag} size={props.size} className={Style.icon} />
-                <p className={Style.description}>My Coupons</p>
+            <Link to="/profile/#address"  exact={"true"} className={Style.ProfileSection}>
+                <FontAwesomeIcon icon={faAddressCard} size={props.size} className={Style.icon} />
+                <p className={Style.description}>Manage Address</p>
             </Link>
 
             {logout}

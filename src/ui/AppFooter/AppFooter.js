@@ -19,12 +19,12 @@ const AppFooter = (props) => {
                 <section className={Style.FooterBasic}>
                 <span>
                     <FontAwesomeIcon icon={faEnvelope} className={Style.FooterIcon} size="lg"/>
-                    <a href="mailto:admin@shopperscart.com" target="_top"><strong>Mail us at: </strong> admin@shopperscart.com</a>
+                    <a href="mailto:support@tiddler.tech" target="_top"><strong>Mail us at: </strong> support@tiddler.tech</a>
                 </span>
 
                     <span>
                     <FontAwesomeIcon icon={faPhone} className={Style.FooterIcon} size="lg"/>
-                    <a href="tel:+91 88880 88880"><strong>Call us at: </strong> +91 88880 88880</a>
+                    <a href="tel:+91 9876543210"><strong>Call us at: </strong> +91 88880 88880</a>
                 </span>
 
                     <span>

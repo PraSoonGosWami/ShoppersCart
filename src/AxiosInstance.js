@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-        baseURL:"https://shopper-cart.firebaseio.com/"
+        baseURL: "https://shopper-cart.firebaseio.com/"
     }
 )
 
