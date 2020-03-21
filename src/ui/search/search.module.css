@@ -1,15 +1,72 @@
+.Search{
+    position: fixed;
+    top: 2.5%;
+    left: 50%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 100;
+    width: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+
+}
 .Input{
     border: 0;
+    width: 90%;
     border-radius: 4px;
     background-color: #f2f2f2;
-    width: 40%;
     padding: 10px;
     margin: 0 10px;
     font-size: 0.9em;
 }
+.Close:hover{
+    cursor: pointer;
+}
+
+input:focus{
+    outline-color: #2FCE98;
+    outline-width: thick;
+    background-color: white;
+}
+
+.SearchResult{
+    margin: 0;
+    display: inline-block;
+    width: 90%;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid #2FCE98;
+    border-left: 1px solid #2FCE98;
+    border-right: 1px solid #2FCE98;
+
+}
+
+.SearchResultHeading{
+    color: #2FCE98;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 16px;
+}
+
+.ResultsDiv{
+    text-align: left;
+    padding: 8px;
+    margin: 8px;
+}
 
 @media (max-width: 850px) {
-    .Input{
+    .Search{
+        width: 100%;
+        height: 100%;
+        top: 8%;
+    }
+    .SearchResult{
+        width: 100%;
+        height: 100%;
+    }
+    .Input {
         width: 90%;
         margin: 12px 0 20px 0;
 

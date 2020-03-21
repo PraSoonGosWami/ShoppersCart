@@ -1,6 +1,6 @@
 .Toolbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     height: 68px;
@@ -9,6 +9,7 @@
     width: 100%;
     background-color: white;
     z-index: 80;
+    padding-left: 40px;
     box-shadow: 2px 2px 5px #BBBBBB;
 
 }
@@ -29,7 +30,7 @@
 .nav{
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0 60px 0 0;
     margin: 0 20px;
     text-decoration: none;
     color: #212529;
@@ -48,5 +49,10 @@
     .Toolbar{
         flex-direction: column;
         height: 140px;
+        padding-left: 0;
+
+    }
+    .nav{
+        padding: 0;
     }
 }

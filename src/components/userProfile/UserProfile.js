@@ -199,7 +199,7 @@ const UserProfile = (props) => {
                     <aside>
                         <div className={Style.UserProfileHeader}>
                             <img
-                                src={"https://scontent.fccu1-1.fna.fbcdn.net/v/t1.0-1/p240x240/82293608_1470013383156268_1977801812396212224_o.jpg?_nc_cat=101&_nc_sid=dbb9e7&_nc_ohc=5hi4IqXrQ_8AX8xDsVo&_nc_ht=scontent.fccu1-1.fna&_nc_tp=6&oh=49c9f031aafab983b5a4deac0dc4ba06&oe=5E97F33A"}/>
+                                src={contextVal.user.photoURL}/>
                             <h3 style={{marginBottom: "4px"}}>{"Hi! " + userData.name}</h3>
                             <h5 style={{marginTop: "8px"}}>{contextVal.user.email}</h5>
                         </div>
@@ -243,7 +243,7 @@ const UserProfile = (props) => {
                                 <div>
                                     {Object.keys(userData.address).map(key => {
                                         return (
-                                           <div style={{borderBottom:"1px solid black", padding:"4px 8px",marginBottom:"6px"}}>
+                                           <div style={{borderBottom:"1px solid black", padding:"4px 8px",marginBottom:"6px",fontFamily:"monospace"}}>
                                                <p>{userData.address[key].name}</p>
                                                <p>{userData.address[key].line}</p>
                                                <p>+91 {userData.address[key].phone}</p>

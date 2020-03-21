@@ -1,0 +1,35 @@
+.SearchItem{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    margin: 4px;
+    text-decoration: none;
+    color: #212529;
+}
+.SearchItem:hover{
+    color: #212529;
+    cursor: pointer;
+    box-shadow: 0 1px 4px #cccccc;
+
+}
+.SearchItem > img{
+    height: 60px;
+    width: 60px;
+    margin: 0 16px;
+    object-fit: scale-down;
+}
+
+.SearchItem > section{
+    margin: 0 16px;
+    font-size: 0.9em;
+}
+
+.SearchItem > section > h4{
+    margin: 4px;
+}
+.SearchItem > section > h5{
+    margin: 4px;
+    color: darkgray;
+    font-weight: lighter;
+}
