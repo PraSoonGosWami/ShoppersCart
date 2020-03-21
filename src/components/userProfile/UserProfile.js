@@ -27,6 +27,8 @@ const UserProfile = (props) => {
 
     useEffect(() => {
         //getting user profile
+        if(!contextVal.user)
+            return
         const url = `/users/${contextVal.user.uid}.json`
         axiosInstance.get(url)
             .then(res => {
@@ -39,7 +41,7 @@ const UserProfile = (props) => {
             .catch(err => {
                 setIsLoading(false)
             })
-    }, [contextVal.user.uid, isUpdating])
+    }, [contextVal.user, isUpdating])
 
     const fNameHandler = (event) => {
         setUpdate(true)
@@ -243,7 +245,7 @@ const UserProfile = (props) => {
                                 <div>
                                     {Object.keys(userData.address).map(key => {
                                         return (
-                                           <div style={{borderBottom:"1px solid black", padding:"4px 8px",marginBottom:"6px",fontFamily:"monospace"}}>
+                                           <div key={key} style={{borderBottom:"1px solid black", padding:"4px 8px",marginBottom:"6px",fontFamily:"monospace",textAlign:"left"}}>
                                                <p>{userData.address[key].name}</p>
                                                <p>{userData.address[key].line}</p>
                                                <p>+91 {userData.address[key].phone}</p>
@@ -258,7 +260,7 @@ const UserProfile = (props) => {
                             }
                             {showAddressForm && <AddAddress setUpdating={(value, val) => updateStates(value, val)}/>}
                         </article>
-                        <article>
+                        <article style={{textAlign:"left"}}>
                             <h4>Contact us</h4>
                             <p><strong>Mail us: </strong>support@tiddler.tech</p>
                             <p><strong>Call us: </strong>+91 9876543210</p>

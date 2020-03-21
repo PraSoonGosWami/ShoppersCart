@@ -1,6 +1,6 @@
 .Toolbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     height: 68px;

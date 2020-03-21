@@ -23,9 +23,6 @@ code {
     monospace;
 }
 
-body.touch *:hover {
-  pointer-events: none !important;
-}
 
 @media (max-width: 350px) {
 

@@ -62,7 +62,6 @@ const Search = (props) => {
                 onChange={(event) => searchResult(event)}
                 onClick={() => setShowSearchResult(true)}
 
-
             />
             {showSearchResult && <div className={Style.SearchResult}>
                 <h4 className={Style.SearchResultHeading}>
