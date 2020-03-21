@@ -30,11 +30,11 @@ class addProduct extends React.Component {
     
       handleSubmit = event => {
         event.preventDefault();
-        const { color, coupon, details, discount, id, name, price } = this.state;
+        const { color, coupon, details, discount, id, name, price, url } = this.state;
         var catName = document.getElementById("catName").value;
         var category = document.getElementById("catID").value;
         var isAvailable = document.getElementById("isAvl").value;
-        axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
+        axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price, url})
           .then(res => {
             console.log(res);
             console.log(res.data);
