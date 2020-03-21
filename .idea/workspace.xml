@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/search/SearchItem/SearchItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/search/SearchItem/SearchItem.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/toolbar/toolbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userProfile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userProfile/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/search/SearchItem/SearchItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/search/SearchItem/SearchItem.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/search/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/search/search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/search/search.module.css" afterDir="false" />
     </list>
@@ -170,7 +167,7 @@
       <workItem from="1584432627347" duration="5447000" />
       <workItem from="1584521284756" duration="18077000" />
       <workItem from="1584639648389" duration="1147000" />
-      <workItem from="1584688490687" duration="20771000" />
+      <workItem from="1584688490687" duration="22892000" />
     </task>
     <servers />
   </component>

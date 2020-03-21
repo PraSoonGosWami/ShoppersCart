@@ -11,8 +11,6 @@ const Search = (props) => {
     const [type, setType] = useState("")
 
 
-
-
     useEffect(() => {
         const products = []
         axiosInstance.get('/products.json')
@@ -27,24 +25,27 @@ const Search = (props) => {
             .catch(err => console.log(err))
 
 
-    },[])
+    }, [])
 
 
-    const searchResult = (event) =>{
+    const searchResult = (event) => {
         setShowSearchResult(true)
         const query = event.target.value
-        if(query.length >= 1) {
+        if (query.length >= 1) {
             let res
             //search by product name
             res = data.filter(p => p.name.toLowerCase().includes(query.toLowerCase()))
             setType("pro")
-            if(!res || res.length ===0){
+            if (!res || res.length === 0) {
                 res = data.filter(p => p.catName.toLowerCase().includes(query.toLowerCase()))
                 setType("cat")
 
-            }else{
+            } else {
 
             }
+        // displays at most 6 items in search result
+            if(res.length >6)
+                res.length = 6
             setResult(res)
         }/*else{
             setResult(null)
@@ -70,9 +71,9 @@ const Search = (props) => {
                           onClick={() => setShowSearchResult(false)}>&times;</span>
                 </h4>
                 <div className={Style.ResultsDiv}>
-                    {(result && result.length > 0) ? result.map(p=>{
+                    {(result && result.length > 0) ? result.map(p => {
                         return <SearchItem
-                            onClick={()=>setShowSearchResult(false)}
+                            onClick={() => setShowSearchResult(false)}
                             key={p.id}
                             type={type}
                             catId={p.category}

@@ -6,6 +6,7 @@
     margin: 4px;
     text-decoration: none;
     color: #212529;
+    overflow: hidden;
 }
 .SearchItem:hover{
     color: #212529;
@@ -30,6 +31,6 @@
 }
 .SearchItem > section > h5{
     margin: 4px;
-    color: darkgray;
-    font-weight: lighter;
+    color: #5e5e5e;
+    font-weight: normal;
 }
