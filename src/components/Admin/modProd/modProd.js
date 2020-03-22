@@ -11,16 +11,16 @@ class modProduct extends React.Component {
       }
 
     state = {
-        catName: '',
-        category: '',
-        color: '',
-        coupon: '',
-        details: '',
-        discount: '',
-        id: '',
-        isAvailable: '',
-        name: '',
-        price: '',
+        catName: null,
+        category: null,
+        color: null,
+        coupon: null,
+        details: null,
+        discount: null,
+        id: null,
+        isAvailable: null,
+        name: null,
+        price: null,
         url: 'gs://shopper-cart.appspot.com/samsung-galaxy-a50s.jpg'
       }
     
@@ -30,37 +30,35 @@ class modProduct extends React.Component {
     
       handleSubmit = event => {
         event.preventDefault();
-        var product;
-        const { color, coupon, details, discount, id, name, price } = this.state;
+        var { color, coupon, details, discount, id, name, price } = this.state;
         var catName = document.getElementById("catName").value;
         var category = document.getElementById("catID").value;
         var isAvailable = document.getElementById("isAvl").value;
         axiosInstance.get("/products/"+category+"/"+this.state.id+".json")
             .then(response => {
-                console.log(response)
-                product=response.data;
+                if(color===null)
+                    color=response.data.color;
+                if(coupon===null)
+                    coupon=response.data.coupon;
+                if(details===null)
+                    details=response.data.details;
+                if(discount===null)
+                    discount=response.data.discount;
+                if(name===null)
+                    name=response.data.name;
+                if(price===null)
+                    price=response.data.price;
             })
             .catch(error => {
                 console.error(error);
             })
-        if(color==='')
-            color=product.color;
-        if(coupon==='')
-            coupon=product.coupon;
-        if(details==='')
-            details=product.details;
-        if(discount==='')
-            discount=product.discount;
-        if(name==='')
-            name=product.name;
-        if(price==='')
-            price=product.price;
         axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
           .then(res => {
             console.log(res);
             console.log(res.data);
           })
       }
+      
 render() {
     const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
     return(

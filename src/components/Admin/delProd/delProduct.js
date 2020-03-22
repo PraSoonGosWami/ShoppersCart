@@ -27,7 +27,7 @@ class addProduct extends React.Component {
       }
 
     render() {
-        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
+        const { category, id } = this.state;
         return(
             <div className={Style.addProd} onSubmit={this.handleSubmit}>
                 <form>
