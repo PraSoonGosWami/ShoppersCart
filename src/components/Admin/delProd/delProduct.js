@@ -35,7 +35,9 @@ class addProduct extends React.Component {
                     <select className={Style.txt} id="catID" value={category} name="id" onChange={this.handleChange}>
                         <option value={"c001"}>c001</option>
                         <option value={"c002"}>c002</option>
+                        <option value={"c003"}>c003</option>
                         <option value={"c004"}>c004</option>
+                        <option value={"c005"}>c005</option>
                     </select>
                     <label>Product ID</label>
                     <input className={Style.txt} type="text" value={id} name="id" onChange={this.handleChange}/>
