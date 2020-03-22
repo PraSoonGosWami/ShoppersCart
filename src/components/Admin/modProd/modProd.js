@@ -30,24 +30,43 @@ class modProduct extends React.Component {
     
       handleSubmit = event => {
         event.preventDefault();
-        var { color, coupon, details, discount, id, name, price } = this.state;
+        let x = 1;
+        let { color, coupon, details, discount, id, name, price } = this.state;
         var catName = document.getElementById("catName").value;
         var category = document.getElementById("catID").value;
         var isAvailable = document.getElementById("isAvl").value;
         axiosInstance.get("/products/"+category+"/"+this.state.id+".json")
             .then(response => {
                 if(color===null)
+                {
+                    console.log(response.data.color);
                     color=response.data.color;
+                }  
                 if(coupon===null)
+                {
+                    console.log(response.data.coupon);
                     coupon=response.data.coupon;
+                }
                 if(details===null)
+                {    
+                    console.log(response.data.details);
                     details=response.data.details;
+                }
                 if(discount===null)
+                {    
+                    console.log(response.data.discount);
                     discount=response.data.discount;
+                }
                 if(name===null)
+                {    
+                    console.log(response.data.name);
                     name=response.data.name;
+                }
                 if(price===null)
+                {    
+                    console.log(response.data.price);
                     price=response.data.price;
+                }
             })
             .catch(error => {
                 console.error(error);
