@@ -36,10 +36,8 @@ class addProduct extends React.Component {
         var isAvailable = document.getElementById("isAvl").value;
         axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price, url})
           .then(res => {
-            console.log(res);
-            console.log(res.data);
+            alert('Product Added Successfuly');
           })
-        alert("Product Added Successfully");
       }
 
     render() {

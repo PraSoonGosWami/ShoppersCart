@@ -22,8 +22,10 @@ class addProduct extends React.Component {
       handleSubmit = event => {
         event.preventDefault();
         var category = document.getElementById("catID").value;
-        axiosInstance.delete("/products/"+category+"/"+this.state.id+".json");
-        alert("Product Deleted Successfully");
+        axiosInstance.delete("/products/"+category+"/"+this.state.id+".json")
+          .then(res => {
+            alert('Product Deleted Successfuly');
+        })
       }
 
     render() {
