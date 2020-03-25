@@ -34,7 +34,7 @@ class addProduct extends React.Component {
             <div className={Style.addProd} onSubmit={this.handleSubmit}>
                 <form>
                     <label>Category ID</label>
-                    <select className={Style.txt} id="catID" value={category} name="id" onChange={this.handleChange}>
+                    <select className={Style.txt} id="catID" value={category} name="category" onChange={this.handleChange}>
                         <option value={"c001"}>c001</option>
                         <option value={"c002"}>c002</option>
                         <option value={"c003"}>c003</option>
