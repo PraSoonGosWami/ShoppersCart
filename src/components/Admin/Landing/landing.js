@@ -2,11 +2,9 @@ import React from 'react'
 import Style from './landing.module.css'
 import {NavLink} from "react-router-dom"
 
-const Categories = (props) => {
-
-
-    return (
-       <div className={Style.Landing}>
+const categories = (props) => {
+    return(
+        <div className={Style.Landing}>
             <NavLink to={"/admin"} exact className={Style.Link}>
                 <p className={Style.LandingName}>Home</p>
             </NavLink>
@@ -23,4 +21,4 @@ const Categories = (props) => {
     )
 }
 
-export default Categories
+export default categories
