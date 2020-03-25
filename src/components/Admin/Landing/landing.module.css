@@ -1,0 +1,50 @@
+.Landing{
+    display: flex;
+    background-color: #f7f6f8;
+    flex-direction: row;
+    align-items: center;
+    margin: 4px 6px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 4px;
+    height: 100px;
+}
+
+.Link{
+    font-size: 0.6em;
+    color: #212529;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.Landing a:hover{
+    color: #2FCE98;
+}
+
+.LandingName{
+    margin-right: 8px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+@media (min-width: 760px) {
+
+    .Landing{
+        height: auto;
+        width: auto;
+    }
+
+    .Link{
+        flex-direction: column;
+        font-size: 0.75em;
+    }
+    .Landing:hover{
+        cursor: pointer;
+    }
+}
