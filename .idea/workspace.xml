@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/Landing/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/Landing/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/addProduct/addProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/addProduct/addProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/delProd/delProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/delProd/delProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/modProd/modProd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/modProd/modProd.js" afterDir="false" />
-    </list>
+    <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,12 +162,23 @@
       <workItem from="1584521284756" duration="18077000" />
       <workItem from="1584639648389" duration="1147000" />
       <workItem from="1584688490687" duration="28049000" />
-      <workItem from="1585123195602" duration="6382000" />
+      <workItem from="1585123195602" duration="6571000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -215,10 +220,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585123950998" />
-    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1581015814249">
+    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1585129698671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1581015814249" />
+    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1585129698671" />
     <state x="294" y="0" width="1139" height="824" key="SettingsEditor" timestamp="1581779740152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
