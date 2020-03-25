@@ -108,7 +108,6 @@ const MainComponent = (props) => {
                     <Route component={ErrorPage}/>
                 </Switch>
             </Suspense>
-
         </main>
     )
 }
