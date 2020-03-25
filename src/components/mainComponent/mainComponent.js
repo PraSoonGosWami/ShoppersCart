@@ -17,6 +17,10 @@ const Signup = React.lazy(() => import("../../components/Auth/Register/SignUp"))
 const ErrorPage = React.lazy(() => import("../../ui/Error404Page/Error404Page"))
 const PaymentPage = React.lazy(() => import("../cart/payment/Payment"))
 const MyOrdersPage = React.lazy(() => import('../myOrders/MyOrders'))
+const Landing = React.lazy(() => import("../Admin/Landing/landing"))
+const addProd = React.lazy(() => import("../Admin/addProduct/addProduct"))
+const modProd = React.lazy(() => import("../Admin/modProd/modProd"))
+const delProd = React.lazy(() => import("../Admin/delProd/delProduct"))
 
 const MainComponent = (props) => {
 
@@ -103,6 +107,18 @@ const MainComponent = (props) => {
 
                     {/*Route to My Order page*/}
                     <Route path='/orders' exact component={MyOrdersPage}/>
+
+                    {/*Route to Admin Landing page*/}
+                    <Route path='/admin' exact component={Landing}/>
+
+                    {/*Route to Admin Add Product page*/}
+                    <Route path='/admin/addprod' exact component={addProd}/>
+
+                    {/*Route to Admin Modify Product page*/}
+                    <Route path='/admin/modprod' exact component={modProd}/>
+
+                    {/*Route to Delete Product page*/}
+                    <Route path='/admin/delprod' exact component={delProd}/>
 
                     {/*Route to unknown pages are handled here*/}
                     <Route component={ErrorPage}/>
