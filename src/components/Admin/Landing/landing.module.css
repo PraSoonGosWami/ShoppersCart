@@ -3,6 +3,7 @@
     background-color: #f7f6f8;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin: 4px 6px;
     box-sizing: border-box;
     text-align: center;

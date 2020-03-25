@@ -45,8 +45,8 @@ const MainComponent = (props) => {
                 const url = `/cart/${user.uid}.json`
                 Axios.get(url)
                     .then(response => {
-                        Object.keys(response.data).map(key=>{
-                           return  contextValue.setCart(prevVal=>prevVal.concat(response.data[key]))
+                        Object.keys(response.data).map(key => {
+                            return contextValue.setCart(prevVal => prevVal.concat(response.data[key]))
                         })
                     })
                     .catch(error => {
@@ -109,16 +109,20 @@ const MainComponent = (props) => {
                     <Route path='/orders' exact component={MyOrdersPage}/>
 
                     {/*Route to Admin Landing page*/}
-                    <Route path='/admin' exact component={Landing}/>
+                    {contextValue.user && contextValue.user.email === 'admin@shopperscart.com' &&
+                        <React.Fragment>
+                            <Route path='/admin' exact component={Landing}/>
 
-                    {/*Route to Admin Add Product page*/}
-                    <Route path='/admin/addprod' exact component={addProd}/>
+                            {/*Route to Admin Add Product page*/}
+                            <Route path='/admin/addprod' exact component={addProd}/>
 
-                    {/*Route to Admin Modify Product page*/}
-                    <Route path='/admin/modprod' exact component={modProd}/>
+                            {/*Route to Admin Modify Product page*/}
+                            <Route path='/admin/modprod' exact component={modProd}/>
 
-                    {/*Route to Delete Product page*/}
-                    <Route path='/admin/delprod' exact component={delProd}/>
+                            {/*Route to Delete Product page*/}
+                            <Route path='/admin/delprod' exact component={delProd}/>
+                        </React.Fragment>
+                    }
 
                     {/*Route to unknown pages are handled here*/}
                     <Route component={ErrorPage}/>
