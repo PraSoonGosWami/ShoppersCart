@@ -67,15 +67,15 @@ class modProduct extends React.Component {
                     console.log(response.data.price);
                     price=response.data.price;
                 }
+                axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
+                    .then(res => {
+                     console.log(res);
+                    console.log(res.data);
+          })
             })
             .catch(error => {
                 console.error(error);
             })
-        axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
-          })
       }
       
 render() {
