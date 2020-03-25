@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/Landing/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/Landing/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/Landing/landing.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/Landing/landing.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/addProduct/addProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/addProduct/addProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/modProd/modProd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/modProd/modProd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainComponent/mainComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +164,7 @@
       <workItem from="1584521284756" duration="18077000" />
       <workItem from="1584639648389" duration="1147000" />
       <workItem from="1584688490687" duration="28049000" />
-      <workItem from="1585123195602" duration="5223000" />
+      <workItem from="1585123195602" duration="5770000" />
     </task>
     <servers />
   </component>
