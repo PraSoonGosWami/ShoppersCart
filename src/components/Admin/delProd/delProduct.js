@@ -26,13 +26,16 @@ class addProduct extends React.Component {
             .then(res => {
                 alert('Product Deleted Successfuly');
             })
+            .catch(error => {
+                alert(error);
+            })
     }
 
     render() {
         const { category, id } = this.state;
         return(
-            <div className={Style.addProd} onSubmit={this.handleSubmit}>
-                <form>
+            <div className={Style.addProd}>
+                <form onSubmit={this.handleSubmit}>
                     <label>Category ID</label>
                     <select className={Style.txt} id="catID" value={category} name="category" onChange={this.handleChange}>
                         <option value={"c001"}>Phones & Accessories (c001)</option>

@@ -21,7 +21,7 @@ class modProduct extends React.Component {
         isAvailable: null,
         name: null,
         price: null,
-        url: 'gs://shopper-cart.appspot.com/samsung-galaxy-a50s.jpg'
+        url: null
     }
 
     handleChange = event => {
@@ -30,59 +30,44 @@ class modProduct extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        let x = 1;
-        let { color, coupon, details, discount, id, name, price } = this.state;
+        let { color, coupon, details, discount, id, name, price, url } = this.state;
         var catName = document.getElementById("catName").value;
         var category = document.getElementById("catID").value;
         var isAvailable = document.getElementById("isAvl").value;
         axiosInstance.get("/products/"+category+"/"+this.state.id+".json")
             .then(response => {
                 if(color===null)
-                {
-                    console.log(response.data.color);
                     color=response.data.color;
-                }
                 if(coupon===null)
-                {
-                    console.log(response.data.coupon);
                     coupon=response.data.coupon;
-                }
                 if(details===null)
-                {
-                    console.log(response.data.details);
                     details=response.data.details;
-                }
                 if(discount===null)
-                {
-                    console.log(response.data.discount);
                     discount=response.data.discount;
-                }
                 if(name===null)
-                {
-                    console.log(response.data.name);
                     name=response.data.name;
-                }
                 if(price===null)
-                {
-                    console.log(response.data.price);
                     price=response.data.price;
-                }
-                axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price})
+                if(url===null)
+                    url=response.data.url;
+                axiosInstance.put("/products/"+category+"/"+this.state.id+".json", { catName, category, color, coupon, details, discount, id, isAvailable, name, price, url})
                     .then(res => {
-                        console.log(res);
-                        console.log(res.data);
+                        alert("Product Modified Successful");
+                    })
+                    .catch(error => {
+                        alert(error);
                     })
             })
             .catch(error => {
-                console.error(error);
+                alert(error);
             })
     }
 
     render() {
-        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
+        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price, url } = this.state;
         return(
-            <div className={Style.modProd} onSubmit={this.handleSubmit}>
-                <form>
+            <div className={Style.modProd}>
+                <form onSubmit={this.handleSubmit}>
                     <label>Category</label>
                     <select className={Style.txt} id="catName" value={catName} name="catName" onChange={this.handleChange}>
                         <option value={"Phones & Accessories"}>Phones & Accessories</option>
@@ -118,8 +103,8 @@ class modProduct extends React.Component {
                     <input className={Style.txt} type="text" name="name" value={name} onChange={this.handleChange}/>
                     <label>Product Price</label>
                     <input className={Style.txt} type="text" name="price" value={price} onChange={this.handleChange}/>
-                    <label>Product Image</label>
-                    <input className={Style.txt} type="file" name="img" accept="image/*"/>
+                    <label>Product Image URL</label>
+                    <input className={Style.txt} type="text" name="url" value={url} onChange={this.handleChange} />
                     <input className={Style.sub} type="submit" value="Submit"/>
                 </form>
                 <NavLink to={"/admin"}>

@@ -21,7 +21,7 @@ class addProduct extends React.Component {
         isAvailable: '',
         name: '',
         price: '',
-        url: 'gs://shopper-cart.appspot.com/samsung-galaxy-a50s.jpg'
+        url: ''
     }
 
     handleChange = event => {
@@ -38,13 +38,16 @@ class addProduct extends React.Component {
             .then(res => {
                 alert('Product Added Successfuly');
             })
+            .catch(error => {
+                alert(error);
+            })
     }
 
     render() {
-        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price } = this.state;
+        const { catName, category, color, coupon, details, discount, id, isAvailable, name, price, url } = this.state;
         return(
-            <div className={Style.addProd} onSubmit={this.handleSubmit}>
-                <form>
+            <div className={Style.addProd}>
+                <form onSubmit={this.handleSubmit}>
                     <label>Category</label>
                     <select className={Style.txt} id="catName" value={catName} name="catName" onChange={this.handleChange}>
                         <option value={"Phones & Accessories"}>Phones & Accessories</option>
@@ -80,8 +83,8 @@ class addProduct extends React.Component {
                     <input className={Style.txt} type="text" name="name" value={name} onChange={this.handleChange}/>
                     <label>Product Price</label>
                     <input className={Style.txt} type="text" name="price" value={price} onChange={this.handleChange}/>
-                    <label>Product Image</label>
-                    <input className={Style.txt} type="file" name="img" accept="image/*"/>
+                    <label>Product Image URL</label>
+                    <input className={Style.txt} type="text" name="url" value={url} onChange={this.handleChange} />
                     <input className={Style.sub} type="submit" value="Submit"/>
                 </form>
                 <NavLink to={"/admin"}>
