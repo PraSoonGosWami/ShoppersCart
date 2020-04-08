@@ -8,7 +8,7 @@ import OrderList from "./orderList/OrderList";
 
 const MyOrders = (props) => {
 
-    const [order , setOrder] = useState()
+    const [order , setOrder] = useState([])
     const [isLoading, setIsLoading] = useState(false)
 
     const contextValue = useContext(AppContext)
@@ -19,8 +19,18 @@ const MyOrders = (props) => {
             //setIsLoading(true)
             const url = `/myorders/${contextValue.user.uid}.json`
             axiosInstance.get(url)
-                .then(response => {
-                    setOrder(response.data)
+                .then(async response => {
+                    const data = Object.keys(response.data).map(id=>{
+                        return response.data[id]
+                    })
+                    await data.sort((a,b)=>{
+                        const d1 = a.date.split('/')
+                        const d2 = b.date.split('/')
+                        const date = new Date(d1[2],parseInt(d1[1])-1,d1[0])
+                        const date2 = new Date(d2[2],parseInt(d2[1])-1,d2[0])
+                        return date2 - date
+                    })
+                    setOrder(data)
                     setIsLoading(false)
                 })
                 .catch(err=>{
@@ -39,13 +49,13 @@ const MyOrders = (props) => {
             {order && <div className={Style.MyOrders}>
                 <h3>Order history</h3>
                 <section>
-                    {Object.keys(order).map(index=>{
+                    {order.map(item=>{
                         return <OrderList
-                            key={index}
-                            date={order[index].date}
-                            orderId={order[index].orderId}
-                            price={order[index].price}
-                            items={order[index].item}
+                            key={item.orderId}
+                            date={item.date}
+                            orderId={item.orderId}
+                            price={item.price}
+                            items={item.item}
                         />
                     })}
                 </section>

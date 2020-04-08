@@ -7,7 +7,7 @@ import paymentDomeAnim from './paymentDoneAnimation'
 import {AppContext} from '../../../context/AppContext'
 import Axios from '../../../AxiosInstance'
 import {useToasts} from 'react-toast-notifications'
-import {v4 as uuid } from 'uuid'
+import {v1 as uuid } from 'uuid'
 import LoadModal from "../../../ui/LoadModal/LoadModal";
 const Payment = (props) => {
     const location = useLocation()
@@ -89,7 +89,8 @@ const Payment = (props) => {
             item : cart,
             date,
             orderId,
-            price
+            price,
+            timestamp : currentDate.getMilliseconds()
         }
         const url = `/myorders/${contextValue.user.uid}/${orderId}.json`
 

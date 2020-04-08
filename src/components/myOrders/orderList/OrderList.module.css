@@ -62,6 +62,9 @@
     margin-top: 0px;
 }
 
+.Stepper{
+    padding: 12px 8px;
+}
 @media (max-width: 700px) {
     .OrderList{
         width: 90vw;
@@ -77,5 +80,9 @@
 @media (max-width: 320px) {
     .OrderListItem > img{
         max-width: 85px;
+    }
+    .Stepper{
+        font-size: 14px;
+        padding: 12px 0;
     }
 }
