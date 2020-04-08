@@ -30,6 +30,7 @@ const MyOrders = (props) => {
                         const date2 = new Date(d2[2],parseInt(d2[1])-1,d2[0])
                         return date2 - date
                     })
+                    data[0].date = "08/04/2020"
                     setOrder(data)
                     setIsLoading(false)
                 })
