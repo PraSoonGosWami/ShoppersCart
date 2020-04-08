@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react'
-import {useParams} from "react-router";
+import {useHistory, useParams} from "react-router";
 import Carousel from "nuka-carousel";
 import axios from '../../AxiosInstance'
 import Spinner from '../../ui/spinner/spinner'
@@ -13,11 +13,14 @@ import LoadModal from "../../ui/LoadModal/LoadModal";
 import addToCartFunction from "../../helper/addToCartFunction";
 import addToWishListFunction from "../../helper/addToWishListFunction";
 import dataModel from "../../helper/dataModel";
+import ProductHolder from "../HomePage/HomePageProducts/homeProductHolder/homeProductHolder";
+import ProductCard from "../HomePage/HomePageProducts/productCard/productCard";
 
 
 const ProductPage = (props) => {
     //initializing states
     const [product, setProduct] = useState(null)
+    const [sProducts, setSProducts] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [adding, setAdding] = useState(false)
 
@@ -34,6 +37,7 @@ const ProductPage = (props) => {
     //toast notification
     const {addToast} = useToasts()
 
+    const history = useHistory()
 
     //getting data from backend once components get mounted
     useEffect(() => {
@@ -44,32 +48,40 @@ const ProductPage = (props) => {
                 setProduct(response.data)
             })
             .catch(error => {
-                console.error(error);
                 setIsLoading(false)
             })
+
+        axios.get("/products/" + cid+'.json')
+            .then(res => {
+                setSProducts(res.data)
+            })
+            .catch(error => {
+            })
+
     }, [url])
 
     // add to cart button click handler
     const onAddToCartButtonClickedListener = () => {
 
-        addToCartFunction(dataModel(product),contextValue,addToast,setAdding)
+        addToCartFunction(dataModel(product), contextValue, addToast, setAdding)
 
     }
 
     //add to wishlist button click handler
     const onAddToWishListButtonClickedListener = () => {
-        addToWishListFunction(contextValue,setAdding,product,addToast)
+        addToWishListFunction(contextValue, setAdding, product, addToast)
     }
+
 
     //init. spinner product list and footer
     let spinner = <Spinner/>
     let productView = null
     let footer = null
-
+    let similarProducts = null
     //populating product view with downloaded data
     if (!isLoading) {
         spinner = null
-        if (product) {
+        if (product && sProducts) {
             let price = Math.round(product.price - ((product.price) * (product.discount / 100)))
                 .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             productView = (
@@ -122,6 +134,31 @@ const ProductPage = (props) => {
                         <h2>Product Details</h2>
                         <p>{product.details}</p>
                     </article>
+                    <ProductHolder
+                        onClick={() => history.push('/category/' + cid)}
+                        title={"Similar products"}>
+                        {Object.keys(sProducts)
+                            .map((pId, index) => {
+                                if (index < 5 && pId !== pid)
+                                    return (
+                                        <ProductCard
+                                            onClick={()=>{
+                                                history.push('/products/'+cid+'/'+pId)
+                                                window.scroll(0,0)
+                                            }}
+                                            key={pId}
+                                            src={sProducts[pId].url}
+                                            name={sProducts[pId].name}
+                                            details={sProducts[pId].details}
+                                            price={sProducts[pId].price}
+                                            discount={parseInt(sProducts[pId].discount)}
+                                        />
+                                    )
+                                else
+                                    return null
+                            })}
+                    </ProductHolder>
+
                 </div>
             )
             footer = <AppFooter/>
