@@ -1,6 +1,6 @@
 import React from 'react';
 import axiosInstance from "../../../AxiosInstance";
-import Style from './delProduct.module.css';
+import Style from "../addProduct/addProduct.module.css";
 import {NavLink} from "react-router-dom";
 
 class addProduct extends React.Component {
@@ -47,10 +47,10 @@ class addProduct extends React.Component {
                     <label>Product ID</label>
                     <input className={Style.txt} type="text" value={id} name="id" onChange={this.handleChange}/>
                     <input className={Style.sub} type="submit" value="Submit"/>
+                    <NavLink to={"/admin"}>
+                        <input className={Style.back} type="submit" value="Go Back"/>
+                    </NavLink>
                 </form>
-                <NavLink to={"/admin"}>
-                    <input className={Style.back} type="submit" value="Go Back"/>
-                </NavLink>
             </div>
         );
     }

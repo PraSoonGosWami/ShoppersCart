@@ -86,10 +86,10 @@ class addProduct extends React.Component {
                     <label>Product Image URL</label>
                     <input className={Style.txt} type="text" name="url" value={url} onChange={this.handleChange} />
                     <input className={Style.sub} type="submit" value="Submit"/>
+                    <NavLink to={"/admin"}>
+                        <input className={Style.back} type="submit" value="Go Back"/>
+                    </NavLink>
                 </form>
-                <NavLink to={"/admin"}>
-                    <input className={Style.back} type="submit" value="Go Back"/>
-                </NavLink>
             </div>
         );
     }
