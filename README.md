@@ -6,6 +6,6 @@ Technolgy used
 
 User interface is build completely responsive to fit all major screen sizes following a material design UI principals
 
-#####Visit the website here - https://www.shopperscart.tiddler.tech
+##### Visit the website here - https://www.shopperscart.tiddler.tech
 
 ##### This project was an internship project done under Tata Consultancy Services
