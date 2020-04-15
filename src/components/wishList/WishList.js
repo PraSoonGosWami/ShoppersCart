@@ -8,6 +8,8 @@ import WishListItem from "./WishListItem/WishListItem";
 import {useToasts} from "react-toast-notifications";
 import addToCartFunction from "../../helper/addToCartFunction";
 import LoadModal from "../../ui/LoadModal/LoadModal";
+import EmptyWishListSVG from './noWishlist.svg'
+import EmptyPage from "../../ui/EmptyPage/EmptyPage";
 
 
 const WishList = (props) => {
@@ -100,7 +102,7 @@ const WishList = (props) => {
             )
         }
         else {
-            emptyMsg = <h3>Oops! Seems like your wish list is empty!</h3>
+            emptyMsg = <EmptyPage img={EmptyWishListSVG} alt={"Empty wish list"} text={"Oops! Seems like your wish list is empty!"}/>
         }
     }
 

@@ -15,6 +15,8 @@ import addToWishListFunction from "../../helper/addToWishListFunction";
 import dataModel from "../../helper/dataModel";
 import ProductHolder from "../HomePage/HomePageProducts/homeProductHolder/homeProductHolder";
 import ProductCard from "../HomePage/HomePageProducts/productCard/productCard";
+import NoProductSVG from './noProduct.svg'
+import EmptyPage from "../../ui/EmptyPage/EmptyPage";
 
 
 const ProductPage = (props) => {
@@ -51,15 +53,18 @@ const ProductPage = (props) => {
                 setIsLoading(false)
             })
 
+
+
+    }, [url])
+
+    useEffect(()=>{
         axios.get("/products/" + cid+'.json')
             .then(res => {
                 setSProducts(res.data)
             })
             .catch(error => {
             })
-
-    }, [url])
-
+    },[sProducts])
     // add to cart button click handler
     const onAddToCartButtonClickedListener = () => {
 
@@ -77,7 +82,6 @@ const ProductPage = (props) => {
     let spinner = <Spinner/>
     let productView = null
     let footer = null
-    let similarProducts = null
     //populating product view with downloaded data
     if (!isLoading) {
         spinner = null
@@ -134,7 +138,7 @@ const ProductPage = (props) => {
                         <h2>Product Details</h2>
                         <p>{product.details}</p>
                     </article>
-                    <ProductHolder
+                     <ProductHolder
                         onClick={() => history.push('/category/' + cid)}
                         title={"Similar products"}>
                         {Object.keys(sProducts)
@@ -163,7 +167,7 @@ const ProductPage = (props) => {
             )
             footer = <AppFooter/>
         } else {
-            productView = <h2> Oops!! Seems like content you are searching for is unavailable</h2>
+            productView = <EmptyPage img={NoProductSVG} alt={"Product unavailable"} text={"Oops!! Seems like product you are searching for is currently unavailable or have been removed"}/>
         }
     }
 

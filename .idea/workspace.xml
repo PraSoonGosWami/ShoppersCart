@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/cart/empty-cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/myOrders/noorder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wishList/noWishlist.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ProductPage/noProduct.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/EmptyPage/EmptyPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/EmptyPage/EmptyPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/categories/all category img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/myOrders/MyOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myOrders/MyOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/wishList/WishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wishList/WishList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -27,14 +42,14 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/wishList" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -51,19 +66,19 @@
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\userProfile" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\navigation\profileSection" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\cart\payment" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\ui\Error404Page" />
-      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList\WishListItem" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\myOrders\orderList" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\footer" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\HomePage\HomePageProducts" />
       <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\wishList" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\containers\ProductPage" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\myOrders" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\cart" />
+      <recent name="D:\Frontend Practise\WebStorm\shoppers-cart\src\components\userProfile" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -95,18 +110,6 @@
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,25 +171,27 @@
       <workItem from="1585123195602" duration="7248000" />
       <workItem from="1585229824405" duration="649000" />
       <workItem from="1585304853567" duration="411000" />
-      <workItem from="1586348530763" duration="7832000" />
+      <workItem from="1586348530763" duration="8278000" />
+      <workItem from="1586427216878" duration="48000" />
+      <workItem from="1586532882998" duration="2428000" />
+      <workItem from="1586971654190" duration="5765000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -204,6 +209,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="519" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1583492116779" />
+    <state x="449" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586357866656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586357866656" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580559046468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -212,22 +221,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585230480678" />
-    <state width="1515" height="206" key="GridCell.Tab.0.bottom" timestamp="1586348612949">
+    <state width="1515" height="206" key="GridCell.Tab.0.bottom" timestamp="1586972975395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586348612949" />
-    <state width="1515" height="206" key="GridCell.Tab.0.center" timestamp="1586348612949">
+    <state width="1515" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586972975395" />
+    <state width="1515" height="206" key="GridCell.Tab.0.center" timestamp="1586972975395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586348612949" />
-    <state width="1515" height="206" key="GridCell.Tab.0.left" timestamp="1586348612948">
+    <state width="1515" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586972975395" />
+    <state width="1515" height="206" key="GridCell.Tab.0.left" timestamp="1586972975395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586348612948" />
-    <state width="1515" height="206" key="GridCell.Tab.0.right" timestamp="1586348612949">
+    <state width="1515" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586972975395" />
+    <state width="1515" height="206" key="GridCell.Tab.0.right" timestamp="1586972975395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586348612949" />
+    <state width="1515" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586972975395" />
     <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1585129902984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

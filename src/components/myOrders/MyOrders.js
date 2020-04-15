@@ -5,10 +5,12 @@ import {Redirect} from "react-router";
 import axiosInstance from "../../AxiosInstance";
 import Spinner from "../../ui/spinner/spinner";
 import OrderList from "./orderList/OrderList";
+import EmptyPage from "../../ui/EmptyPage/EmptyPage";
+import NoOrderSVG from './noorder.svg'
 
 const MyOrders = (props) => {
 
-    const [order , setOrder] = useState([])
+    const [order , setOrder] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
 
     const contextValue = useContext(AppContext)
@@ -30,7 +32,6 @@ const MyOrders = (props) => {
                         const date2 = new Date(d2[2],parseInt(d2[1])-1,d2[0])
                         return date2 - date
                     })
-                    data[0].date = "08/04/2020"
                     setOrder(data)
                     setIsLoading(false)
                 })
@@ -61,7 +62,7 @@ const MyOrders = (props) => {
                     })}
                 </section>
             </div>}
-            {!order && !isLoading && <h3>You dont have any orders</h3> }
+            {!order && !isLoading && <EmptyPage img={NoOrderSVG} alt={"No orders"} text={"It's lonely here! Go ahead and place your order"} />}
         </React.Fragment>
 
     )

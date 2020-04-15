@@ -45,7 +45,7 @@ class HomePage extends Component {
     }
 
     showcaseClickHandler = (url) => {
-        this.props.history.push(url)
+        //this.props.history.push(url)
     }
 
     render() {

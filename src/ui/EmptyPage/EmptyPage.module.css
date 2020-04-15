@@ -1,0 +1,46 @@
+.EmptyPage{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+
+}
+
+.EmptyPage > img {
+    max-width: 200px;
+    margin: 12px;
+    animation: animLogo 0.4s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.EmptyPage > h3{
+    animation: animText 0.4s ease-in-out;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+@keyframes animLogo {
+    0% {opacity: 0; transform: scale(0.8,0.8)}
+    60% { opacity: 1; transform: scale(1.2,1.2)}
+    100% {opacity: 1; transform: scale(1,1)}
+}
+
+@keyframes animText {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@media (max-width: 500px) {
+    .EmptyPage > h3{
+        font-size: 1em;
+    }
+    .EmptyPage{
+        width: 90%;
+
+    }
+}

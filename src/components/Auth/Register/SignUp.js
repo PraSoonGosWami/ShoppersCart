@@ -23,6 +23,11 @@ const SignUp = (props) => {
     const [name,setName] = useState("")
     const [progress, setProgress] = useState(false)
 
+    const [emailError,setEmailError] = useState("")
+    const [passwordError, setPasswordError] = useState("")
+    const [phoneError,setPhoneError] = useState("")
+    const [nameError, setNameError] = useState("")
+
     //toast notification
     const {addToast} = useToasts()
 
@@ -44,6 +49,57 @@ const SignUp = (props) => {
         setPhone(event.target.value)
     }
 
+    const nameErrorHandler = (event) => {
+        const val = event.target.value
+        if(val.length ===0) {
+            setNameError("Please enter a name")
+            return
+        }
+        if(val.length <=2){
+            setNameError("Name too short")
+            return
+        }
+
+        setNameError("")
+    }
+
+    const emailErrorHandler = (event) => {
+        const val = event.target.value
+        if(val.length ===0) {
+            setEmailError("Please enter an email")
+            return
+        }
+        setEmailError("")
+    }
+
+    const psdErrorHandler = (event) => {
+        const val = event.target.value
+        if(val.length ===0) {
+            setPasswordError("Please enter a password")
+            return
+        }
+
+        if(val.length <=5 ) {
+            setPasswordError("Password must be at least 6 characters long")
+            return
+        }
+        setPasswordError("")
+    }
+
+    const phoneErrorHandler = (event) => {
+        const val = event.target.value
+
+        if(val.length !== 10){
+            setPhoneError("Enter a valid phone number")
+            return
+        }
+        if(!/^\d+$/.test(val)){
+            setPhoneError("Enter a valid phone number")
+            return
+        }
+
+        setPhoneError("")
+    }
 
     //signup method
     const signup = () => {
@@ -153,14 +209,32 @@ const SignUp = (props) => {
                                <h5>Please Sign Up</h5>
                            </header>
                            <form onSubmit={(event) => event.preventDefault() }>
+                               <label>{emailError}</label>
                                <input type="email" placeholder="Email" required value={email}
-                                      onChange={(event) => emailHandler(event)}/>
+                                      onChange={(event) => emailHandler(event)}
+                                      onBlur={(event)=>emailErrorHandler(event)}
+                               />
+
+                               <label>{nameError}</label>
                                <input type="name" placeholder="Name" required value={name}
-                                      onChange={(event) => nameHandler(event)}/>
+                                      onChange={(event) => nameHandler(event)}
+                                      onBlur={(event)=>nameErrorHandler(event)}
+
+                               />
+
+                               <label>{passwordError}</label>
                                <input type="password" placeholder="Password" required value={password}
-                                      onChange={(event) => psdHandler(event)}/>
+                                      onChange={(event) => psdHandler(event)}
+                                      onBlur={(event)=>psdErrorHandler(event)}
+
+                               />
+
+                               <label>{phoneError}</label>
                                <input type="tel" placeholder="Mobile Number" required value={phone}
-                                      onChange={(event) => phoneHandler(event)}/>
+                                      onChange={(event) => phoneHandler(event)}
+                                      onBlur={(event)=>phoneErrorHandler(event)}
+
+                               />
                                <button onClick={signup}>Sign Up</button>
 
                            </form>

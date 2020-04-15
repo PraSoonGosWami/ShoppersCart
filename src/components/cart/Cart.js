@@ -7,6 +7,8 @@ import {useToasts} from "react-toast-notifications";
 import LoadModal from "../../ui/LoadModal/LoadModal";
 import AppFooter from "../../ui/AppFooter/AppFooter";
 import {useHistory} from "react-router";
+import EmptyPage from "../../ui/EmptyPage/EmptyPage";
+import EmptyCartSVG from './empty-cart.svg'
 
 const Cart = (props) => {
 
@@ -132,7 +134,7 @@ const Cart = (props) => {
                 </React.Fragment>
             )
         } else {
-            emptyCart = <h3>No item in cart</h3>
+            emptyCart = <EmptyPage img={EmptyCartSVG} alt={"Empty cart"} text={"Your cart seems to be empty! Let's get shopping"}/>
         }
     }
 

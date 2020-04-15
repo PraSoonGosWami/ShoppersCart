@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 430px) {
+    .OrderList{
+        box-shadow: none;
+        width: 95vw ;
+    }
     .OrderListItem > img{
         max-width: 100px;
     }

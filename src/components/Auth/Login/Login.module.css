@@ -49,14 +49,21 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    text-align: left;
 }
-
+.Login > main > form > label{
+    text-align: left;
+    color: rgba(234, 16, 16, 0.87);
+    font-size: 12px;
+    width: 60%;
+    font-weight: bold;
+}
 .Login > main > form > input{
     border: 2px solid #2FCE98;
     padding: 10px;
     border-radius: 4px;
     background-color: #f8f8f8;
-    margin: 8px 4px;
+    margin: 6px 4px;
     width: 55%;
 
 }
@@ -112,6 +119,9 @@
         padding: 8px 10px;
         width: 60%;
     }
+    .Login > main > form > label{
+        width: 65%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -125,6 +135,9 @@
     .Login > main > form > input {
         padding: 8px 10px;
         width: 70%;
+    }
+    .Login > main > form > label{
+        width: 75%;
     }
 }
 
