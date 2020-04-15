@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc6d5b5-e7b8-4d38-a5d3-7588624afb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cart/empty-cart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myOrders/noorder.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/wishList/noWishlist.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ProductPage/noProduct.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/EmptyPage/EmptyPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/EmptyPage/EmptyPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/categories/all category img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/myOrders/MyOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myOrders/MyOrders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myOrders/orderList/OrderList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wishList/WishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wishList/WishList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductPage/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +160,7 @@
       <workItem from="1586348530763" duration="8278000" />
       <workItem from="1586427216878" duration="48000" />
       <workItem from="1586532882998" duration="2428000" />
-      <workItem from="1586971654190" duration="5765000" />
+      <workItem from="1586971654190" duration="6685000" />
     </task>
     <servers />
   </component>
